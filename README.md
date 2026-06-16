@@ -1,14 +1,14 @@
 # World Cup 2026 Sweep — Setup Guide
 
 This site shows live standings for your friends' World Cup sweep. Match
-results are pulled automatically from API-Football every 4 hours — nobody
+results are pulled automatically every 4 hurs — nobody
 has to enter scores by hand.
 
 ## How it works
 
 ```
 GitHub Actions (every 4 hours)
-   → calls API-Football
+   → calls fetches from openfootball’s public JSON
    → recalculates points for every team and friend
    → writes data/data.json
    → commits it to the repo
@@ -23,7 +23,7 @@ Actions runner. It is never sent to anyone's browser.
 
 ## One-time setup
 
-### 1. Add your API key as a secret
+### 1. Add your API key as a secret - NO LONGER REQUIRED
 In your repo: **Settings → Secrets and variables → Actions → New repository secret**
 - Name: `API_FOOTBALL_KEY`
 - Value: your api-sports.io API-Football key
