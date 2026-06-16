@@ -22,8 +22,6 @@ jobs:
           node-version: "20"
 
       - name: Fetch latest fixtures and rebuild data.json
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: node scripts/update-data.js
 
       - name: Commit and push if data changed
