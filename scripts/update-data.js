@@ -1,10 +1,9 @@
 /**
- * update-data.js – using openfootball’s public JSON (flexible parser)
+ * update-data.js – using openfootball’s public JSON
  * ----------------------------------------------------------------
  * Fetches World Cup 2026 data from:
  *   https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json
  * Computes standings and writes data/data.json.
- *
  * No API key required.
  * ----------------------------------------------------------------
  */
@@ -58,7 +57,7 @@ function buildTeamIndex() {
   return { teamToFriend, allTeams };
 }
 
-// ===================== CORRECTED computeStats =====================
+// ===================== BULLETPROOF computeStats =====================
 function computeStats(matches, allTeams) {
   const stats = {};
   allTeams.forEach(t => {
@@ -77,34 +76,37 @@ function computeStats(matches, allTeams) {
 
     // Only process if we have valid numbers
     if (homeGoals !== null && awayGoals !== null && typeof homeGoals === "number" && typeof awayGoals === "number") {
-      // ---------- SAFE DATE HANDLING ----------
-      let matchDate = null;
-      if (m.date) {
-        // Try to build a full ISO‑like string: date + "T" + time
-        let dateString = m.date;
-        if (m.time) {
-          dateString += "T" + m.time;
+
+      // ---------- SAFE DATE CONSTRUCTION ----------
+      let dateObj;
+      try {
+        let dateStr = m.date; // expects "YYYY-MM-DD"
+        if (dateStr) {
+          // Append time if available, otherwise default to midnight UTC
+          const timePart = m.time ? m.time : "00:00:00";
+          dateStr = dateStr + "T" + timePart + "Z"; // Z for UTC
+          dateObj = new Date(dateStr);
+          if (isNaN(dateObj.getTime())) {
+            // Fallback: try without time
+            dateObj = new Date(m.date);
+          }
         } else {
-          // If no time provided, assume midnight UTC
-          dateString += "T00:00:00";
+          // No date provided – use current time
+          dateObj = new Date();
         }
-        matchDate = new Date(dateString);
-
-        // If that fails, try just the date part
-        if (isNaN(matchDate.getTime())) {
-          matchDate = new Date(m.date);
-        }
+      } catch (e) {
+        // If anything fails, use current time
+        dateObj = new Date();
       }
-
-      // If still invalid, use current time as fallback
-      if (!matchDate || isNaN(matchDate.getTime())) {
-        matchDate = new Date();
+      // Ensure we have a valid date
+      if (isNaN(dateObj.getTime())) {
+        dateObj = new Date();
       }
-      // ---------------------------------------
+      // --------------------------------------------
 
       completedMatches.push({
         fixtureId: m.id || `${m.team1}-${m.team2}-${m.date}`,
-        date: matchDate.toISOString(),
+        date: dateObj.toISOString(),
         stage: m.group || m.round || "Group stage",
         home: homeName,
         away: awayName,
@@ -144,7 +146,7 @@ function computeStats(matches, allTeams) {
   completedMatches.sort((a, b) => new Date(b.date) - new Date(a.date));
   return { stats, matches: completedMatches };
 }
-// ===================== END OF CORRECTED SECTION =====================
+// ===================== END OF computeStats =====================
 
 function computeFriendScores(stats) {
   return friends.map(f => {
