@@ -1,23 +1,564 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-06-16T13:21:42.651Z",
   "season": 2026,
   "leagueId": 1,
-  "totalFixturesFetched": 0,
+  "totalFixturesFetched": 104,
   "completedMatches": 0,
   "friends": [
-    { "name": "Patty", "teams": ["Algeria", "Ghana", "Morocco", "Mexico"], "points": 0 },
-    { "name": "Kinaadman", "teams": ["Turkey", "Senegal", "Austria", "Canada"], "points": 0 },
-    { "name": "Joe", "teams": ["Tunisia", "Uzbekistan", "Paraguay", "Belgium"], "points": 0 },
-    { "name": "Brizuela", "teams": ["South Africa", "Saudi Arabia", "Uruguay", "France"], "points": 0 },
-    { "name": "Miriam", "teams": ["Qatar", "Ivory Coast", "Ecuador", "United States"], "points": 0 },
-    { "name": "Norton", "teams": ["Cape Verde", "Australia", "Switzerland", "Germany"], "points": 0 },
-    { "name": "Sal", "teams": ["DR Congo", "Jordan", "Croatia", "Portugal"], "points": 0 },
-    { "name": "Oots", "teams": ["Panama", "Bosnia and Herzegovina", "Norway", "Netherlands"], "points": 0 },
-    { "name": "Pardillo", "teams": ["Haiti", "Czech Republic", "Colombia", "England"], "points": 0 },
-    { "name": "Silenge", "teams": ["Iran", "New Zealand", "Japan", "Spain"], "points": 0 },
-    { "name": "Ron", "teams": ["Iraq", "Sweden", "Egypt", "Brazil"], "points": 0 },
-    { "name": "Rianne", "teams": ["Curacao", "Scotland", "South Korea", "Argentina"], "points": 0 }
+    {
+      "name": "Patty",
+      "teams": [
+        "Algeria",
+        "Ghana",
+        "Morocco",
+        "Mexico"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Kinaadman",
+      "teams": [
+        "Turkey",
+        "Senegal",
+        "Austria",
+        "Canada"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Joe",
+      "teams": [
+        "Tunisia",
+        "Uzbekistan",
+        "Paraguay",
+        "Belgium"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Brizuela",
+      "teams": [
+        "South Africa",
+        "Saudi Arabia",
+        "Uruguay",
+        "France"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Miriam",
+      "teams": [
+        "Qatar",
+        "Ivory Coast",
+        "Ecuador",
+        "United States"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Norton",
+      "teams": [
+        "Cape Verde",
+        "Australia",
+        "Switzerland",
+        "Germany"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Sal",
+      "teams": [
+        "DR Congo",
+        "Jordan",
+        "Croatia",
+        "Portugal"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Oots",
+      "teams": [
+        "Panama",
+        "Bosnia and Herzegovina",
+        "Norway",
+        "Netherlands"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Pardillo",
+      "teams": [
+        "Haiti",
+        "Czech Republic",
+        "Colombia",
+        "England"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Silenge",
+      "teams": [
+        "Iran",
+        "New Zealand",
+        "Japan",
+        "Spain"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Ron",
+      "teams": [
+        "Iraq",
+        "Sweden",
+        "Egypt",
+        "Brazil"
+      ],
+      "points": 0
+    },
+    {
+      "name": "Rianne",
+      "teams": [
+        "Curacao",
+        "Scotland",
+        "South Korea",
+        "Argentina"
+      ],
+      "points": 0
+    }
   ],
-  "teamStats": {},
+  "teamStats": {
+    "Algeria": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Ghana": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Morocco": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Mexico": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Turkey": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Senegal": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Austria": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Canada": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Tunisia": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Uzbekistan": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Paraguay": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Belgium": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "South Africa": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Saudi Arabia": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Uruguay": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "France": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Qatar": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Ivory Coast": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Ecuador": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "United States": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Cape Verde": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Australia": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Switzerland": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Germany": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "DR Congo": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Jordan": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Croatia": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Portugal": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Panama": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Bosnia and Herzegovina": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Norway": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Netherlands": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Haiti": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Czech Republic": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Colombia": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "England": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Iran": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "New Zealand": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Japan": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Spain": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Iraq": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Sweden": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Egypt": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Brazil": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Curacao": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Scotland": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "South Korea": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    },
+    "Argentina": {
+      "pts": 0,
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0
+    }
+  },
   "matches": []
 }
