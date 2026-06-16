@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-16T13:29:03.775Z",
+  "generatedAt": "2026-06-16T13:53:10.792Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 0,
+  "completedMatches": 16,
   "friends": [
     {
       "name": "Patty",
@@ -13,7 +13,7 @@
         "Morocco",
         "Mexico"
       ],
-      "points": 0
+      "points": 4
     },
     {
       "name": "Kinaadman",
@@ -33,7 +33,7 @@
         "Paraguay",
         "Belgium"
       ],
-      "points": 0
+      "points": 1
     },
     {
       "name": "Brizuela",
@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 0
+      "points": 2
     },
     {
       "name": "Miriam",
@@ -53,7 +53,7 @@
         "Ecuador",
         "United States"
       ],
-      "points": 0
+      "points": 7
     },
     {
       "name": "Norton",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 0
+      "points": 5
     },
     {
       "name": "Sal",
@@ -83,7 +83,7 @@
         "Norway",
         "Netherlands"
       ],
-      "points": 0
+      "points": 1
     },
     {
       "name": "Pardillo",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 0
+      "points": 4
     },
     {
       "name": "Ron",
@@ -113,7 +113,7 @@
         "Egypt",
         "Brazil"
       ],
-      "points": 0
+      "points": 5
     },
     {
       "name": "Rianne",
@@ -123,7 +123,7 @@
         "South Korea",
         "Argentina"
       ],
-      "points": 0
+      "points": 6
     }
   ],
   "teamStats": {
@@ -146,31 +146,31 @@
       "ga": 0
     },
     "Morocco": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Mexico": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
+      "gf": 2,
       "ga": 0
     },
     "Turkey": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 0,
-      "ga": 0
+      "ga": 2
     },
     "Senegal": {
       "pts": 0,
@@ -201,12 +201,12 @@
     },
     "Tunisia": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 5
     },
     "Uzbekistan": {
       "pts": 0,
@@ -219,48 +219,48 @@
     },
     "Paraguay": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 4
     },
     "Belgium": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "South Africa": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 0,
-      "ga": 0
+      "ga": 2
     },
     "Saudi Arabia": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Uruguay": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "France": {
       "pts": 0,
@@ -272,67 +272,67 @@
       "ga": 0
     },
     "Qatar": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Ivory Coast": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
+      "gf": 1,
       "ga": 0
     },
     "Ecuador": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 0,
-      "ga": 0
+      "ga": 1
     },
     "United States": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 4,
+      "ga": 1
     },
     "Cape Verde": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
       "gf": 0,
       "ga": 0
     },
     "Australia": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
+      "gf": 2,
       "ga": 0
     },
     "Switzerland": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Germany": {
       "pts": 0,
@@ -407,31 +407,31 @@
       "ga": 0
     },
     "Netherlands": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 2,
+      "ga": 2
     },
     "Haiti": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 0,
-      "ga": 0
+      "ga": 1
     },
     "Czech Republic": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 2
     },
     "Colombia": {
       "pts": 0,
@@ -452,37 +452,37 @@
       "ga": 0
     },
     "Iran": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 2,
+      "ga": 2
     },
     "New Zealand": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 2,
+      "ga": 2
     },
     "Japan": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 2,
+      "ga": 2
     },
     "Spain": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
       "gf": 0,
       "ga": 0
@@ -497,31 +497,31 @@
       "ga": 0
     },
     "Sweden": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 5,
+      "ga": 1
     },
     "Egypt": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Brazil": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Curacao": {
       "pts": 0,
@@ -533,22 +533,22 @@
       "ga": 0
     },
     "Scotland": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
+      "gf": 1,
       "ga": 0
     },
     "South Korea": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 2,
+      "ga": 1
     },
     "Argentina": {
       "pts": 0,
@@ -560,5 +560,166 @@
       "ga": 0
     }
   },
-  "matches": []
+  "matches": [
+    {
+      "fixtureId": "Belgium-Egypt-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Belgium",
+      "away": "Egypt",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Seattle"
+    },
+    {
+      "fixtureId": "Iran-New Zealand-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Iran",
+      "away": "New Zealand",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Spain-Cape Verde-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Spain",
+      "away": "Cape Verde",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Saudi Arabia-Uruguay-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Miami (Miami Gardens)"
+    },
+    {
+      "fixtureId": "Germany-Curaçao-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Germany",
+      "away": "Curaçao",
+      "homeGoals": 7,
+      "awayGoals": 1,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Ivory Coast-Ecuador-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "Netherlands-Japan-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Netherlands",
+      "away": "Japan",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Sweden-Tunisia-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "venue": "Monterrey (Guadalupe)"
+    },
+    {
+      "fixtureId": "Qatar-Switzerland-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+      "fixtureId": "Brazil-Morocco-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Brazil",
+      "away": "Morocco",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Haiti-Scotland-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Haiti",
+      "away": "Scotland",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Australia-Turkey-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Australia",
+      "away": "Turkey",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Canada-Bosnia & Herzegovina-2026-06-12",
+      "date": "2026-06-12T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Canada",
+      "away": "Bosnia & Herzegovina",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "USA-Paraguay-2026-06-12",
+      "date": "2026-06-12T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "United States",
+      "away": "Paraguay",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Mexico-South Africa-2026-06-11",
+      "date": "2026-06-11T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Mexico",
+      "away": "South Africa",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Mexico City"
+    },
+    {
+      "fixtureId": "South Korea-Czech Republic-2026-06-11",
+      "date": "2026-06-11T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "South Korea",
+      "away": "Czech Republic",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Guadalajara (Zapopan)"
+    }
+  ]
 }
