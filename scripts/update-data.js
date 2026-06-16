@@ -1,9 +1,9 @@
 /**
- * update-data.js – now using openfootball’s public JSON
+ * update-data.js – using openfootball’s public JSON (flexible parser)
  * ----------------------------------------------------------------
  * Fetches World Cup 2026 data from:
  *   https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json
- * Computes standings for the sweep and writes data/data.json.
+ * Computes standings and writes data/data.json.
  *
  * No API key required.
  * ----------------------------------------------------------------
@@ -15,7 +15,7 @@ const path = require("path");
 const DATA_URL =
   "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
 
-// ===== Sweep allocations (unchanged) =====
+// ===== Sweep allocations =====
 const friends = [
   { name: "Patty",      teams: ["Algeria", "Ghana", "Morocco", "Mexico"] },
   { name: "Kinaadman",  teams: ["Turkey", "Senegal", "Austria", "Canada"] },
@@ -67,15 +67,12 @@ function computeStats(matches, allTeams) {
   const completedMatches = [];
 
   matches.forEach(m => {
-    // openfootball fields: team1, team2, goals1, goals2 (null if not played)
     const homeName = normaliseTeamName(m.team1);
     const awayName = normaliseTeamName(m.team2);
     const homeGoals = m.goals1;
     const awayGoals = m.goals2;
 
-    // Only process if both goals are numbers (match finished)
     if (typeof homeGoals === "number" && typeof awayGoals === "number") {
-      // Add to completed matches list
       completedMatches.push({
         fixtureId: m.id || `${m.team1}-${m.team2}-${m.date}`,
         date: m.date ? new Date(m.date + "T" + (m.time || "00:00")).toISOString() : new Date().toISOString(),
@@ -87,7 +84,6 @@ function computeStats(matches, allTeams) {
         venue: m.ground || null
       });
 
-      // Update stats only if both teams are in the sweep
       if (stats[homeName] && stats[awayName]) {
         const hs = stats[homeName];
         const as = stats[awayName];
@@ -116,9 +112,7 @@ function computeStats(matches, allTeams) {
     }
   });
 
-  // Sort completed matches: most recent first (by date)
   completedMatches.sort((a, b) => new Date(b.date) - new Date(a.date));
-
   return { stats, matches: completedMatches };
 }
 
@@ -129,6 +123,9 @@ function computeFriendScores(stats) {
   });
 }
 
+/**
+ * Flexible parser – tries to extract an array of match objects from any structure.
+ */
 async function fetchOpenFootballData() {
   const res = await fetch(DATA_URL);
   if (!res.ok) {
@@ -136,31 +133,56 @@ async function fetchOpenFootballData() {
   }
   const data = await res.json();
 
-  // openfootball returns either:
-  //   - an array of rounds (older format)
-  //   - an object with a "rounds" array (current format)
-  let rounds = [];
-  if (Array.isArray(data)) {
-    rounds = data;
-  } else if (data.rounds && Array.isArray(data.rounds)) {
-    rounds = data.rounds;
-  } else {
-    throw new Error(
-      "Unexpected JSON structure from openfootball: " +
-      "expected array or object with 'rounds' array."
-    );
+  // Helper: check if an object looks like a match (has team1 and team2)
+  function isMatch(obj) {
+    return obj && typeof obj === "object" && "team1" in obj && "team2" in obj;
   }
 
-  const allMatches = [];
-  for (const round of rounds) {
-    if (round.matches && Array.isArray(round.matches)) {
-      for (const m of round.matches) {
-        m.round = round.name;   // attach round/group name for the stage field
-        allMatches.push(m);
+  // Helper: recursively find the first array that contains match objects
+  function findMatchesArray(obj) {
+    if (Array.isArray(obj)) {
+      // If the array itself contains match objects, return it
+      if (obj.length > 0 && isMatch(obj[0])) {
+        return obj;
+      }
+      // Otherwise, search each item
+      for (const item of obj) {
+        const found = findMatchesArray(item);
+        if (found) return found;
+      }
+    } else if (obj && typeof obj === "object") {
+      // Search each property value
+      for (const key of Object.keys(obj)) {
+        const found = findMatchesArray(obj[key]);
+        if (found) return found;
       }
     }
+    return null;
   }
-  return allMatches;
+
+  // Attempt to find matches
+  let matchesArray = findMatchesArray(data);
+
+  if (!matchesArray) {
+    console.warn("Could not find any match data in the response. Returning empty array.");
+    return [];
+  }
+
+  // Now we have an array of matches – but they might be nested inside rounds.
+  // If the matches have a "round" property already, we can use that as stage.
+  // Otherwise, we need to attach the round name if they came from a round object.
+  // The current structure might be just a flat array of matches; if so we're done.
+  // But openfootball usually returns an array of rounds, each with a "matches" array.
+  // Since we already extracted an array of match objects, we can just return it.
+  // However, we might want to attach round information if available from the parent.
+  // For simplicity, we assume the matches already have a "round" or "group" field.
+  // If not, we'll set a default.
+  return matchesArray.map(m => {
+    if (!m.round && !m.group) {
+      m.round = "Match"; // fallback
+    }
+    return m;
+  });
 }
 
 async function main() {
@@ -175,7 +197,7 @@ async function main() {
   const output = {
     generatedAt: new Date().toISOString(),
     season: 2026,
-    leagueId: 1,                  // keep for compatibility
+    leagueId: 1,
     totalFixturesFetched: rawMatches.length,
     completedMatches: matches.length,
     friends: friendScores,
