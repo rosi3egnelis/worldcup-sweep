@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T14:08:32.606Z",
+  "generatedAt": "2026-06-16T14:15:40.489Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
@@ -83,7 +83,7 @@
         "Norway",
         "Netherlands"
       ],
-      "points": 1
+      "points": 2
     },
     {
       "name": "Pardillo",
@@ -389,13 +389,13 @@
       "ga": 0
     },
     "Bosnia and Herzegovina": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Norway": {
       "pts": 0,
@@ -525,12 +525,12 @@
     },
     "Curacao": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 7
     },
     "Scotland": {
       "pts": 3,
@@ -606,7 +606,7 @@
       "date": "2026-06-14T00:00:00.000Z",
       "stage": "Group E",
       "home": "Germany",
-      "away": "Curaçao",
+      "away": "Curacao",
       "homeGoals": 7,
       "awayGoals": 1,
       "venue": "Houston"
@@ -686,7 +686,7 @@
       "date": "2026-06-12T00:00:00.000Z",
       "stage": "Group B",
       "home": "Canada",
-      "away": "Bosnia & Herzegovina",
+      "away": "Bosnia and Herzegovina",
       "homeGoals": 1,
       "awayGoals": 1,
       "venue": "Toronto"
