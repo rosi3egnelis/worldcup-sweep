@@ -1,342 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our World Cup Sweep</title>
-    <style>
-        body { font-family: system-ui, -apple-system, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-        h1 { color: #1e3c72; text-align: center; }
-        .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-        .tab-btn { padding: 10px 20px; font-size: 14px; background: #e0e0e0; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-        .tab-btn.active { background: #1e3c72; color: white; }
-        .controls { text-align: center; margin-bottom: 20px; }
-        button { padding: 12px 24px; font-size: 16px; background: #1e3c72; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 5px; }
-        button:hover { background: #152b50; }
-        .status { display: block; margin-top: 8px; font-size: 14px; color: #444; }
-        .last-update { font-size: 13px; color: #666; }
-        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 15px; }
-        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #1e3c72; color: white; position: sticky; top: 0; }
-        tr:hover { background: #f0f4ff; }
-        .points { font-weight: bold; color: #1e3c72; }
-        .team-detail { font-size: 13px; margin: 2px 0; }
-        .bracket { display: flex; flex-direction: column; gap: 20px; overflow-x: auto; padding: 10px 0; }
-        .round { display: flex; justify-content: space-around; align-items: center; }
-        .match-box { background: white; border: 1px solid #ccc; border-radius: 8px; padding: 10px; min-width: 140px; text-align: center; }
-        .match-box .team { font-weight: bold; }
-        .match-box .score { font-size: 1.2em; margin: 5px 0; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .message-box { background: #fff3cd; padding: 10px; border-radius: 6px; margin: 10px 0; text-align: center; display: none; }
-        @media (max-width: 600px) {
-            th, td { padding: 8px 6px; font-size: 14px; }
-            .team-detail { font-size: 12px; }
-            .match-box { min-width: 110px; }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our World Cup Sweep</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
+
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+        h1 { color: #1e3c72; text-align: center; margin-top: 20px; }
+        .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tab-btn { padding: 10px 20px; font-size: 14px; background: #e0e0e0; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; color: #333; }
+        .tab-btn.active { background: #1e3c72; color: white; }
+        
+        /* Specific overrides so Bootstrap doesn't ruin your existing tables */
+        .sweep-content table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 15px; }
+        .sweep-content th, .sweep-content td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        .sweep-content th { background: #1e3c72; color: white; position: sticky; top: 0; }
+        .sweep-content tr:hover { background: #f0f4ff; }
+        
+        .controls { text-align: center; margin-bottom: 20px; }
+        .btn-refresh { padding: 12px 24px; font-size: 16px; background: #1e3c72; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 5px; }
+        .btn-refresh:hover { background: #152b50; }
+        .status { display: block; margin-top: 8px; font-size: 14px; color: #444; }
+        .last-update { font-size: 13px; color: #666; }
+        .points { font-weight: bold; color: #1e3c72; }
+        .team-detail { font-size: 13px; margin: 2px 0; }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .message-box { background: #fff3cd; padding: 10px; border-radius: 6px; margin: 10px 0; text-align: center; display: none; color: #333; }
+        
+        /* Widget specific styling */
+        api-sports-widget {
+            --primary-font-size: 0.82rem;
+            --secondary-font-size: .8rem;
+            --button-font-size: .8rem;
+            --title-font-size: .9rem;
+            height: 70vh;
+        }
+        body .modal-widget { width: 90%; max-width: 700px; }
+        body .modal-widget-content { padding: 0; height: 60vh; }
+
+        @media (max-width: 768px) {
+            .sweep-content th, .sweep-content td { padding: 8px 6px; font-size: 14px; }
+            .team-detail { font-size: 12px; }
+        }
+    </style>
 </head>
 <body>
-    <h1>⚽ World Cup 2026 Sweep</h1>
-    <div class="tabs">
-        <button class="tab-btn active" onclick="showTab('leaderboard')">🏆 Leaderboard</button>
-        <button class="tab-btn" onclick="showTab('teamstats')">📊 Team Stats</button>
-        <button class="tab-btn" onclick="showTab('bracket')">🌳 Knockout Bracket</button>
-    </div>
-    <div class="controls">
-        <button onclick="refreshNow()">Refresh now</button>
-        <span class="status" id="status">Loading…</span>
-        <div class="last-update">Data from Google Sheet. Last update: <span id="lastUpdate">-</span></div>
-    </div>
-    <div id="message" class="message-box"></div>
+    <h1> World Cup 2026 Sweep</h1>
+    
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('leaderboard')"> Sweep Leaderboard</button>
+        <button class="tab-btn" onclick="showTab('live-widgets')"> Live WC Hub</button>
+        <button class="tab-btn" onclick="showTab('teamstats')"> Your Team Stats</button>
+    </div>
 
-    <!-- Leaderboard Tab -->
-    <div id="leaderboard" class="tab-content active">
-        <table>
-            <thead><tr><th>Rank</th><th>Friend</th><th>Points</th><th>Team details</th></tr></thead>
-            <tbody></tbody>
-        </table>
-    </div>
+    <div class="controls">
+        <button class="btn-refresh" onclick="refreshNow()">Refresh Sweep Data</button>
+        <span class="status" id="status">Loading…</span>
+        <div class="last-update">Sweep Data from Google Sheet. Last update: <span id="lastUpdate">-</span></div>
+    </div>
+    <div id="message" class="message-box"></div>
 
-    <!-- Team Stats Tab -->
-    <div id="teamstats" class="tab-content">
-        <table>
-            <thead><tr><th>Team</th><th>Points</th><th>Played</th><th>Wins</th><th>Draws</th><th>Losses</th><th>GF</th><th>GA</th></tr></thead>
-            <tbody></tbody>
-        </table>
-    </div>
+    <div id="leaderboard" class="tab-content active sweep-content">
+        <table>
+            <thead><tr><th>Rank</th><th>Friend</th><th>Points</th><th>Team details</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-    <!-- Knockout Bracket Tab -->
-    <div id="bracket" class="tab-content">
-        <div id="bracketContainer">Knockout matches haven't started yet – the bracket will appear here once the group stage finishes.</div>
-    </div>
+    <div id="live-widgets" class="tab-content">
+        <div class="container-fluid p-0">
+            <div class="row g-3">
+                <div class="col-12 col-md-3">
+                    <div id="leagues-list" class="card border-0 shadow-sm h-100 bg-dark text-light">
+                        <div class="card-body p-0">
+                            <api-sports-widget data-type="league"></api-sports-widget>
+                        </div>
+                    </div>
+                </div>
 
-    <script>
-        // ========== YOUR SWEEP ALLOCATIONS ==========
-        const friends = [
-            { name: "Patty",      teams: ["Algeria", "Ghana", "Morocco", "Mexico"] },
-            { name: "Kinaadman",  teams: ["Türkiye", "Senegal", "Austria", "Canada"] },
-            { name: "Joe",        teams: ["Tunisia", "Uzbekistan", "Paraguay", "Belgium"] },
-            { name: "Brizuela",   teams: ["South Africa", "Saudi Arabia", "Uruguay", "France"] },
-            { name: "Miriam",     teams: ["Qatar", "Côte d'Ivoire", "Ecuador", "USA"] },
-            { name: "Norton",     teams: ["Cabo Verde", "Australia", "Switzerland", "Germany"] },
-            { name: "Sal",        teams: ["DR Congo", "Jordan", "Croatia", "Portugal"] },
-            { name: "Oots",       teams: ["Panama", "Bosnia and Herzegovina", "Norway", "Netherlands"] },
-            { name: "Pardillo",   teams: ["Haiti", "Czechia", "Colombia", "England"] },
-            { name: "Silenge",    teams: ["IR Iran", "New Zealand", "Japan", "Spain"] },
-            { name: "Ron",        teams: ["Iraq", "Sweden", "Egypt", "Brazil"] },
-            { name: "Rianne",     teams: ["Curaçao", "Scotland", "Korea Republic", "Argentina"] }
-        ];
+                <div class="col-12 col-md-4">
+                    <div id="game-content" class="card border-0 shadow-sm h-100 bg-dark text-light">
+                        <div class="card-body p-0">
+                            <div id="games-list">
+                                <api-sports-widget data-type="game"></api-sports-widget>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        // Mapping from sweep names to API names (also used to normalise sheet names)
-        const nameMap = {
-            "Algeria": "Algeria", "Ghana": "Ghana", "Morocco": "Morocco", "Mexico": "Mexico",
-            "Türkiye": "Turkey", "Senegal": "Senegal", "Austria": "Austria", "Canada": "Canada",
-            "Tunisia": "Tunisia", "Uzbekistan": "Uzbekistan", "Paraguay": "Paraguay", "Belgium": "Belgium",
-            "South Africa": "South Africa", "Saudi Arabia": "Saudi Arabia", "Uruguay": "Uruguay", "France": "France",
-            "Qatar": "Qatar", "Côte d'Ivoire": "Ivory Coast", "Ecuador": "Ecuador", "USA": "United States",
-            "Cabo Verde": "Cape Verde", "Australia": "Australia", "Switzerland": "Switzerland", "Germany": "Germany",
-            "DR Congo": "DR Congo", "Jordan": "Jordan", "Croatia": "Croatia", "Portugal": "Portugal",
-            "Panama": "Panama", "Bosnia and Herzegovina": "Bosnia and Herzegovina", "Norway": "Norway", "Netherlands": "Netherlands",
-            "Haiti": "Haiti", "Czechia": "Czech Republic", "Colombia": "Colombia",
-            "England": "England",
-            "IR Iran": "Iran", "New Zealand": "New Zealand", "Japan": "Japan", "Spain": "Spain",
-            "Iraq": "Iraq", "Sweden": "Sweden", "Egypt": "Egypt", "Brazil": "Brazil",
-            "Curaçao": "Curaçao", "Scotland": "Scotland", "Korea Republic": "South Korea", "Argentina": "Argentina"
-        };
+                <div class="col-12 col-md-5">
+                    <div class="card border-0 shadow-sm h-100 bg-dark text-light">
+                        <div class="card-body p-0">
+                            <div id="standings-content">
+                                <api-sports-widget data-type="standings"></api-sports-widget>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
 
-        // Reverse mapping for display
-        const reverseNameMap = {};
-        for (let [sweep, api] of Object.entries(nameMap)) {
-            reverseNameMap[api] = sweep;
-        }
+    <div id="teamstats" class="tab-content sweep-content">
+        <table>
+            <thead><tr><th>Team</th><th>Points</th><th>Played</th><th>Wins</th><th>Draws</th><th>Losses</th><th>GF</th><th>GA</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        // 🏳️ Flag mapping
-        const flagMap = {
-            "Algeria": "🇩🇿", "Ghana": "🇬🇭", "Morocco": "🇲🇦", "Mexico": "🇲🇽",
-            "Türkiye": "🇹🇷", "Turkey": "🇹🇷", "Senegal": "🇸🇳", "Austria": "🇦🇹", "Canada": "🇨🇦",
-            "Tunisia": "🇹🇳", "Uzbekistan": "🇺🇿", "Paraguay": "🇵🇾", "Belgium": "🇧🇪",
-            "South Africa": "🇿🇦", "Saudi Arabia": "🇸🇦", "Uruguay": "🇺🇾", "France": "🇫🇷",
-            "Qatar": "🇶🇦", "Côte d'Ivoire": "🇨🇮", "Ivory Coast": "🇨🇮", "Ecuador": "🇪🇨",
-            "USA": "🇺🇸", "United States": "🇺🇸",
-            "Cabo Verde": "🇨🇻", "Cape Verde": "🇨🇻", "Australia": "🇦🇺", "Switzerland": "🇨🇭", "Germany": "🇩🇪",
-            "DR Congo": "🇨🇩", "Jordan": "🇯🇴", "Croatia": "🇭🇷", "Portugal": "🇵🇹",
-            "Panama": "🇵🇦", "Bosnia and Herzegovina": "🇧🇦", "Norway": "🇳🇴", "Netherlands": "🇳🇱",
-            "Haiti": "🇭🇹", "Czechia": "🇨🇿", "Czech Republic": "🇨🇿", "Colombia": "🇨🇴",
-            "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-            "IR Iran": "🇮🇷", "Iran": "🇮🇷", "New Zealand": "🇳🇿", "Japan": "🇯🇵", "Spain": "🇪🇸",
-            "Iraq": "🇮🇶", "Sweden": "🇸🇪", "Egypt": "🇪🇬", "Brazil": "🇧🇷",
-            "Curaçao": "🇨🇼", "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-            "Korea Republic": "🇰🇷", "South Korea": "🇰🇷", "Argentina": "🇦🇷"
-        };
+    <api-sports-widget
+        data-type="config"
+        data-key="YOUR_API_KEY"
+        data-sport="football"
+        data-lang="en"
+        data-theme="dark"
+        data-show-errors="true"
+        data-show-logos="true"
+        data-refresh="15"
+        data-player-injuries="true"
+        data-team-squad="true"
+        data-team-statistics="true"     
+        data-player-statistics="true" 
+        data-game-tab="statistics"
+        data-standings="true"
+        data-target-standings="true"
+        data-target-game="#game-content .card-body"
+        data-target-player="modal"
+        data-target-team="modal"
+        data-tab="results"
+        data-league="1"
+        data-season="2026"
+    ></api-sports-widget>
 
-        function getFlag(teamName) {
-            return flagMap[teamName] || "🏳️";
-        }
+    <script>
+        // ========== YOUR SWEEP ALLOCATIONS ==========
+        const friends = [
+            { name: "Patty",      teams: ["Algeria", "Ghana", "Morocco", "Mexico"] },
+            { name: "Kinaadman",  teams: ["Türkiye", "Senegal", "Austria", "Canada"] },
+            { name: "Joe",        teams: ["Tunisia", "Uzbekistan", "Paraguay", "Belgium"] },
+            { name: "Brizuela",   teams: ["South Africa", "Saudi Arabia", "Uruguay", "France"] },
+            { name: "Miriam",     teams: ["Qatar", "Côte d'Ivoire", "Ecuador", "USA"] },
+            { name: "Norton",     teams: ["Cabo Verde", "Australia", "Switzerland", "Germany"] },
+            { name: "Sal",        teams: ["DR Congo", "Jordan", "Croatia", "Portugal"] },
+            { name: "Oots",       teams: ["Panama", "Bosnia and Herzegovina", "Norway", "Netherlands"] },
+            { name: "Pardillo",   teams: ["Haiti", "Czechia", "Colombia", "England"] },
+            { name: "Silenge",    teams: ["IR Iran", "New Zealand", "Japan", "Spain"] },
+            { name: "Ron",        teams: ["Iraq", "Sweden", "Egypt", "Brazil"] },
+            { name: "Rianne",     teams: ["Curaçao", "Scotland", "Korea Republic", "Argentina"] }
+        ];
 
-        // ⚠️ Your published Google Sheet CSV link (already inserted)
-        const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQYtLLlSs4Y4njcgyPHLDU-YgKHMLxfhy6SFzFNH2gToWVOMtd7Puc2c25eDYMKzOKpmnB30KjVh80n/pub?gid=2041026320&single=true&output=csv";
+        const nameMap = {
+            "Algeria": "Algeria", "Ghana": "Ghana", "Morocco": "Morocco", "Mexico": "Mexico",
+            "Türkiye": "Turkey", "Senegal": "Senegal", "Austria": "Austria", "Canada": "Canada",
+            "Tunisia": "Tunisia", "Uzbekistan": "Uzbekistan", "Paraguay": "Paraguay", "Belgium": "Belgium",
+            "South Africa": "South Africa", "Saudi Arabia": "Saudi Arabia", "Uruguay": "Uruguay", "France": "France",
+            "Qatar": "Qatar", "Côte d'Ivoire": "Ivory Coast", "Ecuador": "Ecuador", "USA": "United States",
+            "Cabo Verde": "Cape Verde", "Australia": "Australia", "Switzerland": "Switzerland", "Germany": "Germany",
+            "DR Congo": "DR Congo", "Jordan": "Jordan", "Croatia": "Croatia", "Portugal": "Portugal",
+            "Panama": "Panama", "Bosnia and Herzegovina": "Bosnia and Herzegovina", "Norway": "Norway", "Netherlands": "Netherlands",
+            "Haiti": "Haiti", "Czechia": "Czech Republic", "Colombia": "Colombia", "England": "England",
+            "IR Iran": "Iran", "New Zealand": "New Zealand", "Japan": "Japan", "Spain": "Spain",
+            "Iraq": "Iraq", "Sweden": "Sweden", "Egypt": "Egypt", "Brazil": "Brazil",
+            "Curaçao": "Curaçao", "Scotland": "Scotland", "Korea Republic": "South Korea", "Argentina": "Argentina"
+        };
 
-        let teamStats = {};
-        let friendScores = {};
-        let allMatches = [];
+        const reverseNameMap = {};
+        for (let [sweep, api] of Object.entries(nameMap)) { reverseNameMap[api] = sweep; }
 
-        // ================== FLEXIBLE CSV PARSER ==================
-        function parseCSV(csvText) {
-            const lines = csvText.trim().split("\n");
-            if (lines.length < 2) return [];
+        const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQYtLLlSs4Y4njcgyPHLDU-YgKHMLxfhy6SFzFNH2gToWVOMtd7Puc2c25eDYMKzOKpmnB30KjVh80n/pub?gid=2041026320&single=true&output=csv";
 
-            const headers = lines[0].split(",").map(h => h.trim().toLowerCase().replace(/\s+/g, "_"));
-            const homeIdx = headers.findIndex(h => h === "home_team" || h === "home team" || h.includes("home_team") || h.includes("home team"));
-            const awayIdx = headers.findIndex(h => h === "away_team" || h === "away team" || h.includes("away_team") || h.includes("away team"));
-            const hgIdx   = headers.findIndex(h => h === "home_goals" || h === "home goals" || h.includes("home_goals") || h.includes("home goals"));
-            const agIdx   = headers.findIndex(h => h === "away_goals" || h === "away goals" || h.includes("away_goals") || h.includes("away goals"));
+        let teamStats = {};
+        let friendScores = {};
+        let allMatches = [];
 
-            if (homeIdx === -1 || awayIdx === -1 || hgIdx === -1 || agIdx === -1) {
-                console.error("Could not find required columns. Headers:", headers);
-                return [];
-            }
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split("\n");
+            if (lines.length < 2) return [];
 
-            const matches = [];
-            for (let i = 1; i < lines.length; i++) {
-                const cols = lines[i].split(",").map(c => c.trim());
-                const home = cols[homeIdx];
-                const away = cols[awayIdx];
-                const hg = parseInt(cols[hgIdx]);
-                const ag = parseInt(cols[agIdx]);
+            const headers = lines[0].split(",").map(h => h.trim().toLowerCase().replace(/\s+/g, "_"));
+            const homeIdx = headers.findIndex(h => h === "home_team" || h === "home team" || h.includes("home_team"));
+            const awayIdx = headers.findIndex(h => h === "away_team" || h === "away team" || h.includes("away_team"));
+            const hgIdx   = headers.findIndex(h => h === "home_goals" || h === "home goals" || h.includes("home_goals"));
+            const agIdx   = headers.findIndex(h => h === "away_goals" || h === "away goals" || h.includes("away_goals"));
 
-                if (home && away && !isNaN(hg) && !isNaN(ag)) {
-                    matches.push({
-                        home_team: { name: home, goals: hg },
-                        away_team: { name: away, goals: ag },
-                        status: "completed",
-                        stage: "Group stage",
-                        competition: { name: "World Cup" },
-                        datetime: new Date().toISOString()
-                    });
-                }
-            }
-            return matches;
-        }
+            if (homeIdx === -1 || awayIdx === -1 || hgIdx === -1 || agIdx === -1) return [];
 
-        // ================== CALCULATIONS ==================
-        function processMatches(matches) {
-            const stats = {};
-            friends.forEach(f => {
-                f.teams.forEach(sweepName => {
-                    const apiName = nameMap[sweepName];
-                    if (apiName) stats[apiName] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
-                });
-            });
+            const matches = [];
+            for (let i = 1; i < lines.length; i++) {
+                const cols = lines[i].split(",").map(c => c.trim());
+                const home = cols[homeIdx];
+                const away = cols[awayIdx];
+                const hg = parseInt(cols[hgIdx]);
+                const ag = parseInt(cols[agIdx]);
 
-            matches.forEach(m => {
-                if (m.status !== "completed" && m.status !== "finished") return;
-                const home = m.home_team?.name;
-                const away = m.away_team?.name;
-                const hGoals = m.home_team?.goals;
-                const aGoals = m.away_team?.goals;
-                if (!home || !away || hGoals === undefined || aGoals === undefined) return;
+                if (home && away && !isNaN(hg) && !isNaN(ag)) {
+                    matches.push({
+                        home_team: { name: home, goals: hg },
+                        away_team: { name: away, goals: ag },
+                        status: "completed"
+                    });
+                }
+            }
+            return matches;
+        }
 
-                const homeApi = nameMap[home] || home;
-                const awayApi = nameMap[away] || away;
+        function processMatches(matches) {
+            const stats = {};
+            friends.forEach(f => {
+                f.teams.forEach(sweepName => {
+                    const apiName = nameMap[sweepName];
+                    if (apiName) stats[apiName] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
+                });
+            });
 
-                if (!stats[homeApi]) stats[homeApi] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
-                if (!stats[awayApi]) stats[awayApi] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
+            matches.forEach(m => {
+                if (m.status !== "completed") return;
+                const home = m.home_team?.name;
+                const away = m.away_team?.name;
+                const hGoals = m.home_team?.goals;
+                const aGoals = m.away_team?.goals;
+                if (!home || !away || hGoals === undefined || aGoals === undefined) return;
 
-                const hs = stats[homeApi];
-                hs.gp++; hs.gf += hGoals; hs.ga += aGoals;
-                if (hGoals > aGoals) { hs.pts += 3; hs.w++; }
-                else if (hGoals === aGoals) { hs.pts += 1; hs.d++; }
-                else { hs.l++; }
+                const homeApi = nameMap[home] || home;
+                const awayApi = nameMap[away] || away;
 
-                const as = stats[awayApi];
-                as.gp++; as.gf += aGoals; as.ga += hGoals;
-                if (aGoals > hGoals) { as.pts += 3; as.w++; }
-                else if (aGoals === hGoals) { as.pts += 1; as.d++; }
-                else { as.l++; }
-            });
-            return stats;
-        }
+                if (!stats[homeApi]) stats[homeApi] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
+                if (!stats[awayApi]) stats[awayApi] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
 
-        function computeFriendPoints(stats) {
-            const scores = {};
-            friends.forEach(f => {
-                let total = 0;
-                f.teams.forEach(sweepName => {
-                    const apiName = nameMap[sweepName];
-                    if (apiName && stats[apiName]) total += stats[apiName].pts;
-                });
-                scores[f.name] = total;
-            });
-            return scores;
-        }
+                const hs = stats[homeApi], as = stats[awayApi];
+                hs.gp++; hs.gf += hGoals; hs.ga += aGoals;
+                as.gp++; as.gf += aGoals; as.ga += hGoals;
+                
+                if (hGoals > aGoals) { hs.pts += 3; hs.w++; as.l++; }
+                else if (hGoals === aGoals) { hs.pts += 1; hs.d++; as.pts += 1; as.d++; }
+                else { as.pts += 3; as.w++; hs.l++; }
+            });
+            return stats;
+        }
 
-        // ================== DISPLAY ==================
-        function renderLeaderboard(stats, scores) {
-            const tbody = document.querySelector("#leaderboard tbody");
-            tbody.innerHTML = "";
-            const sorted = [...friends].sort((a, b) => {
-                const pa = scores[a.name] || 0, pb = scores[b.name] || 0;
-                if (pb !== pa) return pb - pa;
-                return a.name.localeCompare(b.name);
-            });
-            let rank = 1;
-            sorted.forEach((f, i) => {
-                if (i > 0 && scores[f.name] !== scores[sorted[i-1].name]) rank = i + 1;
-                const points = scores[f.name] || 0;
-                const teamDetails = f.teams.map(team => {
-                    const apiName = nameMap[team];
-                    const s = stats[apiName] || { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
-                    const flag = getFlag(team);
-                    return `<div class="team-detail">${flag} <b>${team}</b>: ${s.pts} pts (${s.gp} games, ${s.w}W ${s.d}D ${s.l}L, GF:${s.gf} GA:${s.ga})</div>`;
-                }).join("");
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${rank}</td><td>${f.name}</td><td class="points">${points}</td><td>${teamDetails}</td>`;
-                tbody.appendChild(row);
-            });
-        }
+        function computeFriendPoints(stats) {
+            const scores = {};
+            friends.forEach(f => {
+                let total = 0;
+                f.teams.forEach(sweepName => {
+                    const apiName = nameMap[sweepName];
+                    if (apiName && stats[apiName]) total += stats[apiName].pts;
+                });
+                scores[f.name] = total;
+            });
+            return scores;
+        }
 
-        function renderTeamStats(stats) {
-            const tbody = document.querySelector("#teamstats tbody");
-            tbody.innerHTML = "";
-            const teams = Object.keys(stats).sort((a, b) => stats[b].pts - stats[a].pts);
-            teams.forEach(apiName => {
-                const s = stats[apiName];
-                const sweepName = reverseNameMap[apiName] || apiName;
-                const flag = getFlag(sweepName);
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${flag} <b>${sweepName}</b></td><td>${s.pts}</td><td>${s.gp}</td><td>${s.w}</td><td>${s.d}</td><td>${s.l}</td><td>${s.gf}</td><td>${s.ga}</td>`;
-                tbody.appendChild(row);
-            });
-        }
+        function renderLeaderboard(stats, scores) {
+            const tbody = document.querySelector("#leaderboard tbody");
+            tbody.innerHTML = "";
+            const sorted = [...friends].sort((a, b) => {
+                const pa = scores[a.name] || 0, pb = scores[b.name] || 0;
+                return pb !== pa ? pb - pa : a.name.localeCompare(b.name);
+            });
+            
+            let rank = 1;
+            sorted.forEach((f, i) => {
+                if (i > 0 && scores[f.name] !== scores[sorted[i-1].name]) rank = i + 1;
+                const points = scores[f.name] || 0;
+                const teamDetails = f.teams.map(team => {
+                    const apiName = nameMap[team];
+                    const s = stats[apiName] || { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
+                    return `<div class="team-detail"><b>${team}</b>: ${s.pts} pts (${s.w}W ${s.d}D ${s.l}L)</div>`;
+                }).join("");
+                
+                tbody.insertAdjacentHTML("beforeend", `<tr><td>${rank}</td><td>${f.name}</td><td class="points">${points}</td><td>${teamDetails}</td></tr>`);
+            });
+        }
 
-        function buildBracket(matches) {
-            if (matches.length === 0) {
-                document.getElementById("bracketContainer").innerHTML = "No matches entered yet.";
-                return;
-            }
-            let html = '<div class="bracket"><h3>Matches</h3><div class="round">';
-            matches.forEach(m => {
-                const home = m.home_team.name;
-                const away = m.away_team.name;
-                const hg = m.home_team.goals;
-                const ag = m.away_team.goals;
-                html += `<div class="match-box">
-                    <div class="team">${getFlag(home)} ${home}</div>
-                    <div class="score">${hg} - ${ag}</div>
-                    <div class="team">${getFlag(away)} ${away}</div>
-                </div>`;
-            });
-            html += '</div></div>';
-            document.getElementById("bracketContainer").innerHTML = html;
-        }
+        function renderTeamStats(stats) {
+            const tbody = document.querySelector("#teamstats tbody");
+            tbody.innerHTML = "";
+            const teams = Object.keys(stats).sort((a, b) => stats[b].pts - stats[a].pts);
+            teams.forEach(apiName => {
+                const s = stats[apiName];
+                const sweepName = reverseNameMap[apiName] || apiName;
+                tbody.insertAdjacentHTML("beforeend", `<tr><td><b>${sweepName}</b></td><td>${s.pts}</td><td>${s.gp}</td><td>${s.w}</td><td>${s.d}</td><td>${s.l}</td><td>${s.gf}</td><td>${s.ga}</td></tr>`);
+            });
+        }
 
-        function showMessage(text, isError = false) {
-            const msgDiv = document.getElementById("message");
-            msgDiv.style.display = text ? "block" : "none";
-            msgDiv.textContent = text;
-            msgDiv.style.background = isError ? "#f8d7da" : "#fff3cd";
-        }
+        function showMessage(text, isError = false) {
+            const msgDiv = document.getElementById("message");
+            msgDiv.style.display = text ? "block" : "none";
+            msgDiv.textContent = text;
+            msgDiv.style.background = isError ? "#f8d7da" : "#fff3cd";
+        }
 
-        // ================== TAB SWITCHING ==================
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            document.querySelector(`.tab-btn[onclick="showTab('${tabName}')"]`).classList.add('active');
-        }
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`.tab-btn[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
 
-        // ================== FETCH & RENDER ==================
-        async function refreshNow() {
-            document.getElementById("status").textContent = "Updating…";
-            showMessage("");
+        async function refreshNow() {
+            document.getElementById("status").textContent = "Updating…";
+            showMessage("");
+            try {
+                const resp = await fetch(CSV_URL);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const csvText = await resp.text();
+                allMatches = parseCSV(csvText);
+                teamStats = processMatches(allMatches);
+                friendScores = computeFriendPoints(teamStats);
+                renderLeaderboard(teamStats, friendScores);
+                renderTeamStats(teamStats);
+                document.getElementById("lastUpdate").textContent = new Date().toLocaleTimeString();
+                document.getElementById("status").textContent = ` Loaded matches from Google Sheet`;
+            } catch (e) {
+                document.getElementById("status").textContent = " Could not load Google Sheet";
+                showMessage("Could not fetch the Google Sheet. Make sure it is published and the link is correct.", true);
+            }
+        }
 
-            try {
-                const resp = await fetch(CSV_URL);
-                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-                const csvText = await resp.text();
-                allMatches = parseCSV(csvText);
-                if (allMatches.length === 0) {
-                    showMessage("No completed matches found in the sheet (check that goals are numbers).", false);
-                }
-                teamStats = processMatches(allMatches);
-                friendScores = computeFriendPoints(teamStats);
-                renderLeaderboard(teamStats, friendScores);
-                renderTeamStats(teamStats);
-                buildBracket(allMatches);
-                document.getElementById("lastUpdate").textContent = new Date().toLocaleTimeString();
-                document.getElementById("status").textContent = `✔ Loaded ${allMatches.length} matches from Google Sheet`;
-            } catch (e) {
-                document.getElementById("status").textContent = "⚠ Could not load Google Sheet";
-                showMessage("Could not fetch the Google Sheet. Make sure it is published and the link is correct.", true);
-            }
-        }
-
-        window.addEventListener("load", () => {
-            refreshNow();
-            // Refresh every 5 minutes
-            setInterval(refreshNow, 5 * 60 * 1000);
-        });
-    </script>
+        window.addEventListener("load", () => {
+            refreshNow();
+            setInterval(refreshNow, 5 * 60 * 1000);
+        });
+    </script>
 </body>
 </html>
