@@ -207,6 +207,7 @@
     background:var(--pitch); color:var(--chalk); padding:3px 10px; border-radius:6px; min-width:46px; text-align:center;
   }
   .match-row .stage-tag{font-size:11px; color:#9c9384; text-transform:uppercase; letter-spacing:0.03em; text-align:right;}
+  .owner-tag{font-size:11px; color:#9c9384; font-weight:400; margin-left:4px;}
   @media (max-width:560px){
     .match-row{grid-template-columns:1fr auto 1fr; grid-template-areas:"home score away" "stage stage stage";}
     .match-row .stage-tag{grid-area:stage; text-align:left; margin-top:2px;}
@@ -296,7 +297,7 @@
 </main>
 
 <footer>
-  Updated automatically every 4 hours from openfootball’s World Cup data.
+  Updated automatically every 4 hours from openfootball's World Cup data.
 </footer>
 
 <script>
@@ -317,6 +318,12 @@ function teamOwnerMap(friends){
   friends.forEach(f => f.teams.forEach(t => map[t] = f.name));
   return map;
 }
+
+// ===== NEW: Helper to get owner name for a team =====
+function getOwnerName(team, ownerMap) {
+  return ownerMap[team] || "Unclaimed";
+}
+// ===================================================
 
 function timeAgo(isoString){
   if(!isoString) return "never";
@@ -400,6 +407,7 @@ function renderTeamStats(data){
   });
 }
 
+// ===================== UPDATED renderMatches =====================
 function renderMatches(data){
   const list = document.getElementById("matchesList");
   if(!data.matches || data.matches.length === 0){
@@ -410,15 +418,30 @@ function renderMatches(data){
     </div>`;
     return;
   }
-  list.innerHTML = data.matches.map(m => `
-    <div class="match-row">
-      <div class="side home">${getFlag(m.home)} ${m.home}</div>
-      <div class="score">${m.homeGoals} – ${m.awayGoals}</div>
-      <div class="side away">${m.away} ${getFlag(m.away)}</div>
-      <div class="stage-tag">${m.stage || ""}</div>
-    </div>
-  `).join("");
+
+  // Build owner map
+  const ownerMap = teamOwnerMap(data.friends);
+
+  list.innerHTML = data.matches.map(m => {
+    const homeOwner = getOwnerName(m.home, ownerMap);
+    const awayOwner = getOwnerName(m.away, ownerMap);
+    return `
+      <div class="match-row">
+        <div class="side home">
+          ${getFlag(m.home)} ${m.home}
+          <span class="owner-tag">(${homeOwner})</span>
+        </div>
+        <div class="score">${m.homeGoals} – ${m.awayGoals}</div>
+        <div class="side away">
+          <span class="owner-tag">(${awayOwner})</span>
+          ${m.away} ${getFlag(m.away)}
+        </div>
+        <div class="stage-tag">${m.stage || ""}</div>
+      </div>
+    `;
+  }).join("");
 }
+// ================================================================
 
 function setupTabs(){
   document.querySelectorAll(".tab-btn").forEach(btn => {
