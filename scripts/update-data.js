@@ -134,26 +134,62 @@ async function fetchOpenFootballData() {
   if (!res.ok) {
     throw new Error(`Failed to fetch openfootball data: ${res.status} ${res.statusText}`);
   }
-  const data = await res.json();
+ // **************** OLD CODE TO BE REMOVED **************************
+ // const data = await res.json();
 
   // The JSON is an array of rounds; each round has a "matches" array.
   // Some rounds may be empty. Flatten all matches.
-  const allMatches = [];
+ // const allMatches = [];
+ // if (Array.isArray(data)) {
+ //   for (const round of data) {
+ //     if (round.matches && Array.isArray(round.matches)) {
+ //       // Add round/group info to each match for the stage field
+ //       for (const m of round.matches) {
+ //         m.round = round.name;   // e.g., "Group A", "Quarter-finals"
+ //         allMatches.push(m);
+ //       }
+ //     }
+ //   }
+ // } else {
+ //   // fallback if structure is different (just in case)
+ //   throw new Error("Unexpected JSON structure from openfootball");
+ // }
+// **********************************************************************
+
+async function fetchOpenFootballData() {
+  const res = await fetch(DATA_URL);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch openfootball data: ${res.status} ${res.statusText}`);
+  }
+  const data = await res.json();
+
+  // openfootball returns either:
+  //   - an array of rounds (older format)
+  //   - an object with a "rounds" array (current format)
+  let rounds = [];
   if (Array.isArray(data)) {
-    for (const round of data) {
-      if (round.matches && Array.isArray(round.matches)) {
-        // Add round/group info to each match for the stage field
-        for (const m of round.matches) {
-          m.round = round.name;   // e.g., "Group A", "Quarter-finals"
-          allMatches.push(m);
-        }
-      }
-    }
+    rounds = data;
+  } else if (data.rounds && Array.isArray(data.rounds)) {
+    rounds = data.rounds;
   } else {
-    // fallback if structure is different (just in case)
-    throw new Error("Unexpected JSON structure from openfootball");
+    throw new Error(
+      "Unexpected JSON structure from openfootball: " +
+      "expected array or object with 'rounds' array."
+    );
   }
 
+  const allMatches = [];
+  for (const round of rounds) {
+    if (round.matches && Array.isArray(round.matches)) {
+      for (const m of round.matches) {
+        m.round = round.name;   // attach round/group name for the stage field
+        allMatches.push(m);
+      }
+    }
+  }
+  return allMatches;
+}  
+  
   return allMatches;
 }
 
