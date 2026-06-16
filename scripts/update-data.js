@@ -39,6 +39,7 @@ const nameAliases = {
   "Czechia": "Czech Republic",
   "Côte d'Ivoire": "Ivory Coast",
   "Türkiye": "Turkey"
+  // Add more if you see mismatches in the logs
 };
 
 function normaliseTeamName(raw) {
@@ -57,7 +58,7 @@ function buildTeamIndex() {
   return { teamToFriend, allTeams };
 }
 
-// ===================== FIXED computeStats =====================
+// ===================== IMPROVED computeStats =====================
 function computeStats(matches, allTeams) {
   // Initialize stats for all drafted teams
   const stats = {};
@@ -65,11 +66,25 @@ function computeStats(matches, allTeams) {
     stats[t] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
   });
 
+  // Helper: find a team key in stats case‑insensitively
+  function findTeamKey(teamName) {
+    if (stats[teamName]) return teamName; // exact match
+    // Case‑insensitive search
+    const lower = teamName.toLowerCase();
+    for (const key of Object.keys(stats)) {
+      if (key.toLowerCase() === lower) return key;
+    }
+    return null; // not found
+  }
+
   const completedMatches = [];
 
   matches.forEach(m => {
-    const homeName = normaliseTeamName(m.team1);
-    const awayName = normaliseTeamName(m.team2);
+    const rawHome = normaliseTeamName(m.team1);
+    const rawAway = normaliseTeamName(m.team2);
+
+    const homeName = findTeamKey(rawHome) || rawHome;  // fallback to raw if not found
+    const awayName = findTeamKey(rawAway) || rawAway;
 
     const homeGoals = m.score && m.score.ft ? m.score.ft[0] : null;
     const awayGoals = m.score && m.score.ft ? m.score.ft[1] : null;
@@ -109,7 +124,7 @@ function computeStats(matches, allTeams) {
         venue: m.ground || null
       });
 
-      // ---------- UPDATE STATS FOR EACH DRAFTED TEAM INDEPENDENTLY ----------
+      // ---------- UPDATE STATS ----------
       if (stats[homeName]) {
         const hs = stats[homeName];
         hs.gp++;
@@ -124,6 +139,8 @@ function computeStats(matches, allTeams) {
           hs.pts += 1;
           hs.d++;
         }
+      } else {
+        console.warn(`Team "${homeName}" not in draft – ignoring stats.`);
       }
 
       if (stats[awayName]) {
@@ -140,8 +157,10 @@ function computeStats(matches, allTeams) {
           as.pts += 1;
           as.d++;
         }
+      } else {
+        console.warn(`Team "${awayName}" not in draft – ignoring stats.`);
       }
-      // ---------------------------------------------------------------------
+      // ----------------------------------
     }
   });
 
