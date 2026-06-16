@@ -57,8 +57,9 @@ function buildTeamIndex() {
   return { teamToFriend, allTeams };
 }
 
-// ===================== BULLETPROOF computeStats =====================
+// ===================== FIXED computeStats =====================
 function computeStats(matches, allTeams) {
+  // Initialize stats for all drafted teams
   const stats = {};
   allTeams.forEach(t => {
     stats[t] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
@@ -70,39 +71,32 @@ function computeStats(matches, allTeams) {
     const homeName = normaliseTeamName(m.team1);
     const awayName = normaliseTeamName(m.team2);
 
-    // Extract the full‑time score from score.ft
     const homeGoals = m.score && m.score.ft ? m.score.ft[0] : null;
     const awayGoals = m.score && m.score.ft ? m.score.ft[1] : null;
 
-    // Only process if we have valid numbers
     if (homeGoals !== null && awayGoals !== null && typeof homeGoals === "number" && typeof awayGoals === "number") {
 
-      // ---------- SAFE DATE CONSTRUCTION ----------
+      // -------- Safe date (unchanged) --------
       let dateObj;
       try {
-        let dateStr = m.date; // expects "YYYY-MM-DD"
+        let dateStr = m.date;
         if (dateStr) {
-          // Append time if available, otherwise default to midnight UTC
           const timePart = m.time ? m.time : "00:00:00";
-          dateStr = dateStr + "T" + timePart + "Z"; // Z for UTC
+          dateStr = dateStr + "T" + timePart + "Z";
           dateObj = new Date(dateStr);
           if (isNaN(dateObj.getTime())) {
-            // Fallback: try without time
             dateObj = new Date(m.date);
           }
         } else {
-          // No date provided – use current time
           dateObj = new Date();
         }
       } catch (e) {
-        // If anything fails, use current time
         dateObj = new Date();
       }
-      // Ensure we have a valid date
       if (isNaN(dateObj.getTime())) {
         dateObj = new Date();
       }
-      // --------------------------------------------
+      // ----------------------------------------
 
       completedMatches.push({
         fixtureId: m.id || `${m.team1}-${m.team2}-${m.date}`,
@@ -115,31 +109,39 @@ function computeStats(matches, allTeams) {
         venue: m.ground || null
       });
 
-      if (stats[homeName] && stats[awayName]) {
+      // ---------- UPDATE STATS FOR EACH DRAFTED TEAM INDEPENDENTLY ----------
+      if (stats[homeName]) {
         const hs = stats[homeName];
-        const as = stats[awayName];
         hs.gp++;
         hs.gf += homeGoals;
         hs.ga += awayGoals;
-        as.gp++;
-        as.gf += awayGoals;
-        as.ga += homeGoals;
-
         if (homeGoals > awayGoals) {
           hs.pts += 3;
           hs.w++;
-          as.l++;
         } else if (homeGoals < awayGoals) {
-          as.pts += 3;
-          as.w++;
           hs.l++;
         } else {
           hs.pts += 1;
-          as.pts += 1;
           hs.d++;
+        }
+      }
+
+      if (stats[awayName]) {
+        const as = stats[awayName];
+        as.gp++;
+        as.gf += awayGoals;
+        as.ga += homeGoals;
+        if (awayGoals > homeGoals) {
+          as.pts += 3;
+          as.w++;
+        } else if (awayGoals < homeGoals) {
+          as.l++;
+        } else {
+          as.pts += 1;
           as.d++;
         }
       }
+      // ---------------------------------------------------------------------
     }
   });
 
@@ -165,25 +167,20 @@ async function fetchOpenFootballData() {
   }
   const data = await res.json();
 
-  // Helper: check if an object looks like a match (has team1 and team2)
   function isMatch(obj) {
     return obj && typeof obj === "object" && "team1" in obj && "team2" in obj;
   }
 
-  // Helper: recursively find the first array that contains match objects
   function findMatchesArray(obj) {
     if (Array.isArray(obj)) {
-      // If the array itself contains match objects, return it
       if (obj.length > 0 && isMatch(obj[0])) {
         return obj;
       }
-      // Otherwise, search each item
       for (const item of obj) {
         const found = findMatchesArray(item);
         if (found) return found;
       }
     } else if (obj && typeof obj === "object") {
-      // Search each property value
       for (const key of Object.keys(obj)) {
         const found = findMatchesArray(obj[key]);
         if (found) return found;
@@ -192,15 +189,11 @@ async function fetchOpenFootballData() {
     return null;
   }
 
-  // Attempt to find matches
   let matchesArray = findMatchesArray(data);
-
   if (!matchesArray) {
     console.warn("Could not find any match data in the response. Returning empty array.");
     return [];
   }
-
-  // Attach a default round/group if missing
   return matchesArray.map(m => {
     if (!m.round && !m.group) {
       m.round = "Match";
