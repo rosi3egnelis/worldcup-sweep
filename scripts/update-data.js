@@ -38,8 +38,9 @@ const nameAliases = {
   "IR Iran": "Iran",
   "Czechia": "Czech Republic",
   "Côte d'Ivoire": "Ivory Coast",
-  "Türkiye": "Turkey"
-  // Add more if you see mismatches in the logs
+  "Türkiye": "Turkey",
+  "Bosnia & Herzegovina": "Bosnia and Herzegovina",  // added
+  "Curaçao": "Curacao"                               // added
 };
 
 function normaliseTeamName(raw) {
@@ -58,23 +59,19 @@ function buildTeamIndex() {
   return { teamToFriend, allTeams };
 }
 
-// ===================== IMPROVED computeStats =====================
 function computeStats(matches, allTeams) {
-  // Initialize stats for all drafted teams
   const stats = {};
   allTeams.forEach(t => {
     stats[t] = { pts: 0, gp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
   });
 
-  // Helper: find a team key in stats case‑insensitively
   function findTeamKey(teamName) {
-    if (stats[teamName]) return teamName; // exact match
-    // Case‑insensitive search
+    if (stats[teamName]) return teamName;
     const lower = teamName.toLowerCase();
     for (const key of Object.keys(stats)) {
       if (key.toLowerCase() === lower) return key;
     }
-    return null; // not found
+    return null;
   }
 
   const completedMatches = [];
@@ -83,7 +80,7 @@ function computeStats(matches, allTeams) {
     const rawHome = normaliseTeamName(m.team1);
     const rawAway = normaliseTeamName(m.team2);
 
-    const homeName = findTeamKey(rawHome) || rawHome;  // fallback to raw if not found
+    const homeName = findTeamKey(rawHome) || rawHome;
     const awayName = findTeamKey(rawAway) || rawAway;
 
     const homeGoals = m.score && m.score.ft ? m.score.ft[0] : null;
@@ -91,7 +88,6 @@ function computeStats(matches, allTeams) {
 
     if (homeGoals !== null && awayGoals !== null && typeof homeGoals === "number" && typeof awayGoals === "number") {
 
-      // -------- Safe date (unchanged) --------
       let dateObj;
       try {
         let dateStr = m.date;
@@ -111,7 +107,6 @@ function computeStats(matches, allTeams) {
       if (isNaN(dateObj.getTime())) {
         dateObj = new Date();
       }
-      // ----------------------------------------
 
       completedMatches.push({
         fixtureId: m.id || `${m.team1}-${m.team2}-${m.date}`,
@@ -124,21 +119,14 @@ function computeStats(matches, allTeams) {
         venue: m.ground || null
       });
 
-      // ---------- UPDATE STATS ----------
       if (stats[homeName]) {
         const hs = stats[homeName];
         hs.gp++;
         hs.gf += homeGoals;
         hs.ga += awayGoals;
-        if (homeGoals > awayGoals) {
-          hs.pts += 3;
-          hs.w++;
-        } else if (homeGoals < awayGoals) {
-          hs.l++;
-        } else {
-          hs.pts += 1;
-          hs.d++;
-        }
+        if (homeGoals > awayGoals) { hs.pts += 3; hs.w++; }
+        else if (homeGoals < awayGoals) { hs.l++; }
+        else { hs.pts += 1; hs.d++; }
       } else {
         console.warn(`Team "${homeName}" not in draft – ignoring stats.`);
       }
@@ -148,26 +136,18 @@ function computeStats(matches, allTeams) {
         as.gp++;
         as.gf += awayGoals;
         as.ga += homeGoals;
-        if (awayGoals > homeGoals) {
-          as.pts += 3;
-          as.w++;
-        } else if (awayGoals < homeGoals) {
-          as.l++;
-        } else {
-          as.pts += 1;
-          as.d++;
-        }
+        if (awayGoals > homeGoals) { as.pts += 3; as.w++; }
+        else if (awayGoals < homeGoals) { as.l++; }
+        else { as.pts += 1; as.d++; }
       } else {
         console.warn(`Team "${awayName}" not in draft – ignoring stats.`);
       }
-      // ----------------------------------
     }
   });
 
   completedMatches.sort((a, b) => new Date(b.date) - new Date(a.date));
   return { stats, matches: completedMatches };
 }
-// ===================== END OF computeStats =====================
 
 function computeFriendScores(stats) {
   return friends.map(f => {
@@ -176,9 +156,6 @@ function computeFriendScores(stats) {
   });
 }
 
-/**
- * Flexible parser – tries to extract an array of match objects from any structure.
- */
 async function fetchOpenFootballData() {
   const res = await fetch(DATA_URL);
   if (!res.ok) {
