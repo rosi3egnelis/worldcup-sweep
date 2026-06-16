@@ -1,0 +1,23 @@
+{
+  "generatedAt": null,
+  "season": 2026,
+  "leagueId": 1,
+  "totalFixturesFetched": 0,
+  "completedMatches": 0,
+  "friends": [
+    { "name": "Patty", "teams": ["Algeria", "Ghana", "Morocco", "Mexico"], "points": 0 },
+    { "name": "Kinaadman", "teams": ["Turkey", "Senegal", "Austria", "Canada"], "points": 0 },
+    { "name": "Joe", "teams": ["Tunisia", "Uzbekistan", "Paraguay", "Belgium"], "points": 0 },
+    { "name": "Brizuela", "teams": ["South Africa", "Saudi Arabia", "Uruguay", "France"], "points": 0 },
+    { "name": "Miriam", "teams": ["Qatar", "Ivory Coast", "Ecuador", "United States"], "points": 0 },
+    { "name": "Norton", "teams": ["Cape Verde", "Australia", "Switzerland", "Germany"], "points": 0 },
+    { "name": "Sal", "teams": ["DR Congo", "Jordan", "Croatia", "Portugal"], "points": 0 },
+    { "name": "Oots", "teams": ["Panama", "Bosnia and Herzegovina", "Norway", "Netherlands"], "points": 0 },
+    { "name": "Pardillo", "teams": ["Haiti", "Czech Republic", "Colombia", "England"], "points": 0 },
+    { "name": "Silenge", "teams": ["Iran", "New Zealand", "Japan", "Spain"], "points": 0 },
+    { "name": "Ron", "teams": ["Iraq", "Sweden", "Egypt", "Brazil"], "points": 0 },
+    { "name": "Rianne", "teams": ["Curacao", "Scotland", "South Korea", "Argentina"], "points": 0 }
+  ],
+  "teamStats": {},
+  "matches": []
+}
