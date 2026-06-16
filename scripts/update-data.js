@@ -58,6 +58,7 @@ function buildTeamIndex() {
   return { teamToFriend, allTeams };
 }
 
+// ===================== CORRECTED computeStats =====================
 function computeStats(matches, allTeams) {
   const stats = {};
   allTeams.forEach(t => {
@@ -69,10 +70,13 @@ function computeStats(matches, allTeams) {
   matches.forEach(m => {
     const homeName = normaliseTeamName(m.team1);
     const awayName = normaliseTeamName(m.team2);
-    const homeGoals = m.goals1;
-    const awayGoals = m.goals2;
 
-    if (typeof homeGoals === "number" && typeof awayGoals === "number") {
+    // Extract the full‑time score from score.ft
+    const homeGoals = m.score && m.score.ft ? m.score.ft[0] : null;
+    const awayGoals = m.score && m.score.ft ? m.score.ft[1] : null;
+
+    // Only process if we have valid numbers
+    if (homeGoals !== null && awayGoals !== null && typeof homeGoals === "number" && typeof awayGoals === "number") {
       completedMatches.push({
         fixtureId: m.id || `${m.team1}-${m.team2}-${m.date}`,
         date: m.date ? new Date(m.date + "T" + (m.time || "00:00")).toISOString() : new Date().toISOString(),
@@ -115,6 +119,7 @@ function computeStats(matches, allTeams) {
   completedMatches.sort((a, b) => new Date(b.date) - new Date(a.date));
   return { stats, matches: completedMatches };
 }
+// ===================== END OF CORRECTED SECTION =====================
 
 function computeFriendScores(stats) {
   return friends.map(f => {
@@ -168,18 +173,10 @@ async function fetchOpenFootballData() {
     return [];
   }
 
-  // Now we have an array of matches – but they might be nested inside rounds.
-  // If the matches have a "round" property already, we can use that as stage.
-  // Otherwise, we need to attach the round name if they came from a round object.
-  // The current structure might be just a flat array of matches; if so we're done.
-  // But openfootball usually returns an array of rounds, each with a "matches" array.
-  // Since we already extracted an array of match objects, we can just return it.
-  // However, we might want to attach round information if available from the parent.
-  // For simplicity, we assume the matches already have a "round" or "group" field.
-  // If not, we'll set a default.
+  // Attach a default round/group if missing
   return matchesArray.map(m => {
     if (!m.round && !m.group) {
-      m.round = "Match"; // fallback
+      m.round = "Match";
     }
     return m;
   });
