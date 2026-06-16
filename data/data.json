@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T13:53:10.792Z",
+  "generatedAt": "2026-06-16T14:01:05.282Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
@@ -23,7 +23,7 @@
         "Austria",
         "Canada"
       ],
-      "points": 0
+      "points": 1
     },
     {
       "name": "Joe",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 5
+      "points": 8
     },
     {
       "name": "Sal",
@@ -191,13 +191,13 @@
       "ga": 0
     },
     "Canada": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Tunisia": {
       "pts": 0,
@@ -335,13 +335,13 @@
       "ga": 1
     },
     "Germany": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 7,
+      "ga": 1
     },
     "DR Congo": {
       "pts": 0,
