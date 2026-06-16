@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-16T17:06:20.042Z",
+  "generatedAt": "2026-06-16T22:18:58.881Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 16,
+  "completedMatches": 17,
   "friends": [
     {
       "name": "Patty",
@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 2
+      "points": 5
     },
     {
       "name": "Miriam",
@@ -174,12 +174,12 @@
     },
     "Senegal": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 3
     },
     "Austria": {
       "pts": 0,
@@ -263,13 +263,13 @@
       "ga": 1
     },
     "France": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 3,
+      "ga": 1
     },
     "Qatar": {
       "pts": 1,
@@ -561,6 +561,16 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "France-Senegal-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "France",
+      "away": "Senegal",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
     {
       "fixtureId": "Belgium-Egypt-2026-06-15",
       "date": "2026-06-15T00:00:00.000Z",
