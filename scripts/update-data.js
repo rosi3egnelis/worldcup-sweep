@@ -77,9 +77,34 @@ function computeStats(matches, allTeams) {
 
     // Only process if we have valid numbers
     if (homeGoals !== null && awayGoals !== null && typeof homeGoals === "number" && typeof awayGoals === "number") {
+      // ---------- SAFE DATE HANDLING ----------
+      let matchDate = null;
+      if (m.date) {
+        // Try to build a full ISO‑like string: date + "T" + time
+        let dateString = m.date;
+        if (m.time) {
+          dateString += "T" + m.time;
+        } else {
+          // If no time provided, assume midnight UTC
+          dateString += "T00:00:00";
+        }
+        matchDate = new Date(dateString);
+
+        // If that fails, try just the date part
+        if (isNaN(matchDate.getTime())) {
+          matchDate = new Date(m.date);
+        }
+      }
+
+      // If still invalid, use current time as fallback
+      if (!matchDate || isNaN(matchDate.getTime())) {
+        matchDate = new Date();
+      }
+      // ---------------------------------------
+
       completedMatches.push({
         fixtureId: m.id || `${m.team1}-${m.team2}-${m.date}`,
-        date: m.date ? new Date(m.date + "T" + (m.time || "00:00")).toISOString() : new Date().toISOString(),
+        date: matchDate.toISOString(),
         stage: m.group || m.round || "Group stage",
         home: homeName,
         away: awayName,
