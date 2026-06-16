@@ -134,33 +134,6 @@ async function fetchOpenFootballData() {
   if (!res.ok) {
     throw new Error(`Failed to fetch openfootball data: ${res.status} ${res.statusText}`);
   }
- // **************** OLD CODE TO BE REMOVED **************************
- // const data = await res.json();
-
-  // The JSON is an array of rounds; each round has a "matches" array.
-  // Some rounds may be empty. Flatten all matches.
- // const allMatches = [];
- // if (Array.isArray(data)) {
- //   for (const round of data) {
- //     if (round.matches && Array.isArray(round.matches)) {
- //       // Add round/group info to each match for the stage field
- //       for (const m of round.matches) {
- //         m.round = round.name;   // e.g., "Group A", "Quarter-finals"
- //         allMatches.push(m);
- //       }
- //     }
- //   }
- // } else {
- //   // fallback if structure is different (just in case)
- //   throw new Error("Unexpected JSON structure from openfootball");
- // }
-// **********************************************************************
-
-async function fetchOpenFootballData() {
-  const res = await fetch(DATA_URL);
-  if (!res.ok) {
-    throw new Error(`Failed to fetch openfootball data: ${res.status} ${res.statusText}`);
-  }
   const data = await res.json();
 
   // openfootball returns either:
@@ -187,9 +160,6 @@ async function fetchOpenFootballData() {
       }
     }
   }
-  return allMatches;
-}  
-  
   return allMatches;
 }
 
