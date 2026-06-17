@@ -14,6 +14,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Fetch latest fixtures and rebuild data.json
+        run: node scripts/update-data.js
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "sweep-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/data.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update sweep data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          finame: Update World Cup sweep data
+
+on:
+  schedule:
+    # Runs at minute 0 past every 4th hour (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
+    - cron: "0 */4 * * *"
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
         uses: actions/checkout@v5   # Updated from v4 – supports Node.js 24
 
       - name: Set up Node
