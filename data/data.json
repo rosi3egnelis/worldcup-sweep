@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-17T18:14:11.503Z",
+  "generatedAt": "2026-06-17T21:59:33.113Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 20,
+  "completedMatches": 21,
   "friends": [
     {
       "name": "Patty",
@@ -73,7 +73,7 @@
         "Croatia",
         "Portugal"
       ],
-      "points": 0
+      "points": 2
     },
     {
       "name": "Oots",
@@ -344,13 +344,13 @@
       "ga": 1
     },
     "DR Congo": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Jordan": {
       "pts": 0,
@@ -371,13 +371,13 @@
       "ga": 0
     },
     "Portugal": {
-      "pts": 0,
-      "gp": 0,
+      "pts": 1,
+      "gp": 1,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 1,
+      "ga": 1
     },
     "Panama": {
       "pts": 0,
@@ -561,6 +561,16 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Portugal-DR Congo-2026-06-17",
+      "date": "2026-06-17T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Portugal",
+      "away": "DR Congo",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Houston"
+    },
     {
       "fixtureId": "France-Senegal-2026-06-16",
       "date": "2026-06-16T00:00:00.000Z",
@@ -1225,29 +1235,29 @@
     ],
     "Group K": [
       {
-        "team": "Colombia",
-        "pts": 0,
-        "gp": 0,
-        "w": 0,
-        "d": 0,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0
-      },
-      {
         "team": "DR Congo",
-        "pts": 0,
-        "gp": 0,
+        "pts": 1,
+        "gp": 1,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 0,
-        "gf": 0,
-        "ga": 0,
+        "gf": 1,
+        "ga": 1,
         "gd": 0
       },
       {
         "team": "Portugal",
+        "pts": 1,
+        "gp": 1,
+        "w": 0,
+        "d": 1,
+        "l": 0,
+        "gf": 1,
+        "ga": 1,
+        "gd": 0
+      },
+      {
+        "team": "Colombia",
         "pts": 0,
         "gp": 0,
         "w": 0,
@@ -1388,8 +1398,8 @@
       "inHuntForR32": true
     },
     {
-      "group": "Group L",
-      "team": "Ghana",
+      "group": "Group K",
+      "team": "Colombia",
       "pts": 0,
       "gp": 0,
       "w": 0,
@@ -1402,8 +1412,8 @@
       "inHuntForR32": true
     },
     {
-      "group": "Group K",
-      "team": "Portugal",
+      "group": "Group L",
+      "team": "Ghana",
       "pts": 0,
       "gp": 0,
       "w": 0,
