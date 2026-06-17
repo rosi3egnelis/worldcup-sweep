@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-16T22:18:58.881Z",
+  "generatedAt": "2026-06-17T04:47:06.196Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 17,
+  "completedMatches": 19,
   "friends": [
     {
       "name": "Patty",
@@ -83,7 +83,7 @@
         "Norway",
         "Netherlands"
       ],
-      "points": 2
+      "points": 5
     },
     {
       "name": "Pardillo",
@@ -123,18 +123,18 @@
         "South Korea",
         "Argentina"
       ],
-      "points": 6
+      "points": 9
     }
   ],
   "teamStats": {
     "Algeria": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 0,
-      "ga": 0
+      "ga": 3
     },
     "Ghana": {
       "pts": 0,
@@ -398,13 +398,13 @@
       "ga": 1
     },
     "Norway": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 4,
+      "ga": 1
     },
     "Netherlands": {
       "pts": 1,
@@ -489,12 +489,12 @@
     },
     "Iraq": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 4
     },
     "Sweden": {
       "pts": 3,
@@ -551,12 +551,12 @@
       "ga": 1
     },
     "Argentina": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
+      "gf": 3,
       "ga": 0
     }
   },
@@ -570,6 +570,26 @@
       "homeGoals": 3,
       "awayGoals": 1,
       "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Iraq-Norway-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Iraq",
+      "away": "Norway",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Argentina-Algeria-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Argentina",
+      "away": "Algeria",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "venue": "Kansas City"
     },
     {
       "fixtureId": "Belgium-Egypt-2026-06-15",
