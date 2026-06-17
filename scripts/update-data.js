@@ -204,3 +204,124 @@ function buildGroupStandings(stats) {
     );
     groups[groupName] = rows;
   });
+  return groups;
+}
+
+// Ranks every group's 3rd-placed team against each other, since 8 of the
+// 12 advance to the Round of 32. This is informational only — it shows
+// where each third-place team currently stands, not a guaranteed outcome,
+// since results are still incomplete and FIFA's official tiebreakers
+// include fair play / ranking criteria we can't compute here.
+function rankThirdPlaceTeams(groupStandings) {
+  const thirds = Object.entries(groupStandings).map(([groupName, rows]) => ({
+    group: groupName,
+    ...rows[2]
+  }));
+  thirds.sort((a, b) => (b.pts - a.pts) || (b.gd - a.gd) || (b.gf - a.gf) || a.team.localeCompare(b.team));
+  return thirds.map((t, i) => ({ ...t, provisionalRank: i + 1, inHuntForR32: i < 8 }));
+}
+
+// Separates knockout-stage matches (Round of 32 onward) from group-stage
+// ones, based purely on whatever round/stage label openfootball provides.
+// We never invent a pairing ourselves — a knockout match only appears here
+// once the source data names both real teams.
+function splitKnockoutMatches(allMatches) {
+  const knockout = {};
+  knockoutRoundOrder.forEach(r => { knockout[r] = []; });
+
+  allMatches.forEach(m => {
+    const stage = m.stage || "";
+    const matchedRound = knockoutRoundOrder.find(r =>
+      stage.toLowerCase().includes(r.toLowerCase()) ||
+      (r === "Round of 32" && /round of 32|r32/i.test(stage)) ||
+      (r === "Round of 16" && /round of 16|r16/i.test(stage)) ||
+      (r === "Quarter-finals" && /quarter/i.test(stage)) ||
+      (r === "Semi-finals" && /semi/i.test(stage)) ||
+      (r === "Third place play-off" && /third.place/i.test(stage)) ||
+      (r === "Final" && /^final$/i.test(stage.trim()))
+    );
+    if (matchedRound) knockout[matchedRound].push(m);
+  });
+
+  return knockout;
+}
+
+async function fetchOpenFootballData() {
+  const res = await fetch(DATA_URL);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch openfootball data: ${res.status} ${res.statusText}`);
+  }
+  const data = await res.json();
+
+  function isMatch(obj) {
+    return obj && typeof obj === "object" && "team1" in obj && "team2" in obj;
+  }
+
+  function findMatchesArray(obj) {
+    if (Array.isArray(obj)) {
+      if (obj.length > 0 && isMatch(obj[0])) {
+        return obj;
+      }
+      for (const item of obj) {
+        const found = findMatchesArray(item);
+        if (found) return found;
+      }
+    } else if (obj && typeof obj === "object") {
+      for (const key of Object.keys(obj)) {
+        const found = findMatchesArray(obj[key]);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+
+  let matchesArray = findMatchesArray(data);
+  if (!matchesArray) {
+    console.warn("Could not find any match data in the response. Returning empty array.");
+    return [];
+  }
+  return matchesArray.map(m => {
+    if (!m.round && !m.group) {
+      m.round = "Match";
+    }
+    return m;
+  });
+}
+
+async function main() {
+  console.log("Fetching World Cup 2026 data from openfootball...");
+  const rawMatches = await fetchOpenFootballData();
+  console.log(`Received ${rawMatches.length} matches (including future ones).`);
+
+  const { allTeams } = buildTeamIndex();
+  const { stats, matches } = computeStats(rawMatches, allTeams);
+  const friendScores = computeFriendScores(stats);
+  const groupStandings = buildGroupStandings(stats);
+  const thirdPlaceRanking = rankThirdPlaceTeams(groupStandings);
+  const knockout = splitKnockoutMatches(matches);
+
+  const output = {
+    generatedAt: new Date().toISOString(),
+    season: 2026,
+    leagueId: 1,
+    totalFixturesFetched: rawMatches.length,
+    completedMatches: matches.length,
+    friends: friendScores,
+    teamStats: stats,
+    matches,
+    groupStandings,
+    thirdPlaceRanking,
+    knockout
+  };
+
+  const outPath = path.join(__dirname, "..", "data", "data.json");
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
+  console.log(`Wrote ${outPath}`);
+  console.log(`Completed matches used for standings: ${matches.length}`);
+}
+
+main().catch(err => {
+  console.error("update-data.js failed:", err);
+  process.exit(1);
+});
