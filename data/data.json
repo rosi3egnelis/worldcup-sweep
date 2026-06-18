@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-18T18:25:21.418Z",
+  "generatedAt": "2026-06-18T22:06:18.847Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 25,
+  "completedMatches": 26,
   "friends": [
     {
       "name": "Patty",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 8
+      "points": 11
     },
     {
       "name": "Sal",
@@ -326,13 +326,13 @@
       "ga": 0
     },
     "Switzerland": {
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
+      "pts": 4,
+      "gp": 2,
+      "w": 1,
       "d": 1,
       "l": 0,
-      "gf": 1,
-      "ga": 1
+      "gf": 5,
+      "ga": 2
     },
     "Germany": {
       "pts": 3,
@@ -390,12 +390,12 @@
     },
     "Bosnia and Herzegovina": {
       "pts": 1,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 1,
-      "l": 0,
-      "gf": 1,
-      "ga": 1
+      "l": 1,
+      "gf": 2,
+      "ga": 5
     },
     "Norway": {
       "pts": 3,
@@ -570,6 +570,16 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Switzerland-Bosnia & Herzegovina-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Switzerland",
+      "away": "Bosnia and Herzegovina",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "venue": "Los Angeles (Inglewood)"
     },
     {
       "fixtureId": "Portugal-DR Congo-2026-06-17",
@@ -861,15 +871,15 @@
     ],
     "Group B": [
       {
-        "team": "Bosnia and Herzegovina",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
+        "team": "Switzerland",
+        "pts": 4,
+        "gp": 2,
+        "w": 1,
         "d": 1,
         "l": 0,
-        "gf": 1,
-        "ga": 1,
-        "gd": 0
+        "gf": 5,
+        "ga": 2,
+        "gd": 3
       },
       {
         "team": "Canada",
@@ -894,15 +904,15 @@
         "gd": 0
       },
       {
-        "team": "Switzerland",
+        "team": "Bosnia and Herzegovina",
         "pts": 1,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 1,
-        "l": 0,
-        "gf": 1,
-        "ga": 1,
-        "gd": 0
+        "l": 1,
+        "gf": 2,
+        "ga": 5,
+        "gd": -3
       }
     ],
     "Group C": [
