@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-18T15:20:13.221Z",
+  "generatedAt": "2026-06-18T18:25:21.418Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 24,
+  "completedMatches": 25,
   "friends": [
     {
       "name": "Patty",
@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 5
+      "points": 6
     },
     {
       "name": "Miriam",
@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 6
+      "points": 7
     },
     {
       "name": "Silenge",
@@ -236,13 +236,13 @@
       "ga": 1
     },
     "South Africa": {
-      "pts": 0,
-      "gp": 1,
+      "pts": 1,
+      "gp": 2,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 1,
-      "gf": 0,
-      "ga": 2
+      "gf": 1,
+      "ga": 3
     },
     "Saudi Arabia": {
       "pts": 1,
@@ -425,13 +425,13 @@
       "ga": 1
     },
     "Czech Republic": {
-      "pts": 0,
-      "gp": 1,
+      "pts": 1,
+      "gp": 2,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 1,
-      "gf": 1,
-      "ga": 2
+      "gf": 2,
+      "ga": 3
     },
     "Colombia": {
       "pts": 3,
@@ -561,6 +561,16 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Czech Republic-South Africa-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Czech Republic",
+      "away": "South Africa",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Atlanta"
+    },
     {
       "fixtureId": "Portugal-DR Congo-2026-06-17",
       "date": "2026-06-17T00:00:00.000Z",
@@ -828,24 +838,24 @@
       },
       {
         "team": "Czech Republic",
-        "pts": 0,
-        "gp": 1,
+        "pts": 1,
+        "gp": 2,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 1,
-        "gf": 1,
-        "ga": 2,
+        "gf": 2,
+        "ga": 3,
         "gd": -1
       },
       {
         "team": "South Africa",
-        "pts": 0,
-        "gp": 1,
+        "pts": 1,
+        "gp": 2,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 1,
-        "gf": 0,
-        "ga": 2,
+        "gf": 1,
+        "ga": 3,
         "gd": -2
       }
     ],
@@ -1444,13 +1454,13 @@
     {
       "group": "Group A",
       "team": "Czech Republic",
-      "pts": 0,
-      "gp": 1,
+      "pts": 1,
+      "gp": 2,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 1,
-      "gf": 1,
-      "ga": 2,
+      "gf": 2,
+      "ga": 3,
       "gd": -1,
       "provisionalRank": 7,
       "inHuntForR32": true
