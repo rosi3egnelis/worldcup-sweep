@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-18T03:46:04.762Z",
+  "generatedAt": "2026-06-18T08:46:00.882Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 23,
+  "completedMatches": 24,
   "friends": [
     {
       "name": "Patty",
@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 3
+      "points": 6
     },
     {
       "name": "Silenge",
@@ -210,12 +210,12 @@
     },
     "Uzbekistan": {
       "pts": 0,
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "d": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0
+      "l": 1,
+      "gf": 1,
+      "ga": 3
     },
     "Paraguay": {
       "pts": 0,
@@ -434,13 +434,13 @@
       "ga": 2
     },
     "Colombia": {
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
+      "pts": 3,
+      "gp": 1,
+      "w": 1,
       "d": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0
+      "gf": 3,
+      "ga": 1
     },
     "England": {
       "pts": 3,
@@ -570,6 +570,16 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "venue": "Houston"
+    },
+    {
+      "fixtureId": "Uzbekistan-Colombia-2026-06-17",
+      "date": "2026-06-17T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "venue": "Mexico City"
     },
     {
       "fixtureId": "England-Croatia-2026-06-17",
@@ -1255,6 +1265,17 @@
     ],
     "Group K": [
       {
+        "team": "Colombia",
+        "pts": 3,
+        "gp": 1,
+        "w": 1,
+        "d": 0,
+        "l": 0,
+        "gf": 3,
+        "ga": 1,
+        "gd": 2
+      },
+      {
         "team": "DR Congo",
         "pts": 1,
         "gp": 1,
@@ -1277,26 +1298,15 @@
         "gd": 0
       },
       {
-        "team": "Colombia",
-        "pts": 0,
-        "gp": 0,
-        "w": 0,
-        "d": 0,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0
-      },
-      {
         "team": "Uzbekistan",
         "pts": 0,
-        "gp": 0,
+        "gp": 1,
         "w": 0,
         "d": 0,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0
+        "l": 1,
+        "gf": 1,
+        "ga": 3,
+        "gd": -2
       }
     ],
     "Group L": [
@@ -1390,8 +1400,8 @@
       "inHuntForR32": true
     },
     {
-      "group": "Group B",
-      "team": "Qatar",
+      "group": "Group K",
+      "team": "Portugal",
       "pts": 1,
       "gp": 1,
       "w": 0,
@@ -1404,26 +1414,26 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group B",
+      "team": "Qatar",
+      "pts": 1,
+      "gp": 1,
+      "w": 0,
+      "d": 1,
+      "l": 0,
+      "gf": 1,
+      "ga": 1,
+      "gd": 0,
+      "provisionalRank": 5,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group H",
       "team": "Cape Verde",
       "pts": 1,
       "gp": 1,
       "w": 0,
       "d": 1,
-      "l": 0,
-      "gf": 0,
-      "ga": 0,
-      "gd": 0,
-      "provisionalRank": 5,
-      "inHuntForR32": true
-    },
-    {
-      "group": "Group K",
-      "team": "Colombia",
-      "pts": 0,
-      "gp": 0,
-      "w": 0,
-      "d": 0,
       "l": 0,
       "gf": 0,
       "ga": 0,
