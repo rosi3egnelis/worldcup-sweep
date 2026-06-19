@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-18T22:06:18.847Z",
+  "generatedAt": "2026-06-19T04:08:25.892Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 26,
+  "completedMatches": 28,
   "friends": [
     {
       "name": "Patty",
@@ -13,7 +13,7 @@
         "Morocco",
         "Mexico"
       ],
-      "points": 7
+      "points": 10
     },
     {
       "name": "Kinaadman",
@@ -23,7 +23,7 @@
         "Austria",
         "Canada"
       ],
-      "points": 4
+      "points": 7
     },
     {
       "name": "Joe",
@@ -155,12 +155,12 @@
       "ga": 1
     },
     "Mexico": {
-      "pts": 3,
-      "gp": 1,
-      "w": 1,
+      "pts": 6,
+      "gp": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "gf": 2,
+      "gf": 3,
       "ga": 0
     },
     "Turkey": {
@@ -191,12 +191,12 @@
       "ga": 1
     },
     "Canada": {
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
+      "pts": 4,
+      "gp": 2,
+      "w": 1,
       "d": 1,
       "l": 0,
-      "gf": 1,
+      "gf": 7,
       "ga": 1
     },
     "Tunisia": {
@@ -273,12 +273,12 @@
     },
     "Qatar": {
       "pts": 1,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 1,
-      "l": 0,
+      "l": 1,
       "gf": 1,
-      "ga": 1
+      "ga": 7
     },
     "Ivory Coast": {
       "pts": 3,
@@ -543,12 +543,12 @@
     },
     "South Korea": {
       "pts": 3,
-      "gp": 1,
+      "gp": 2,
       "w": 1,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 2,
-      "ga": 1
+      "ga": 2
     },
     "Argentina": {
       "pts": 3,
@@ -572,6 +572,16 @@
       "venue": "Atlanta"
     },
     {
+      "fixtureId": "Mexico-South Korea-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Mexico",
+      "away": "South Korea",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Guadalajara (Zapopan)"
+    },
+    {
       "fixtureId": "Switzerland-Bosnia & Herzegovina-2026-06-18",
       "date": "2026-06-18T00:00:00.000Z",
       "stage": "Group B",
@@ -580,6 +590,16 @@
       "homeGoals": 4,
       "awayGoals": 1,
       "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Canada-Qatar-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Canada",
+      "away": "Qatar",
+      "homeGoals": 6,
+      "awayGoals": 0,
+      "venue": "Vancouver"
     },
     {
       "fixtureId": "Portugal-DR Congo-2026-06-17",
@@ -826,25 +846,25 @@
     "Group A": [
       {
         "team": "Mexico",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
+        "pts": 6,
+        "gp": 2,
+        "w": 2,
         "d": 0,
         "l": 0,
-        "gf": 2,
+        "gf": 3,
         "ga": 0,
-        "gd": 2
+        "gd": 3
       },
       {
         "team": "South Korea",
         "pts": 3,
-        "gp": 1,
+        "gp": 2,
         "w": 1,
         "d": 0,
-        "l": 0,
+        "l": 1,
         "gf": 2,
-        "ga": 1,
-        "gd": 1
+        "ga": 2,
+        "gd": 0
       },
       {
         "team": "Czech Republic",
@@ -871,6 +891,17 @@
     ],
     "Group B": [
       {
+        "team": "Canada",
+        "pts": 4,
+        "gp": 2,
+        "w": 1,
+        "d": 1,
+        "l": 0,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6
+      },
+      {
         "team": "Switzerland",
         "pts": 4,
         "gp": 2,
@@ -882,28 +913,6 @@
         "gd": 3
       },
       {
-        "team": "Canada",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
-        "d": 1,
-        "l": 0,
-        "gf": 1,
-        "ga": 1,
-        "gd": 0
-      },
-      {
-        "team": "Qatar",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
-        "d": 1,
-        "l": 0,
-        "gf": 1,
-        "ga": 1,
-        "gd": 0
-      },
-      {
         "team": "Bosnia and Herzegovina",
         "pts": 1,
         "gp": 2,
@@ -913,6 +922,17 @@
         "gf": 2,
         "ga": 5,
         "gd": -3
+      },
+      {
+        "team": "Qatar",
+        "pts": 1,
+        "gp": 2,
+        "w": 0,
+        "d": 1,
+        "l": 1,
+        "gf": 1,
+        "ga": 7,
+        "gd": -6
       }
     ],
     "Group C": [
@@ -1434,20 +1454,6 @@
       "inHuntForR32": true
     },
     {
-      "group": "Group B",
-      "team": "Qatar",
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
-      "d": 1,
-      "l": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "provisionalRank": 5,
-      "inHuntForR32": true
-    },
-    {
       "group": "Group H",
       "team": "Cape Verde",
       "pts": 1,
@@ -1458,7 +1464,7 @@
       "gf": 0,
       "ga": 0,
       "gd": 0,
-      "provisionalRank": 6,
+      "provisionalRank": 5,
       "inHuntForR32": true
     },
     {
@@ -1472,6 +1478,20 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
+      "provisionalRank": 6,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group B",
+      "team": "Bosnia and Herzegovina",
+      "pts": 1,
+      "gp": 2,
+      "w": 0,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3,
       "provisionalRank": 7,
       "inHuntForR32": true
     },
