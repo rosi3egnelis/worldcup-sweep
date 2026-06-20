@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-19T21:09:04.011Z",
+  "generatedAt": "2026-06-20T03:31:39.088Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 28,
+  "completedMatches": 31,
   "friends": [
     {
       "name": "Patty",
@@ -13,7 +13,7 @@
         "Morocco",
         "Mexico"
       ],
-      "points": 10
+      "points": 13
     },
     {
       "name": "Kinaadman",
@@ -53,7 +53,7 @@
         "Ecuador",
         "United States"
       ],
-      "points": 7
+      "points": 10
     },
     {
       "name": "Norton",
@@ -113,7 +113,7 @@
         "Egypt",
         "Brazil"
       ],
-      "points": 5
+      "points": 8
     },
     {
       "name": "Rianne",
@@ -146,12 +146,12 @@
       "ga": 0
     },
     "Morocco": {
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
+      "pts": 4,
+      "gp": 2,
+      "w": 1,
       "d": 1,
       "l": 0,
-      "gf": 1,
+      "gf": 2,
       "ga": 1
     },
     "Mexico": {
@@ -299,12 +299,12 @@
       "ga": 1
     },
     "United States": {
-      "pts": 3,
-      "gp": 1,
-      "w": 1,
+      "pts": 6,
+      "gp": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "gf": 4,
+      "gf": 6,
       "ga": 1
     },
     "Cape Verde": {
@@ -318,12 +318,12 @@
     },
     "Australia": {
       "pts": 3,
-      "gp": 1,
+      "gp": 2,
       "w": 1,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 2,
-      "ga": 0
+      "ga": 2
     },
     "Switzerland": {
       "pts": 4,
@@ -417,12 +417,12 @@
     },
     "Haiti": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
+      "l": 2,
       "gf": 0,
-      "ga": 1
+      "ga": 4
     },
     "Czech Republic": {
       "pts": 1,
@@ -515,12 +515,12 @@
       "ga": 1
     },
     "Brazil": {
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
+      "pts": 4,
+      "gp": 2,
+      "w": 1,
       "d": 1,
       "l": 0,
-      "gf": 1,
+      "gf": 4,
       "ga": 1
     },
     "Curacao": {
@@ -534,12 +534,12 @@
     },
     "Scotland": {
       "pts": 3,
-      "gp": 1,
+      "gp": 2,
       "w": 1,
       "d": 0,
-      "l": 0,
+      "l": 1,
       "gf": 1,
-      "ga": 0
+      "ga": 1
     },
     "South Korea": {
       "pts": 3,
@@ -561,6 +561,36 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Scotland-Morocco-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Scotland",
+      "away": "Morocco",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Brazil-Haiti-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Brazil",
+      "away": "Haiti",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "USA-Australia-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "United States",
+      "away": "Australia",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Seattle"
+    },
     {
       "fixtureId": "Czech Republic-South Africa-2026-06-18",
       "date": "2026-06-18T00:00:00.000Z",
@@ -937,34 +967,34 @@
     ],
     "Group C": [
       {
-        "team": "Scotland",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
-        "d": 0,
-        "l": 0,
-        "gf": 1,
-        "ga": 0,
-        "gd": 1
-      },
-      {
         "team": "Brazil",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
+        "pts": 4,
+        "gp": 2,
+        "w": 1,
         "d": 1,
         "l": 0,
-        "gf": 1,
+        "gf": 4,
         "ga": 1,
-        "gd": 0
+        "gd": 3
       },
       {
         "team": "Morocco",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
+        "pts": 4,
+        "gp": 2,
+        "w": 1,
         "d": 1,
         "l": 0,
+        "gf": 2,
+        "ga": 1,
+        "gd": 1
+      },
+      {
+        "team": "Scotland",
+        "pts": 3,
+        "gp": 2,
+        "w": 1,
+        "d": 0,
+        "l": 1,
         "gf": 1,
         "ga": 1,
         "gd": 0
@@ -972,37 +1002,37 @@
       {
         "team": "Haiti",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
+        "l": 2,
         "gf": 0,
-        "ga": 1,
-        "gd": -1
+        "ga": 4,
+        "gd": -4
       }
     ],
     "Group D": [
       {
         "team": "United States",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
+        "pts": 6,
+        "gp": 2,
+        "w": 2,
         "d": 0,
         "l": 0,
-        "gf": 4,
+        "gf": 6,
         "ga": 1,
-        "gd": 3
+        "gd": 5
       },
       {
         "team": "Australia",
         "pts": 3,
-        "gp": 1,
+        "gp": 2,
         "w": 1,
         "d": 0,
-        "l": 0,
+        "l": 1,
         "gf": 2,
-        "ga": 0,
-        "gd": 2
+        "ga": 2,
+        "gd": 0
       },
       {
         "team": "Turkey",
@@ -1398,6 +1428,20 @@
   },
   "thirdPlaceRanking": [
     {
+      "group": "Group C",
+      "team": "Scotland",
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
+      "d": 0,
+      "l": 1,
+      "gf": 1,
+      "ga": 1,
+      "gd": 0,
+      "provisionalRank": 1,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group F",
       "team": "Netherlands",
       "pts": 1,
@@ -1408,26 +1452,12 @@
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "provisionalRank": 1,
+      "provisionalRank": 2,
       "inHuntForR32": true
     },
     {
       "group": "Group G",
       "team": "Belgium",
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
-      "d": 1,
-      "l": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "provisionalRank": 2,
-      "inHuntForR32": true
-    },
-    {
-      "group": "Group C",
-      "team": "Morocco",
       "pts": 1,
       "gp": 1,
       "w": 0,
