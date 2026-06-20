@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-20T03:31:39.088Z",
+  "generatedAt": "2026-06-20T07:49:13.810Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 31,
+  "completedMatches": 32,
   "friends": [
     {
       "name": "Patty",
@@ -33,7 +33,7 @@
         "Paraguay",
         "Belgium"
       ],
-      "points": 1
+      "points": 4
     },
     {
       "name": "Brizuela",
@@ -165,12 +165,12 @@
     },
     "Turkey": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
+      "l": 2,
       "gf": 0,
-      "ga": 2
+      "ga": 3
     },
     "Senegal": {
       "pts": 0,
@@ -218,12 +218,12 @@
       "ga": 3
     },
     "Paraguay": {
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
       "d": 0,
       "l": 1,
-      "gf": 1,
+      "gf": 2,
       "ga": 4
     },
     "Belgium": {
@@ -590,6 +590,16 @@
       "homeGoals": 2,
       "awayGoals": 0,
       "venue": "Seattle"
+    },
+    {
+      "fixtureId": "Turkey-Paraguay-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Turkey",
+      "away": "Paraguay",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "San Francisco Bay Area (Santa Clara)"
     },
     {
       "fixtureId": "Czech Republic-South Africa-2026-06-18",
@@ -1035,25 +1045,25 @@
         "gd": 0
       },
       {
-        "team": "Turkey",
-        "pts": 0,
-        "gp": 1,
-        "w": 0,
+        "team": "Paraguay",
+        "pts": 3,
+        "gp": 2,
+        "w": 1,
         "d": 0,
         "l": 1,
-        "gf": 0,
-        "ga": 2,
+        "gf": 2,
+        "ga": 4,
         "gd": -2
       },
       {
-        "team": "Paraguay",
+        "team": "Turkey",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
-        "gf": 1,
-        "ga": 4,
+        "l": 2,
+        "gf": 0,
+        "ga": 3,
         "gd": -3
       }
     ],
@@ -1442,6 +1452,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group D",
+      "team": "Paraguay",
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
+      "d": 0,
+      "l": 1,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "provisionalRank": 2,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group F",
       "team": "Netherlands",
       "pts": 1,
@@ -1452,7 +1476,7 @@
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "provisionalRank": 2,
+      "provisionalRank": 3,
       "inHuntForR32": true
     },
     {
@@ -1466,7 +1490,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 3,
+      "provisionalRank": 4,
       "inHuntForR32": true
     },
     {
@@ -1480,7 +1504,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 4,
+      "provisionalRank": 5,
       "inHuntForR32": true
     },
     {
@@ -1494,7 +1518,7 @@
       "gf": 0,
       "ga": 0,
       "gd": 0,
-      "provisionalRank": 5,
+      "provisionalRank": 6,
       "inHuntForR32": true
     },
     {
@@ -1508,7 +1532,7 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1522,7 +1546,7 @@
       "gf": 2,
       "ga": 5,
       "gd": -3,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1536,8 +1560,8 @@
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group L",
@@ -1550,7 +1574,7 @@
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "provisionalRank": 9,
+      "provisionalRank": 10,
       "inHuntForR32": false
     },
     {
@@ -1564,7 +1588,7 @@
       "gf": 1,
       "ga": 3,
       "gd": -2,
-      "provisionalRank": 10,
+      "provisionalRank": 11,
       "inHuntForR32": false
     },
     {
@@ -1577,20 +1601,6 @@
       "l": 1,
       "gf": 1,
       "ga": 3,
-      "gd": -2,
-      "provisionalRank": 11,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group D",
-      "team": "Turkey",
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
-      "d": 0,
-      "l": 1,
-      "gf": 0,
-      "ga": 2,
       "gd": -2,
       "provisionalRank": 12,
       "inHuntForR32": false
