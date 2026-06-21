@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-20T21:16:44.242Z",
+  "generatedAt": "2026-06-21T04:02:45.615Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 33,
+  "completedMatches": 35,
   "friends": [
     {
       "name": "Patty",
@@ -53,7 +53,7 @@
         "Ecuador",
         "United States"
       ],
-      "points": 10
+      "points": 11
     },
     {
       "name": "Norton",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 11
+      "points": 14
     },
     {
       "name": "Sal",
@@ -123,7 +123,7 @@
         "South Korea",
         "Argentina"
       ],
-      "points": 9
+      "points": 10
     }
   ],
   "teamStats": {
@@ -282,18 +282,18 @@
     },
     "Ivory Coast": {
       "pts": 3,
-      "gp": 1,
+      "gp": 2,
       "w": 1,
       "d": 0,
-      "l": 0,
-      "gf": 1,
-      "ga": 0
+      "l": 1,
+      "gf": 2,
+      "ga": 2
     },
     "Ecuador": {
-      "pts": 0,
-      "gp": 1,
+      "pts": 1,
+      "gp": 2,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 1,
       "gf": 0,
       "ga": 1
@@ -335,13 +335,13 @@
       "ga": 2
     },
     "Germany": {
-      "pts": 3,
-      "gp": 1,
-      "w": 1,
+      "pts": 6,
+      "gp": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "gf": 7,
-      "ga": 1
+      "gf": 9,
+      "ga": 2
     },
     "DR Congo": {
       "pts": 1,
@@ -524,10 +524,10 @@
       "ga": 1
     },
     "Curacao": {
-      "pts": 0,
-      "gp": 1,
+      "pts": 1,
+      "gp": 2,
       "w": 0,
-      "d": 0,
+      "d": 1,
       "l": 1,
       "gf": 1,
       "ga": 7
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Germany-Ivory Coast-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "Ecuador-Curaçao-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Ecuador",
+      "away": "Curacao",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Kansas City"
+    },
     {
       "fixtureId": "Netherlands-Sweden-2026-06-20",
       "date": "2026-06-20T00:00:00.000Z",
@@ -1080,32 +1100,32 @@
     "Group E": [
       {
         "team": "Germany",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
+        "pts": 6,
+        "gp": 2,
+        "w": 2,
         "d": 0,
         "l": 0,
-        "gf": 7,
-        "ga": 1,
-        "gd": 6
+        "gf": 9,
+        "ga": 2,
+        "gd": 7
       },
       {
         "team": "Ivory Coast",
         "pts": 3,
-        "gp": 1,
+        "gp": 2,
         "w": 1,
         "d": 0,
-        "l": 0,
-        "gf": 1,
-        "ga": 0,
-        "gd": 1
+        "l": 1,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0
       },
       {
         "team": "Ecuador",
-        "pts": 0,
-        "gp": 1,
+        "pts": 1,
+        "gp": 2,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 1,
         "gf": 0,
         "ga": 1,
@@ -1113,10 +1133,10 @@
       },
       {
         "team": "Curacao",
-        "pts": 0,
-        "gp": 1,
+        "pts": 1,
+        "gp": 2,
         "w": 0,
-        "d": 0,
+        "d": 1,
         "l": 1,
         "gf": 1,
         "ga": 7,
@@ -1546,6 +1566,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group E",
+      "team": "Ecuador",
+      "pts": 1,
+      "gp": 2,
+      "w": 0,
+      "d": 1,
+      "l": 1,
+      "gf": 0,
+      "ga": 1,
+      "gd": -1,
+      "provisionalRank": 8,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group B",
       "team": "Bosnia and Herzegovina",
       "pts": 1,
@@ -1556,20 +1590,6 @@
       "gf": 2,
       "ga": 5,
       "gd": -3,
-      "provisionalRank": 8,
-      "inHuntForR32": true
-    },
-    {
-      "group": "Group E",
-      "team": "Ecuador",
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
-      "d": 0,
-      "l": 1,
-      "gf": 0,
-      "ga": 1,
-      "gd": -1,
       "provisionalRank": 9,
       "inHuntForR32": false
     },
