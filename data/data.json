@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-21T04:02:45.615Z",
+  "generatedAt": "2026-06-21T11:15:03.967Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 35,
+  "completedMatches": 36,
   "friends": [
     {
       "name": "Patty",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 4
+      "points": 7
     },
     {
       "name": "Ron",
@@ -201,12 +201,12 @@
     },
     "Tunisia": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
+      "l": 2,
       "gf": 1,
-      "ga": 5
+      "ga": 9
     },
     "Uzbekistan": {
       "pts": 0,
@@ -470,12 +470,12 @@
       "ga": 2
     },
     "Japan": {
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
+      "pts": 4,
+      "gp": 2,
+      "w": 1,
       "d": 1,
       "l": 0,
-      "gf": 2,
+      "gf": 6,
       "ga": 2
     },
     "Spain": {
@@ -590,6 +590,16 @@
       "homeGoals": 5,
       "awayGoals": 1,
       "venue": "Houston"
+    },
+    {
+      "fixtureId": "Tunisia-Japan-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Tunisia",
+      "away": "Japan",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "venue": "Monterrey (Guadalupe)"
     },
     {
       "fixtureId": "Scotland-Morocco-2026-06-19",
@@ -1156,6 +1166,17 @@
         "gd": 4
       },
       {
+        "team": "Japan",
+        "pts": 4,
+        "gp": 2,
+        "w": 1,
+        "d": 1,
+        "l": 0,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4
+      },
+      {
         "team": "Sweden",
         "pts": 3,
         "gp": 2,
@@ -1167,26 +1188,15 @@
         "gd": 0
       },
       {
-        "team": "Japan",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
-        "d": 1,
-        "l": 0,
-        "gf": 2,
-        "ga": 2,
-        "gd": 0
-      },
-      {
         "team": "Tunisia",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
+        "l": 2,
         "gf": 1,
-        "ga": 5,
-        "gd": -4
+        "ga": 9,
+        "gd": -8
       }
     ],
     "Group G": [
@@ -1468,6 +1478,20 @@
   },
   "thirdPlaceRanking": [
     {
+      "group": "Group F",
+      "team": "Sweden",
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
+      "d": 0,
+      "l": 1,
+      "gf": 6,
+      "ga": 6,
+      "gd": 0,
+      "provisionalRank": 1,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group C",
       "team": "Scotland",
       "pts": 3,
@@ -1478,7 +1502,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 1,
+      "provisionalRank": 2,
       "inHuntForR32": true
     },
     {
@@ -1492,20 +1516,6 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 2,
-      "inHuntForR32": true
-    },
-    {
-      "group": "Group F",
-      "team": "Japan",
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
-      "d": 1,
-      "l": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
       "provisionalRank": 3,
       "inHuntForR32": true
     },
