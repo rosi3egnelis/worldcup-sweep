@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-21T17:26:11.071Z",
+  "generatedAt": "2026-06-21T21:12:30.152Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 36,
+  "completedMatches": 38,
   "friends": [
     {
       "name": "Patty",
@@ -33,7 +33,7 @@
         "Paraguay",
         "Belgium"
       ],
-      "points": 4
+      "points": 5
     },
     {
       "name": "Brizuela",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 7
+      "points": 11
     },
     {
       "name": "Ron",
@@ -227,10 +227,10 @@
       "ga": 4
     },
     "Belgium": {
-      "pts": 1,
-      "gp": 1,
+      "pts": 2,
+      "gp": 2,
       "w": 0,
-      "d": 1,
+      "d": 2,
       "l": 0,
       "gf": 1,
       "ga": 1
@@ -246,12 +246,12 @@
     },
     "Saudi Arabia": {
       "pts": 1,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 1,
-      "l": 0,
+      "l": 1,
       "gf": 1,
-      "ga": 1
+      "ga": 5
     },
     "Uruguay": {
       "pts": 1,
@@ -452,10 +452,10 @@
       "ga": 2
     },
     "Iran": {
-      "pts": 1,
-      "gp": 1,
+      "pts": 2,
+      "gp": 2,
       "w": 0,
-      "d": 1,
+      "d": 2,
       "l": 0,
       "gf": 2,
       "ga": 2
@@ -479,12 +479,12 @@
       "ga": 2
     },
     "Spain": {
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
+      "pts": 4,
+      "gp": 2,
+      "w": 1,
       "d": 1,
       "l": 0,
-      "gf": 0,
+      "gf": 4,
       "ga": 0
     },
     "Iraq": {
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Belgium-Iran-2026-06-21",
+      "date": "2026-06-21T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Belgium",
+      "away": "Iran",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Spain-Saudi Arabia-2026-06-21",
+      "date": "2026-06-21T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "venue": "Atlanta"
+    },
     {
       "fixtureId": "Germany-Ivory Coast-2026-06-20",
       "date": "2026-06-20T00:00:00.000Z",
@@ -1202,13 +1222,24 @@
     "Group G": [
       {
         "team": "Iran",
-        "pts": 1,
-        "gp": 1,
+        "pts": 2,
+        "gp": 2,
         "w": 0,
-        "d": 1,
+        "d": 2,
         "l": 0,
         "gf": 2,
         "ga": 2,
+        "gd": 0
+      },
+      {
+        "team": "Belgium",
+        "pts": 2,
+        "gp": 2,
+        "w": 0,
+        "d": 2,
+        "l": 0,
+        "gf": 1,
+        "ga": 1,
         "gd": 0
       },
       {
@@ -1220,17 +1251,6 @@
         "l": 0,
         "gf": 2,
         "ga": 2,
-        "gd": 0
-      },
-      {
-        "team": "Belgium",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
-        "d": 1,
-        "l": 0,
-        "gf": 1,
-        "ga": 1,
         "gd": 0
       },
       {
@@ -1247,15 +1267,15 @@
     ],
     "Group H": [
       {
-        "team": "Saudi Arabia",
-        "pts": 1,
-        "gp": 1,
-        "w": 0,
+        "team": "Spain",
+        "pts": 4,
+        "gp": 2,
+        "w": 1,
         "d": 1,
         "l": 0,
-        "gf": 1,
-        "ga": 1,
-        "gd": 0
+        "gf": 4,
+        "ga": 0,
+        "gd": 4
       },
       {
         "team": "Uruguay",
@@ -1280,15 +1300,15 @@
         "gd": 0
       },
       {
-        "team": "Spain",
+        "team": "Saudi Arabia",
         "pts": 1,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 1,
-        "l": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0
+        "l": 1,
+        "gf": 1,
+        "ga": 5,
+        "gd": -4
       }
     ],
     "Group I": [
@@ -1521,14 +1541,14 @@
     },
     {
       "group": "Group G",
-      "team": "Belgium",
+      "team": "New Zealand",
       "pts": 1,
       "gp": 1,
       "w": 0,
       "d": 1,
       "l": 0,
-      "gf": 1,
-      "ga": 1,
+      "gf": 2,
+      "ga": 2,
       "gd": 0,
       "provisionalRank": 4,
       "inHuntForR32": true
