@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-22T22:00:46.394Z",
+  "generatedAt": "2026-06-23T03:25:01.235Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 41,
+  "completedMatches": 43,
   "friends": [
     {
       "name": "Patty",
@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 7
+      "points": 10
     },
     {
       "name": "Miriam",
@@ -83,7 +83,7 @@
         "Norway",
         "Netherlands"
       ],
-      "points": 8
+      "points": 11
     },
     {
       "name": "Pardillo",
@@ -174,12 +174,12 @@
     },
     "Senegal": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
-      "gf": 1,
-      "ga": 3
+      "l": 2,
+      "gf": 3,
+      "ga": 6
     },
     "Austria": {
       "pts": 3,
@@ -263,12 +263,12 @@
       "ga": 3
     },
     "France": {
-      "pts": 3,
-      "gp": 1,
-      "w": 1,
+      "pts": 6,
+      "gp": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "gf": 3,
+      "gf": 6,
       "ga": 1
     },
     "Qatar": {
@@ -398,13 +398,13 @@
       "ga": 5
     },
     "Norway": {
-      "pts": 3,
-      "gp": 1,
-      "w": 1,
+      "pts": 6,
+      "gp": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "gf": 4,
-      "ga": 1
+      "gf": 7,
+      "ga": 3
     },
     "Netherlands": {
       "pts": 4,
@@ -489,12 +489,12 @@
     },
     "Iraq": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
+      "l": 2,
       "gf": 1,
-      "ga": 4
+      "ga": 7
     },
     "Sweden": {
       "pts": 3,
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "France-Iraq-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "France",
+      "away": "Iraq",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "Norway-Senegal-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Norway",
+      "away": "Senegal",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
     {
       "fixtureId": "Argentina-Austria-2026-06-22",
       "date": "2026-06-22T00:00:00.000Z",
@@ -1343,48 +1363,48 @@
     ],
     "Group I": [
       {
-        "team": "Norway",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
+        "team": "France",
+        "pts": 6,
+        "gp": 2,
+        "w": 2,
         "d": 0,
         "l": 0,
-        "gf": 4,
+        "gf": 6,
         "ga": 1,
-        "gd": 3
+        "gd": 5
       },
       {
-        "team": "France",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
+        "team": "Norway",
+        "pts": 6,
+        "gp": 2,
+        "w": 2,
         "d": 0,
         "l": 0,
-        "gf": 3,
-        "ga": 1,
-        "gd": 2
+        "gf": 7,
+        "ga": 3,
+        "gd": 4
       },
       {
         "team": "Senegal",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
-        "gf": 1,
-        "ga": 3,
-        "gd": -2
+        "l": 2,
+        "gf": 3,
+        "ga": 6,
+        "gd": -3
       },
       {
         "team": "Iraq",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
+        "l": 2,
         "gf": 1,
-        "ga": 4,
-        "gd": -3
+        "ga": 7,
+        "gd": -6
       }
     ],
     "Group J": [
@@ -1685,13 +1705,13 @@
       "group": "Group I",
       "team": "Senegal",
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
-      "gf": 1,
-      "ga": 3,
-      "gd": -2,
+      "l": 2,
+      "gf": 3,
+      "ga": 6,
+      "gd": -3,
       "provisionalRank": 12,
       "inHuntForR32": false
     }
