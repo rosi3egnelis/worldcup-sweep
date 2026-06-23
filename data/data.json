@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-23T03:25:01.235Z",
+  "generatedAt": "2026-06-23T07:47:09.591Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 43,
+  "completedMatches": 44,
   "friends": [
     {
       "name": "Patty",
@@ -13,7 +13,7 @@
         "Morocco",
         "Mexico"
       ],
-      "points": 13
+      "points": 16
     },
     {
       "name": "Kinaadman",
@@ -128,13 +128,13 @@
   ],
   "teamStats": {
     "Algeria": {
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
       "d": 0,
       "l": 1,
-      "gf": 0,
-      "ga": 3
+      "gf": 2,
+      "ga": 4
     },
     "Ghana": {
       "pts": 3,
@@ -354,12 +354,12 @@
     },
     "Jordan": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
-      "gf": 1,
-      "ga": 3
+      "l": 2,
+      "gf": 2,
+      "ga": 5
     },
     "Croatia": {
       "pts": 0,
@@ -590,6 +590,16 @@
       "homeGoals": 2,
       "awayGoals": 0,
       "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Jordan-Algeria-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Jordan",
+      "away": "Algeria",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "venue": "San Francisco Bay Area (Santa Clara)"
     },
     {
       "fixtureId": "Belgium-Iran-2026-06-21",
@@ -1431,25 +1441,25 @@
         "gd": 0
       },
       {
-        "team": "Jordan",
-        "pts": 0,
-        "gp": 1,
-        "w": 0,
+        "team": "Algeria",
+        "pts": 3,
+        "gp": 2,
+        "w": 1,
         "d": 0,
         "l": 1,
-        "gf": 1,
-        "ga": 3,
+        "gf": 2,
+        "ga": 4,
         "gd": -2
       },
       {
-        "team": "Algeria",
+        "team": "Jordan",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
-        "gf": 0,
-        "ga": 3,
+        "l": 2,
+        "gf": 2,
+        "ga": 5,
         "gd": -3
       }
     ],
@@ -1576,6 +1586,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group J",
+      "team": "Algeria",
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
+      "d": 0,
+      "l": 1,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "provisionalRank": 3,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group D",
       "team": "Paraguay",
       "pts": 3,
@@ -1586,7 +1610,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 3,
+      "provisionalRank": 4,
       "inHuntForR32": true
     },
     {
@@ -1600,7 +1624,7 @@
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "provisionalRank": 4,
+      "provisionalRank": 5,
       "inHuntForR32": true
     },
     {
@@ -1614,7 +1638,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 5,
+      "provisionalRank": 6,
       "inHuntForR32": true
     },
     {
@@ -1628,7 +1652,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1642,7 +1666,7 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1656,8 +1680,8 @@
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group B",
@@ -1670,7 +1694,7 @@
       "gf": 2,
       "ga": 5,
       "gd": -3,
-      "provisionalRank": 9,
+      "provisionalRank": 10,
       "inHuntForR32": false
     },
     {
@@ -1684,20 +1708,6 @@
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "provisionalRank": 10,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group J",
-      "team": "Jordan",
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
-      "d": 0,
-      "l": 1,
-      "gf": 1,
-      "ga": 3,
-      "gd": -2,
       "provisionalRank": 11,
       "inHuntForR32": false
     },
