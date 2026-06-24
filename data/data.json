@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-24T03:27:26.279Z",
+  "generatedAt": "2026-06-24T07:38:53.675Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 47,
+  "completedMatches": 48,
   "friends": [
     {
       "name": "Patty",
@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 8
+      "points": 11
     },
     {
       "name": "Silenge",
@@ -345,12 +345,12 @@
     },
     "DR Congo": {
       "pts": 1,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 1,
-      "l": 0,
+      "l": 1,
       "gf": 1,
-      "ga": 1
+      "ga": 2
     },
     "Jordan": {
       "pts": 0,
@@ -434,12 +434,12 @@
       "ga": 3
     },
     "Colombia": {
-      "pts": 3,
-      "gp": 1,
-      "w": 1,
+      "pts": 6,
+      "gp": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "gf": 3,
+      "gf": 4,
       "ga": 1
     },
     "England": {
@@ -570,6 +570,16 @@
       "homeGoals": 5,
       "awayGoals": 0,
       "venue": "Houston"
+    },
+    {
+      "fixtureId": "Colombia-DR Congo-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Colombia",
+      "away": "DR Congo",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Guadalajara (Zapopan)"
     },
     {
       "fixtureId": "England-Ghana-2026-06-23",
@@ -1495,6 +1505,17 @@
     ],
     "Group K": [
       {
+        "team": "Colombia",
+        "pts": 6,
+        "gp": 2,
+        "w": 2,
+        "d": 0,
+        "l": 0,
+        "gf": 4,
+        "ga": 1,
+        "gd": 3
+      },
+      {
         "team": "Portugal",
         "pts": 4,
         "gp": 2,
@@ -1506,26 +1527,15 @@
         "gd": 5
       },
       {
-        "team": "Colombia",
-        "pts": 3,
-        "gp": 1,
-        "w": 1,
-        "d": 0,
-        "l": 0,
-        "gf": 3,
-        "ga": 1,
-        "gd": 2
-      },
-      {
         "team": "DR Congo",
         "pts": 1,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 1,
-        "l": 0,
+        "l": 1,
         "gf": 1,
-        "ga": 1,
-        "gd": 0
+        "ga": 2,
+        "gd": -1
       },
       {
         "team": "Uzbekistan",
@@ -1686,20 +1696,6 @@
       "inHuntForR32": true
     },
     {
-      "group": "Group K",
-      "team": "DR Congo",
-      "pts": 1,
-      "gp": 1,
-      "w": 0,
-      "d": 1,
-      "l": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "provisionalRank": 8,
-      "inHuntForR32": true
-    },
-    {
       "group": "Group A",
       "team": "Czech Republic",
       "pts": 1,
@@ -1709,6 +1705,20 @@
       "l": 1,
       "gf": 2,
       "ga": 3,
+      "gd": -1,
+      "provisionalRank": 8,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group K",
+      "team": "DR Congo",
+      "pts": 1,
+      "gp": 2,
+      "w": 0,
+      "d": 1,
+      "l": 1,
+      "gf": 1,
+      "ga": 2,
       "gd": -1,
       "provisionalRank": 9,
       "inHuntForR32": false
