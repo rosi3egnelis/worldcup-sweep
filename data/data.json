@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-24T17:52:57.142Z",
+  "generatedAt": "2026-06-24T21:21:18.701Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 48,
+  "completedMatches": 50,
   "friends": [
     {
       "name": "Patty",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 15
+      "points": 18
     },
     {
       "name": "Sal",
@@ -83,7 +83,7 @@
         "Norway",
         "Netherlands"
       ],
-      "points": 11
+      "points": 14
     },
     {
       "name": "Pardillo",
@@ -192,12 +192,12 @@
     },
     "Canada": {
       "pts": 4,
-      "gp": 2,
+      "gp": 3,
       "w": 1,
       "d": 1,
-      "l": 0,
-      "gf": 7,
-      "ga": 1
+      "l": 1,
+      "gf": 8,
+      "ga": 3
     },
     "Tunisia": {
       "pts": 0,
@@ -273,12 +273,12 @@
     },
     "Qatar": {
       "pts": 1,
-      "gp": 2,
+      "gp": 3,
       "w": 0,
       "d": 1,
-      "l": 1,
-      "gf": 1,
-      "ga": 7
+      "l": 2,
+      "gf": 2,
+      "ga": 10
     },
     "Ivory Coast": {
       "pts": 3,
@@ -326,13 +326,13 @@
       "ga": 2
     },
     "Switzerland": {
-      "pts": 4,
-      "gp": 2,
-      "w": 1,
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
       "d": 1,
       "l": 0,
-      "gf": 5,
-      "ga": 2
+      "gf": 7,
+      "ga": 3
     },
     "Germany": {
       "pts": 6,
@@ -389,13 +389,13 @@
       "ga": 2
     },
     "Bosnia and Herzegovina": {
-      "pts": 1,
-      "gp": 2,
-      "w": 0,
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
       "d": 1,
       "l": 1,
-      "gf": 2,
-      "ga": 5
+      "gf": 5,
+      "ga": 6
     },
     "Norway": {
       "pts": 6,
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Switzerland-Canada-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Switzerland",
+      "away": "Canada",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Bosnia & Herzegovina-Qatar-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "venue": "Seattle"
+    },
     {
       "fixtureId": "Portugal-Uzbekistan-2026-06-23",
       "date": "2026-06-23T00:00:00.000Z",
@@ -1091,48 +1111,48 @@
     ],
     "Group B": [
       {
-        "team": "Canada",
-        "pts": 4,
-        "gp": 2,
-        "w": 1,
+        "team": "Switzerland",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
         "d": 1,
         "l": 0,
         "gf": 7,
-        "ga": 1,
-        "gd": 6
+        "ga": 3,
+        "gd": 4
       },
       {
-        "team": "Switzerland",
+        "team": "Canada",
         "pts": 4,
-        "gp": 2,
+        "gp": 3,
         "w": 1,
         "d": 1,
-        "l": 0,
-        "gf": 5,
-        "ga": 2,
-        "gd": 3
+        "l": 1,
+        "gf": 8,
+        "ga": 3,
+        "gd": 5
       },
       {
         "team": "Bosnia and Herzegovina",
-        "pts": 1,
-        "gp": 2,
-        "w": 0,
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
         "d": 1,
         "l": 1,
-        "gf": 2,
-        "ga": 5,
-        "gd": -3
+        "gf": 5,
+        "ga": 6,
+        "gd": -1
       },
       {
         "team": "Qatar",
         "pts": 1,
-        "gp": 2,
+        "gp": 3,
         "w": 0,
         "d": 1,
-        "l": 1,
-        "gf": 1,
-        "ga": 7,
-        "gd": -6
+        "l": 2,
+        "gf": 2,
+        "ga": 10,
+        "gd": -8
       }
     ],
     "Group C": [
@@ -1598,6 +1618,20 @@
   },
   "thirdPlaceRanking": [
     {
+      "group": "Group B",
+      "team": "Bosnia and Herzegovina",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 5,
+      "ga": 6,
+      "gd": -1,
+      "provisionalRank": 1,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group F",
       "team": "Sweden",
       "pts": 3,
@@ -1608,7 +1642,7 @@
       "gf": 6,
       "ga": 6,
       "gd": 0,
-      "provisionalRank": 1,
+      "provisionalRank": 2,
       "inHuntForR32": true
     },
     {
@@ -1622,7 +1656,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 2,
+      "provisionalRank": 3,
       "inHuntForR32": true
     },
     {
@@ -1636,7 +1670,7 @@
       "gf": 3,
       "ga": 4,
       "gd": -1,
-      "provisionalRank": 3,
+      "provisionalRank": 4,
       "inHuntForR32": true
     },
     {
@@ -1650,7 +1684,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 4,
+      "provisionalRank": 5,
       "inHuntForR32": true
     },
     {
@@ -1664,7 +1698,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 5,
+      "provisionalRank": 6,
       "inHuntForR32": true
     },
     {
@@ -1678,7 +1712,7 @@
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1692,7 +1726,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1706,8 +1740,8 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group K",
@@ -1720,7 +1754,7 @@
       "gf": 1,
       "ga": 2,
       "gd": -1,
-      "provisionalRank": 9,
+      "provisionalRank": 10,
       "inHuntForR32": false
     },
     {
@@ -1734,20 +1768,6 @@
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "provisionalRank": 10,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group B",
-      "team": "Bosnia and Herzegovina",
-      "pts": 1,
-      "gp": 2,
-      "w": 0,
-      "d": 1,
-      "l": 1,
-      "gf": 2,
-      "ga": 5,
-      "gd": -3,
       "provisionalRank": 11,
       "inHuntForR32": false
     },
