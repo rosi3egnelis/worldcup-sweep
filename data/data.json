@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-23T21:42:26.033Z",
+  "generatedAt": "2026-06-24T03:27:26.279Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 45,
+  "completedMatches": 47,
   "friends": [
     {
       "name": "Patty",
@@ -13,7 +13,7 @@
         "Morocco",
         "Mexico"
       ],
-      "points": 16
+      "points": 17
     },
     {
       "name": "Kinaadman",
@@ -73,7 +73,7 @@
         "Croatia",
         "Portugal"
       ],
-      "points": 5
+      "points": 8
     },
     {
       "name": "Oots",
@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 7
+      "points": 8
     },
     {
       "name": "Silenge",
@@ -137,10 +137,10 @@
       "ga": 4
     },
     "Ghana": {
-      "pts": 3,
-      "gp": 1,
+      "pts": 4,
+      "gp": 2,
       "w": 1,
-      "d": 0,
+      "d": 1,
       "l": 0,
       "gf": 1,
       "ga": 0
@@ -362,12 +362,12 @@
       "ga": 5
     },
     "Croatia": {
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
       "d": 0,
       "l": 1,
-      "gf": 2,
+      "gf": 3,
       "ga": 4
     },
     "Portugal": {
@@ -381,12 +381,12 @@
     },
     "Panama": {
       "pts": 0,
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "d": 0,
-      "l": 1,
+      "l": 2,
       "gf": 0,
-      "ga": 1
+      "ga": 2
     },
     "Bosnia and Herzegovina": {
       "pts": 1,
@@ -443,10 +443,10 @@
       "ga": 1
     },
     "England": {
-      "pts": 3,
-      "gp": 1,
+      "pts": 4,
+      "gp": 2,
       "w": 1,
-      "d": 0,
+      "d": 1,
       "l": 0,
       "gf": 4,
       "ga": 2
@@ -570,6 +570,26 @@
       "homeGoals": 5,
       "awayGoals": 0,
       "venue": "Houston"
+    },
+    {
+      "fixtureId": "England-Ghana-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "England",
+      "away": "Ghana",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Panama-Croatia-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "Panama",
+      "away": "Croatia",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Toronto"
     },
     {
       "fixtureId": "France-Iraq-2026-06-22",
@@ -1522,10 +1542,10 @@
     "Group L": [
       {
         "team": "England",
-        "pts": 3,
-        "gp": 1,
+        "pts": 4,
+        "gp": 2,
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 0,
         "gf": 4,
         "ga": 2,
@@ -1533,35 +1553,35 @@
       },
       {
         "team": "Ghana",
-        "pts": 3,
-        "gp": 1,
+        "pts": 4,
+        "gp": 2,
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 0,
         "gf": 1,
         "ga": 0,
         "gd": 1
       },
       {
-        "team": "Panama",
-        "pts": 0,
-        "gp": 1,
-        "w": 0,
+        "team": "Croatia",
+        "pts": 3,
+        "gp": 2,
+        "w": 1,
         "d": 0,
         "l": 1,
-        "gf": 0,
-        "ga": 1,
+        "gf": 3,
+        "ga": 4,
         "gd": -1
       },
       {
-        "team": "Croatia",
+        "team": "Panama",
         "pts": 0,
-        "gp": 1,
+        "gp": 2,
         "w": 0,
         "d": 0,
-        "l": 1,
-        "gf": 2,
-        "ga": 4,
+        "l": 2,
+        "gf": 0,
+        "ga": 2,
         "gd": -2
       }
     ]
@@ -1596,6 +1616,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group L",
+      "team": "Croatia",
+      "pts": 3,
+      "gp": 2,
+      "w": 1,
+      "d": 0,
+      "l": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "provisionalRank": 3,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group J",
       "team": "Algeria",
       "pts": 3,
@@ -1606,7 +1640,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 3,
+      "provisionalRank": 4,
       "inHuntForR32": true
     },
     {
@@ -1620,7 +1654,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 4,
+      "provisionalRank": 5,
       "inHuntForR32": true
     },
     {
@@ -1634,7 +1668,7 @@
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "provisionalRank": 5,
+      "provisionalRank": 6,
       "inHuntForR32": true
     },
     {
@@ -1648,7 +1682,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1662,7 +1696,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1676,8 +1710,8 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group E",
@@ -1690,7 +1724,7 @@
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "provisionalRank": 9,
+      "provisionalRank": 10,
       "inHuntForR32": false
     },
     {
@@ -1704,20 +1738,6 @@
       "gf": 2,
       "ga": 5,
       "gd": -3,
-      "provisionalRank": 10,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group L",
-      "team": "Panama",
-      "pts": 0,
-      "gp": 1,
-      "w": 0,
-      "d": 0,
-      "l": 1,
-      "gf": 0,
-      "ga": 1,
-      "gd": -1,
       "provisionalRank": 11,
       "inHuntForR32": false
     },
