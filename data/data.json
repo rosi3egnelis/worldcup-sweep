@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-26T03:32:48.447Z",
+  "generatedAt": "2026-06-26T07:51:09.308Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 58,
+  "completedMatches": 60,
   "friends": [
     {
       "name": "Patty",
@@ -23,7 +23,7 @@
         "Austria",
         "Canada"
       ],
-      "points": 7
+      "points": 10
     },
     {
       "name": "Joe",
@@ -33,7 +33,7 @@
         "Paraguay",
         "Belgium"
       ],
-      "points": 5
+      "points": 6
     },
     {
       "name": "Brizuela",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 18
+      "points": 19
     },
     {
       "name": "Sal",
@@ -164,13 +164,13 @@
       "ga": 0
     },
     "Turkey": {
-      "pts": 0,
-      "gp": 2,
-      "w": 0,
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
       "d": 0,
       "l": 2,
-      "gf": 0,
-      "ga": 3
+      "gf": 3,
+      "ga": 5
     },
     "Senegal": {
       "pts": 0,
@@ -218,10 +218,10 @@
       "ga": 8
     },
     "Paraguay": {
-      "pts": 3,
-      "gp": 2,
+      "pts": 4,
+      "gp": 3,
       "w": 1,
-      "d": 0,
+      "d": 1,
       "l": 1,
       "gf": 2,
       "ga": 4
@@ -300,12 +300,12 @@
     },
     "United States": {
       "pts": 6,
-      "gp": 2,
+      "gp": 3,
       "w": 2,
       "d": 0,
-      "l": 0,
-      "gf": 6,
-      "ga": 1
+      "l": 1,
+      "gf": 8,
+      "ga": 4
     },
     "Cape Verde": {
       "pts": 2,
@@ -317,10 +317,10 @@
       "ga": 2
     },
     "Australia": {
-      "pts": 3,
-      "gp": 2,
+      "pts": 4,
+      "gp": 3,
       "w": 1,
-      "d": 0,
+      "d": 1,
       "l": 1,
       "gf": 2,
       "ga": 2
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Turkey-USA-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Turkey",
+      "away": "United States",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Paraguay-Australia-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Paraguay",
+      "away": "Australia",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
     {
       "fixtureId": "Curaçao-Ivory Coast-2026-06-25",
       "date": "2026-06-25T00:00:00.000Z",
@@ -1285,20 +1305,20 @@
       {
         "team": "United States",
         "pts": 6,
-        "gp": 2,
+        "gp": 3,
         "w": 2,
         "d": 0,
-        "l": 0,
-        "gf": 6,
-        "ga": 1,
-        "gd": 5
+        "l": 1,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4
       },
       {
         "team": "Australia",
-        "pts": 3,
-        "gp": 2,
+        "pts": 4,
+        "gp": 3,
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 1,
         "gf": 2,
         "ga": 2,
@@ -1306,10 +1326,10 @@
       },
       {
         "team": "Paraguay",
-        "pts": 3,
-        "gp": 2,
+        "pts": 4,
+        "gp": 3,
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 1,
         "gf": 2,
         "ga": 4,
@@ -1317,14 +1337,14 @@
       },
       {
         "team": "Turkey",
-        "pts": 0,
-        "gp": 2,
-        "w": 0,
+        "pts": 3,
+        "gp": 3,
+        "w": 1,
         "d": 0,
         "l": 2,
-        "gf": 0,
-        "ga": 3,
-        "gd": -3
+        "gf": 3,
+        "ga": 5,
+        "gd": -2
       }
     ],
     "Group E": [
@@ -1740,6 +1760,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group D",
+      "team": "Paraguay",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "provisionalRank": 4,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group L",
       "team": "Croatia",
       "pts": 3,
@@ -1750,7 +1784,7 @@
       "gf": 3,
       "ga": 4,
       "gd": -1,
-      "provisionalRank": 4,
+      "provisionalRank": 5,
       "inHuntForR32": true
     },
     {
@@ -1764,26 +1798,12 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 5,
+      "provisionalRank": 6,
       "inHuntForR32": true
     },
     {
       "group": "Group J",
       "team": "Algeria",
-      "pts": 3,
-      "gp": 2,
-      "w": 1,
-      "d": 0,
-      "l": 1,
-      "gf": 2,
-      "ga": 4,
-      "gd": -2,
-      "provisionalRank": 6,
-      "inHuntForR32": true
-    },
-    {
-      "group": "Group D",
-      "team": "Paraguay",
       "pts": 3,
       "gp": 2,
       "w": 1,
