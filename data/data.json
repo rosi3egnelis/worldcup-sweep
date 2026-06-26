@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-26T17:45:36.454Z",
+  "generatedAt": "2026-06-26T21:16:36.224Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 60,
+  "completedMatches": 62,
   "friends": [
     {
       "name": "Patty",
@@ -23,7 +23,7 @@
         "Austria",
         "Canada"
       ],
-      "points": 10
+      "points": 13
     },
     {
       "name": "Joe",
@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 13
+      "points": 16
     },
     {
       "name": "Miriam",
@@ -173,12 +173,12 @@
       "ga": 5
     },
     "Senegal": {
-      "pts": 0,
-      "gp": 2,
-      "w": 0,
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
       "d": 0,
       "l": 2,
-      "gf": 3,
+      "gf": 8,
       "ga": 6
     },
     "Austria": {
@@ -263,13 +263,13 @@
       "ga": 3
     },
     "France": {
-      "pts": 6,
-      "gp": 2,
-      "w": 2,
+      "pts": 9,
+      "gp": 3,
+      "w": 3,
       "d": 0,
       "l": 0,
-      "gf": 6,
-      "ga": 1
+      "gf": 10,
+      "ga": 2
     },
     "Qatar": {
       "pts": 1,
@@ -399,12 +399,12 @@
     },
     "Norway": {
       "pts": 6,
-      "gp": 2,
+      "gp": 3,
       "w": 2,
       "d": 0,
-      "l": 0,
-      "gf": 7,
-      "ga": 3
+      "l": 1,
+      "gf": 8,
+      "ga": 7
     },
     "Netherlands": {
       "pts": 7,
@@ -489,12 +489,12 @@
     },
     "Iraq": {
       "pts": 0,
-      "gp": 2,
+      "gp": 3,
       "w": 0,
       "d": 0,
-      "l": 2,
+      "l": 3,
       "gf": 1,
-      "ga": 7
+      "ga": 12
     },
     "Sweden": {
       "pts": 4,
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Norway-France-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Norway",
+      "away": "France",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Senegal-Iraq-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Senegal",
+      "away": "Iraq",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "venue": "Toronto"
+    },
     {
       "fixtureId": "Turkey-USA-2026-06-25",
       "date": "2026-06-25T00:00:00.000Z",
@@ -1534,47 +1554,47 @@
     "Group I": [
       {
         "team": "France",
-        "pts": 6,
-        "gp": 2,
-        "w": 2,
+        "pts": 9,
+        "gp": 3,
+        "w": 3,
         "d": 0,
         "l": 0,
-        "gf": 6,
-        "ga": 1,
-        "gd": 5
+        "gf": 10,
+        "ga": 2,
+        "gd": 8
       },
       {
         "team": "Norway",
         "pts": 6,
-        "gp": 2,
+        "gp": 3,
         "w": 2,
         "d": 0,
-        "l": 0,
-        "gf": 7,
-        "ga": 3,
-        "gd": 4
+        "l": 1,
+        "gf": 8,
+        "ga": 7,
+        "gd": 1
       },
       {
         "team": "Senegal",
-        "pts": 0,
-        "gp": 2,
-        "w": 0,
+        "pts": 3,
+        "gp": 3,
+        "w": 1,
         "d": 0,
         "l": 2,
-        "gf": 3,
+        "gf": 8,
         "ga": 6,
-        "gd": -3
+        "gd": 2
       },
       {
         "team": "Iraq",
         "pts": 0,
-        "gp": 2,
+        "gp": 3,
         "w": 0,
         "d": 0,
-        "l": 2,
+        "l": 3,
         "gf": 1,
-        "ga": 7,
-        "gd": -6
+        "ga": 12,
+        "gd": -11
       }
     ],
     "Group J": [
@@ -1774,6 +1794,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group I",
+      "team": "Senegal",
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 8,
+      "ga": 6,
+      "gd": 2,
+      "provisionalRank": 5,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group L",
       "team": "Croatia",
       "pts": 3,
@@ -1784,7 +1818,7 @@
       "gf": 3,
       "ga": 4,
       "gd": -1,
-      "provisionalRank": 5,
+      "provisionalRank": 6,
       "inHuntForR32": true
     },
     {
@@ -1798,7 +1832,7 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1812,7 +1846,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1826,8 +1860,8 @@
       "gf": 1,
       "ga": 4,
       "gd": -3,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group H",
@@ -1840,7 +1874,7 @@
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "provisionalRank": 9,
+      "provisionalRank": 10,
       "inHuntForR32": false
     },
     {
@@ -1854,7 +1888,7 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
-      "provisionalRank": 10,
+      "provisionalRank": 11,
       "inHuntForR32": false
     },
     {
@@ -1868,20 +1902,6 @@
       "gf": 1,
       "ga": 2,
       "gd": -1,
-      "provisionalRank": 11,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group I",
-      "team": "Senegal",
-      "pts": 0,
-      "gp": 2,
-      "w": 0,
-      "d": 0,
-      "l": 2,
-      "gf": 3,
-      "ga": 6,
-      "gd": -3,
       "provisionalRank": 12,
       "inHuntForR32": false
     }
