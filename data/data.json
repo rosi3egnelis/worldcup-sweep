@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-27T02:55:14.434Z",
+  "generatedAt": "2026-06-27T06:51:08.382Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 64,
+  "completedMatches": 66,
   "friends": [
     {
       "name": "Patty",
@@ -33,7 +33,7 @@
         "Paraguay",
         "Belgium"
       ],
-      "points": 6
+      "points": 9
     },
     {
       "name": "Brizuela",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 15
+      "points": 16
     },
     {
       "name": "Ron",
@@ -113,7 +113,7 @@
         "Egypt",
         "Brazil"
       ],
-      "points": 15
+      "points": 16
     },
     {
       "name": "Rianne",
@@ -227,13 +227,13 @@
       "ga": 4
     },
     "Belgium": {
-      "pts": 2,
-      "gp": 2,
-      "w": 0,
+      "pts": 5,
+      "gp": 3,
+      "w": 1,
       "d": 2,
       "l": 0,
-      "gf": 1,
-      "ga": 1
+      "gf": 6,
+      "ga": 2
     },
     "South Africa": {
       "pts": 4,
@@ -452,22 +452,22 @@
       "ga": 2
     },
     "Iran": {
-      "pts": 2,
-      "gp": 2,
+      "pts": 3,
+      "gp": 3,
       "w": 0,
-      "d": 2,
+      "d": 3,
       "l": 0,
-      "gf": 2,
-      "ga": 2
+      "gf": 3,
+      "ga": 3
     },
     "New Zealand": {
       "pts": 1,
-      "gp": 2,
+      "gp": 3,
       "w": 0,
       "d": 1,
-      "l": 1,
-      "gf": 3,
-      "ga": 5
+      "l": 2,
+      "gf": 4,
+      "ga": 10
     },
     "Japan": {
       "pts": 5,
@@ -506,13 +506,13 @@
       "ga": 7
     },
     "Egypt": {
-      "pts": 4,
-      "gp": 2,
+      "pts": 5,
+      "gp": 3,
       "w": 1,
-      "d": 1,
+      "d": 2,
       "l": 0,
-      "gf": 4,
-      "ga": 2
+      "gf": 5,
+      "ga": 3
     },
     "Brazil": {
       "pts": 7,
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Egypt-Iran-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Egypt",
+      "away": "Iran",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Seattle"
+    },
+    {
+      "fixtureId": "New Zealand-Belgium-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "venue": "Vancouver"
+    },
     {
       "fixtureId": "Cape Verde-Saudi Arabia-2026-06-26",
       "date": "2026-06-26T00:00:00.000Z",
@@ -1481,48 +1501,48 @@
     ],
     "Group G": [
       {
-        "team": "Egypt",
-        "pts": 4,
-        "gp": 2,
+        "team": "Belgium",
+        "pts": 5,
+        "gp": 3,
         "w": 1,
-        "d": 1,
+        "d": 2,
         "l": 0,
-        "gf": 4,
+        "gf": 6,
         "ga": 2,
+        "gd": 4
+      },
+      {
+        "team": "Egypt",
+        "pts": 5,
+        "gp": 3,
+        "w": 1,
+        "d": 2,
+        "l": 0,
+        "gf": 5,
+        "ga": 3,
         "gd": 2
       },
       {
         "team": "Iran",
-        "pts": 2,
-        "gp": 2,
+        "pts": 3,
+        "gp": 3,
         "w": 0,
-        "d": 2,
+        "d": 3,
         "l": 0,
-        "gf": 2,
-        "ga": 2,
-        "gd": 0
-      },
-      {
-        "team": "Belgium",
-        "pts": 2,
-        "gp": 2,
-        "w": 0,
-        "d": 2,
-        "l": 0,
-        "gf": 1,
-        "ga": 1,
+        "gf": 3,
+        "ga": 3,
         "gd": 0
       },
       {
         "team": "New Zealand",
         "pts": 1,
-        "gp": 2,
+        "gp": 3,
         "w": 0,
         "d": 1,
-        "l": 1,
-        "gf": 3,
-        "ga": 5,
-        "gd": -2
+        "l": 2,
+        "gf": 4,
+        "ga": 10,
+        "gd": -6
       }
     ],
     "Group H": [
@@ -1828,6 +1848,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group G",
+      "team": "Iran",
+      "pts": 3,
+      "gp": 3,
+      "w": 0,
+      "d": 3,
+      "l": 0,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0,
+      "provisionalRank": 6,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group L",
       "team": "Croatia",
       "pts": 3,
@@ -1838,7 +1872,7 @@
       "gf": 3,
       "ga": 4,
       "gd": -1,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1852,7 +1886,7 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1866,8 +1900,8 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group C",
@@ -1880,20 +1914,6 @@
       "gf": 1,
       "ga": 4,
       "gd": -3,
-      "provisionalRank": 9,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group G",
-      "team": "Belgium",
-      "pts": 2,
-      "gp": 2,
-      "w": 0,
-      "d": 2,
-      "l": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
       "provisionalRank": 10,
       "inHuntForR32": false
     },
