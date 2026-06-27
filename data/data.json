@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-26T21:16:36.224Z",
+  "generatedAt": "2026-06-27T02:55:14.434Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 62,
+  "completedMatches": 64,
   "friends": [
     {
       "name": "Patty",
@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 16
+      "points": 17
     },
     {
       "name": "Miriam",
@@ -63,7 +63,7 @@
         "Switzerland",
         "Germany"
       ],
-      "points": 19
+      "points": 20
     },
     {
       "name": "Sal",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 12
+      "points": 15
     },
     {
       "name": "Ron",
@@ -245,22 +245,22 @@
       "ga": 3
     },
     "Saudi Arabia": {
-      "pts": 1,
-      "gp": 2,
+      "pts": 2,
+      "gp": 3,
       "w": 0,
-      "d": 1,
+      "d": 2,
       "l": 1,
       "gf": 1,
       "ga": 5
     },
     "Uruguay": {
       "pts": 2,
-      "gp": 2,
+      "gp": 3,
       "w": 0,
       "d": 2,
-      "l": 0,
+      "l": 1,
       "gf": 3,
-      "ga": 3
+      "ga": 4
     },
     "France": {
       "pts": 9,
@@ -308,10 +308,10 @@
       "ga": 4
     },
     "Cape Verde": {
-      "pts": 2,
-      "gp": 2,
+      "pts": 3,
+      "gp": 3,
       "w": 0,
-      "d": 2,
+      "d": 3,
       "l": 0,
       "gf": 2,
       "ga": 2
@@ -479,12 +479,12 @@
       "ga": 3
     },
     "Spain": {
-      "pts": 4,
-      "gp": 2,
-      "w": 1,
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
       "d": 1,
       "l": 0,
-      "gf": 4,
+      "gf": 5,
       "ga": 0
     },
     "Iraq": {
@@ -561,6 +561,26 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Cape Verde-Saudi Arabia-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Uruguay-Spain-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Uruguay",
+      "away": "Spain",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Guadalajara (Zapopan)"
+    },
     {
       "fixtureId": "Norway-France-2026-06-26",
       "date": "2026-06-26T00:00:00.000Z",
@@ -1508,43 +1528,43 @@
     "Group H": [
       {
         "team": "Spain",
-        "pts": 4,
-        "gp": 2,
-        "w": 1,
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
         "d": 1,
         "l": 0,
-        "gf": 4,
+        "gf": 5,
         "ga": 0,
-        "gd": 4
-      },
-      {
-        "team": "Uruguay",
-        "pts": 2,
-        "gp": 2,
-        "w": 0,
-        "d": 2,
-        "l": 0,
-        "gf": 3,
-        "ga": 3,
-        "gd": 0
+        "gd": 5
       },
       {
         "team": "Cape Verde",
-        "pts": 2,
-        "gp": 2,
+        "pts": 3,
+        "gp": 3,
         "w": 0,
-        "d": 2,
+        "d": 3,
         "l": 0,
         "gf": 2,
         "ga": 2,
         "gd": 0
       },
       {
-        "team": "Saudi Arabia",
-        "pts": 1,
-        "gp": 2,
+        "team": "Uruguay",
+        "pts": 2,
+        "gp": 3,
         "w": 0,
-        "d": 1,
+        "d": 2,
+        "l": 1,
+        "gf": 3,
+        "ga": 4,
+        "gd": -1
+      },
+      {
+        "team": "Saudi Arabia",
+        "pts": 2,
+        "gp": 3,
+        "w": 0,
+        "d": 2,
         "l": 1,
         "gf": 1,
         "ga": 5,
@@ -1864,20 +1884,6 @@
       "inHuntForR32": false
     },
     {
-      "group": "Group H",
-      "team": "Cape Verde",
-      "pts": 2,
-      "gp": 2,
-      "w": 0,
-      "d": 2,
-      "l": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "provisionalRank": 10,
-      "inHuntForR32": false
-    },
-    {
       "group": "Group G",
       "team": "Belgium",
       "pts": 2,
@@ -1888,6 +1894,20 @@
       "gf": 1,
       "ga": 1,
       "gd": 0,
+      "provisionalRank": 10,
+      "inHuntForR32": false
+    },
+    {
+      "group": "Group H",
+      "team": "Uruguay",
+      "pts": 2,
+      "gp": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
       "provisionalRank": 11,
       "inHuntForR32": false
     },
