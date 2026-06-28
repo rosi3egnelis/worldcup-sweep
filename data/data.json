@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-28T03:38:20.542Z",
+  "generatedAt": "2026-06-28T07:49:45.532Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 70,
+  "completedMatches": 72,
   "friends": [
     {
       "name": "Patty",
@@ -13,7 +13,7 @@
         "Morocco",
         "Mexico"
       ],
-      "points": 23
+      "points": 24
     },
     {
       "name": "Kinaadman",
@@ -23,7 +23,7 @@
         "Austria",
         "Canada"
       ],
-      "points": 13
+      "points": 14
     },
     {
       "name": "Joe",
@@ -123,18 +123,18 @@
         "South Korea",
         "Argentina"
       ],
-      "points": 13
+      "points": 16
     }
   ],
   "teamStats": {
     "Algeria": {
-      "pts": 3,
-      "gp": 2,
+      "pts": 4,
+      "gp": 3,
       "w": 1,
-      "d": 0,
+      "d": 1,
       "l": 1,
-      "gf": 2,
-      "ga": 4
+      "gf": 5,
+      "ga": 7
     },
     "Ghana": {
       "pts": 4,
@@ -182,13 +182,13 @@
       "ga": 6
     },
     "Austria": {
-      "pts": 3,
-      "gp": 2,
+      "pts": 4,
+      "gp": 3,
       "w": 1,
-      "d": 0,
+      "d": 1,
       "l": 1,
-      "gf": 3,
-      "ga": 3
+      "gf": 6,
+      "ga": 6
     },
     "Canada": {
       "pts": 4,
@@ -354,12 +354,12 @@
     },
     "Jordan": {
       "pts": 0,
-      "gp": 2,
+      "gp": 3,
       "w": 0,
       "d": 0,
-      "l": 2,
-      "gf": 2,
-      "ga": 5
+      "l": 3,
+      "gf": 3,
+      "ga": 8
     },
     "Croatia": {
       "pts": 6,
@@ -551,16 +551,36 @@
       "ga": 3
     },
     "Argentina": {
-      "pts": 6,
-      "gp": 2,
-      "w": 2,
+      "pts": 9,
+      "gp": 3,
+      "w": 3,
       "d": 0,
       "l": 0,
-      "gf": 5,
-      "ga": 0
+      "gf": 8,
+      "ga": 1
     }
   },
   "matches": [
+    {
+      "fixtureId": "Algeria-Austria-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Algeria",
+      "away": "Austria",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "venue": "Kansas City"
+    },
+    {
+      "fixtureId": "Jordan-Argentina-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Jordan",
+      "away": "Argentina",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "venue": "Dallas (Arlington)"
+    },
     {
       "fixtureId": "Colombia-Portugal-2026-06-27",
       "date": "2026-06-27T00:00:00.000Z",
@@ -1680,47 +1700,47 @@
     "Group J": [
       {
         "team": "Argentina",
-        "pts": 6,
-        "gp": 2,
-        "w": 2,
+        "pts": 9,
+        "gp": 3,
+        "w": 3,
         "d": 0,
         "l": 0,
-        "gf": 5,
-        "ga": 0,
-        "gd": 5
+        "gf": 8,
+        "ga": 1,
+        "gd": 7
       },
       {
         "team": "Austria",
-        "pts": 3,
-        "gp": 2,
+        "pts": 4,
+        "gp": 3,
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 1,
-        "gf": 3,
-        "ga": 3,
+        "gf": 6,
+        "ga": 6,
         "gd": 0
       },
       {
         "team": "Algeria",
-        "pts": 3,
-        "gp": 2,
+        "pts": 4,
+        "gp": 3,
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 1,
-        "gf": 2,
-        "ga": 4,
+        "gf": 5,
+        "ga": 7,
         "gd": -2
       },
       {
         "team": "Jordan",
         "pts": 0,
-        "gp": 2,
+        "gp": 3,
         "w": 0,
         "d": 0,
-        "l": 2,
-        "gf": 2,
-        "ga": 5,
-        "gd": -3
+        "l": 3,
+        "gf": 3,
+        "ga": 8,
+        "gd": -5
       }
     ],
     "Group K": [
@@ -1888,6 +1908,20 @@
       "inHuntForR32": true
     },
     {
+      "group": "Group J",
+      "team": "Algeria",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 5,
+      "ga": 7,
+      "gd": -2,
+      "provisionalRank": 6,
+      "inHuntForR32": true
+    },
+    {
       "group": "Group D",
       "team": "Paraguay",
       "pts": 4,
@@ -1898,7 +1932,7 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "provisionalRank": 6,
+      "provisionalRank": 7,
       "inHuntForR32": true
     },
     {
@@ -1912,7 +1946,7 @@
       "gf": 8,
       "ga": 6,
       "gd": 2,
-      "provisionalRank": 7,
+      "provisionalRank": 8,
       "inHuntForR32": true
     },
     {
@@ -1926,8 +1960,8 @@
       "gf": 3,
       "ga": 3,
       "gd": 0,
-      "provisionalRank": 8,
-      "inHuntForR32": true
+      "provisionalRank": 9,
+      "inHuntForR32": false
     },
     {
       "group": "Group A",
@@ -1940,20 +1974,6 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "provisionalRank": 9,
-      "inHuntForR32": false
-    },
-    {
-      "group": "Group J",
-      "team": "Algeria",
-      "pts": 3,
-      "gp": 2,
-      "w": 1,
-      "d": 0,
-      "l": 1,
-      "gf": 2,
-      "ga": 4,
-      "gd": -2,
       "provisionalRank": 10,
       "inHuntForR32": false
     },
