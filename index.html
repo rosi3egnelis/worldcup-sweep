@@ -904,6 +904,8 @@ main{
   border-bottom:1px solid var(--border);
 }
 .bracket-slot.winner{background:rgba(34,197,94,0.07);}
+.bracket-owner{display:block;font-size:10px;color:var(--text-faint);font-weight:400;letter-spacing:0.02em;margin-top:1px;}
+.team-owner-label{font-size:10px;color:var(--accent);font-weight:500;letter-spacing:0.03em;opacity:0.8;}
 .bracket-slot-score{
   font-family:var(--font-display);
   font-weight:800;
@@ -1348,11 +1350,12 @@ function renderGroups(data){
     grid.innerHTML=`<div class="empty-state"><p>Group standings aren't available yet.</p></div>`;
     return;
   }
+  const owners=ownerMap(data.friends);
   grid.innerHTML=Object.entries(data.groupStandings).map(([groupName,rows])=>{
     const played=rows.reduce((a,r)=>Math.max(a,r.gp),0);
     const rowsHtml=rows.map((r,i)=>`
       <tr class="${i<2?"qualifies":""}">
-        <td class="team-td">${flag(r.team)} ${r.team}</td>
+        <td class="team-td">${flag(r.team)} ${r.team}${owners[r.team]?`<br><span class="team-owner-label">(${owners[r.team]})</span>`:""}</td>
         <td>${r.gp}</td>
         <td>${r.gd>0?"+"+r.gd:r.gd}</td>
         <td class="pts-td">${r.pts}</td>
@@ -1380,6 +1383,7 @@ function renderGroups(data){
    BEST THIRDS
    ============================================================ */
 function renderThirds(data){
+  const owners=ownerMap(data.friends);
   const tbody=document.getElementById("thirdsBody");
   if(!data.thirdPlaceRanking||data.thirdPlaceRanking.length===0){
     tbody.innerHTML=`<tr><td colspan="8" style="text-align:center;color:var(--text-faint);padding:var(--space-8);">Not enough group matches played yet.</td></tr>`;
@@ -1388,7 +1392,7 @@ function renderThirds(data){
   tbody.innerHTML=data.thirdPlaceRanking.map(t=>`
     <tr class="thirds-row ${t.inHuntForR32?"in-hunt":""}">
       <td class="rank-td">${t.provisionalRank}</td>
-      <td class="team-td">${flag(t.team)} ${t.team}</td>
+      <td class="team-td">${flag(t.team)} ${t.team}${owners[t.team]?`<br><span class="team-owner-label">(${owners[t.team]})</span>`:""}</td>
       <td style="color:var(--text-faint);">${t.group}</td>
       <td class="pts-td">${t.pts}</td>
       <td>${t.gp}</td>
@@ -1460,6 +1464,7 @@ function r32Winner(id){
 function renderBracket(data){
   const river=document.getElementById("bracketRiver");
   const knockout=data.knockout||{};
+  const owners=ownerMap(data.friends);
 
   // Build result lookup from data.json knockout section (R32)
   const resultLookup={};
@@ -1478,12 +1483,12 @@ function renderBracket(data){
       const hg=(jsonResult?jsonResult.homeGoals:result.homeGoals);
       const ag=(jsonResult?jsonResult.awayGoals:result.awayGoals);
       const hw=hg>ag,aw=ag>hg;
-      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(fix.home)} ${fix.home}</span><span class="bracket-slot-score">${hg}</span></div>`;
-      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(fix.away)} ${fix.away}</span><span class="bracket-slot-score">${ag}</span></div>`;
+      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(fix.home)} ${fix.home}</span><span class="bracket-slot-score">${hg}</span>${owners[fix.home]?`<span class="bracket-owner">(${owners[fix.home]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(fix.away)} ${fix.away}</span><span class="bracket-slot-score">${ag}</span>${owners[fix.away]?`<span class="bracket-owner">(${owners[fix.away]})</span>`:""}</div>`;
       return `<div class="bracket-match">${s1}${s2}</div>`;
     } else {
-      s1=`<div class="bracket-slot upcoming">${flag(fix.home)} ${fix.home}</div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(fix.away)} ${fix.away}</div>`;
+      s1=`<div class="bracket-slot upcoming">${flag(fix.home)} ${fix.home}${owners[fix.home]?`<span class="bracket-owner">(${owners[fix.home]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(fix.away)} ${fix.away}${owners[fix.away]?`<span class="bracket-owner">(${owners[fix.away]})</span>`:""}</div>`;
       return `<div class="bracket-match"><div class="bracket-date-tag">${fix.date}</div>${s1}${s2}</div>`;
     }
   }).join("");
@@ -1506,20 +1511,20 @@ function renderBracket(data){
       const hg=playedMatch.home===teamA?playedMatch.homeGoals:playedMatch.awayGoals;
       const ag=playedMatch.home===teamA?playedMatch.awayGoals:playedMatch.homeGoals;
       const hw=hg>ag,aw=ag>hg;
-      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(teamA)} ${teamA}</span><span class="bracket-slot-score">${hg}</span></div>`;
-      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(teamB)} ${teamB}</span><span class="bracket-slot-score">${ag}</span></div>`;
+      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(teamA)} ${teamA}</span><span class="bracket-slot-score">${hg}</span>${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(teamB)} ${teamB}</span><span class="bracket-slot-score">${ag}</span>${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
       return `<div class="bracket-match">${s1}${s2}</div>`;
     } else if(teamA&&teamB){
-      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}</div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}</div>`;
+      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
       return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
     } else if(teamA){
-      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}</div>`;
+      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
       s2=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
       return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
     } else if(teamB){
       s1=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}</div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
       return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
     } else {
       const fixA=R32_FIXTURES.find(f=>f.id===idA);
@@ -1544,8 +1549,8 @@ function renderBracket(data){
       let s1,s2;
       if(m){
         const hw=m.homeGoals>m.awayGoals,aw=m.awayGoals>m.homeGoals;
-        s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(m.home)} ${m.home}</span><span class="bracket-slot-score">${m.homeGoals}</span></div>`;
-        s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(m.away)} ${m.away}</span><span class="bracket-slot-score">${m.awayGoals}</span></div>`;
+        s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(m.home)} ${m.home}</span><span class="bracket-slot-score">${m.homeGoals}</span>${owners[m.home]?`<span class="bracket-owner">(${owners[m.home]})</span>`:""}</div>`;
+        s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(m.away)} ${m.away}</span><span class="bracket-slot-score">${m.awayGoals}</span>${owners[m.away]?`<span class="bracket-owner">(${owners[m.away]})</span>`:""}</div>`;
       } else {
         s1=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
         s2=`<div class="bracket-slot tbd"><span>TBD</span></div>`;

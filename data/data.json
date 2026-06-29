@@ -1,224 +1,2031 @@
 {
-  "generatedAt": "2026-06-29T02:14:00.000Z",
-  "season": "2026",
-  "leagueId": "FIFA.WORLD",
+  "generatedAt": "2026-06-29T02:40:00.000Z",
+  "season": 2026,
+  "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 37,
+  "completedMatches": 73,
   "friends": [
-    {"name":"Patty",     "teams":["Algeria","Ghana","Morocco","Mexico"],                   "points":4},
-    {"name":"Kinaadman", "teams":["Turkey","Senegal","Austria","Canada"],                  "points":7},
-    {"name":"Joe",       "teams":["Tunisia","Uzbekistan","Paraguay","Belgium"],             "points":1},
-    {"name":"Brizuela",  "teams":["South Africa","Saudi Arabia","Uruguay","France"],       "points":5},
-    {"name":"Miriam",    "teams":["Qatar","Ivory Coast","Ecuador","United States"],        "points":7},
-    {"name":"Norton",    "teams":["Cape Verde","Australia","Switzerland","Germany"],       "points":8},
-    {"name":"Sal",       "teams":["DR Congo","Jordan","Croatia","Portugal"],               "points":0},
-    {"name":"Oots",      "teams":["Panama","Bosnia and Herzegovina","Norway","Netherlands"],"points":5},
-    {"name":"Pardillo",  "teams":["Haiti","Czech Republic","Colombia","England"],          "points":0},
-    {"name":"Silenge",   "teams":["Iran","New Zealand","Japan","Spain"],                   "points":4},
-    {"name":"Ron",       "teams":["Iraq","Sweden","Egypt","Brazil"],                       "points":5},
-    {"name":"Rianne",    "teams":["Curacao","Scotland","South Korea","Argentina"],         "points":9}
+    {
+      "name": "Patty",
+      "teams": [
+        "Algeria",
+        "Ghana",
+        "Morocco",
+        "Mexico"
+      ],
+      "points": 24
+    },
+    {
+      "name": "Kinaadman",
+      "teams": [
+        "Turkey",
+        "Senegal",
+        "Austria",
+        "Canada"
+      ],
+      "points": 17
+    },
+    {
+      "name": "Joe",
+      "teams": [
+        "Tunisia",
+        "Uzbekistan",
+        "Paraguay",
+        "Belgium"
+      ],
+      "points": 9
+    },
+    {
+      "name": "Brizuela",
+      "teams": [
+        "South Africa",
+        "Saudi Arabia",
+        "Uruguay",
+        "France"
+      ],
+      "points": 17
+    },
+    {
+      "name": "Miriam",
+      "teams": [
+        "Qatar",
+        "Ivory Coast",
+        "Ecuador",
+        "United States"
+      ],
+      "points": 17
+    },
+    {
+      "name": "Norton",
+      "teams": [
+        "Cape Verde",
+        "Australia",
+        "Switzerland",
+        "Germany"
+      ],
+      "points": 20
+    },
+    {
+      "name": "Sal",
+      "teams": [
+        "DR Congo",
+        "Jordan",
+        "Croatia",
+        "Portugal"
+      ],
+      "points": 15
+    },
+    {
+      "name": "Oots",
+      "teams": [
+        "Panama",
+        "Bosnia and Herzegovina",
+        "Norway",
+        "Netherlands"
+      ],
+      "points": 17
+    },
+    {
+      "name": "Pardillo",
+      "teams": [
+        "Haiti",
+        "Czech Republic",
+        "Colombia",
+        "England"
+      ],
+      "points": 15
+    },
+    {
+      "name": "Silenge",
+      "teams": [
+        "Iran",
+        "New Zealand",
+        "Japan",
+        "Spain"
+      ],
+      "points": 16
+    },
+    {
+      "name": "Ron",
+      "teams": [
+        "Iraq",
+        "Sweden",
+        "Egypt",
+        "Brazil"
+      ],
+      "points": 16
+    },
+    {
+      "name": "Rianne",
+      "teams": [
+        "Curacao",
+        "Scotland",
+        "South Korea",
+        "Argentina"
+      ],
+      "points": 16
+    }
   ],
   "teamStats": {
-    "Algeria":               {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":6,"ga":5},
-    "Argentina":             {"pts":9,"gp":3,"w":3,"d":0,"l":0,"gf":9,"ga":1},
-    "Australia":             {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":2,"ga":2},
-    "Austria":               {"pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":6,"ga":4},
-    "Belgium":               {"pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":7,"ga":4},
-    "Bosnia and Herzegovina":{"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":5,"ga":7},
-    "Brazil":                {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":7,"ga":2},
-    "Canada":                {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":8,"ga":3},
-    "Cape Verde":            {"pts":3,"gp":3,"w":0,"d":3,"l":0,"gf":2,"ga":2},
-    "Colombia":              {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":4,"ga":1},
-    "Croatia":               {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":5,"ga":6},
-    "Czech Republic":        {"pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":2,"ga":6},
-    "Curacao":               {"pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":1,"ga":9},
-    "DR Congo":              {"pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":4,"ga":5},
-    "Ecuador":               {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":4,"ga":4},
-    "Egypt":                 {"pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":5,"ga":3},
-    "England":               {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":6,"ga":2},
-    "France":                {"pts":9,"gp":3,"w":3,"d":0,"l":0,"gf":10,"ga":2},
-    "Germany":               {"pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":11,"ga":3},
-    "Ghana":                 {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":4,"ga":5},
-    "Haiti":                 {"pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":2,"ga":9},
-    "Iran":                  {"pts":3,"gp":3,"w":0,"d":3,"l":0,"gf":3,"ga":3},
-    "Ivory Coast":           {"pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":4,"ga":3},
-    "Japan":                 {"pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":7,"ga":3},
-    "Jordan":                {"pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":2,"ga":7},
-    "Mexico":                {"pts":9,"gp":3,"w":3,"d":0,"l":0,"gf":6,"ga":0},
-    "Morocco":               {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":6,"ga":2},
-    "Netherlands":           {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":10,"ga":4},
-    "New Zealand":           {"pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":4,"ga":10},
-    "Norway":                {"pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":8,"ga":2},
-    "Panama":                {"pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":0,"ga":7},
-    "Paraguay":              {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":2,"ga":4},
-    "Portugal":              {"pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":6,"ga":1},
-    "Qatar":                 {"pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":2,"ga":8},
-    "Saudi Arabia":          {"pts":2,"gp":3,"w":0,"d":2,"l":1,"gf":1,"ga":5},
-    "Scotland":              {"pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":1,"ga":8},
-    "Senegal":               {"pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":8,"ga":5},
-    "South Africa":          {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":2,"ga":2},
-    "South Korea":           {"pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":2,"ga":4},
-    "Spain":                 {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":5,"ga":0},
-    "Sweden":                {"pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":7,"ga":6},
-    "Switzerland":           {"pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":7,"ga":3},
-    "Tunisia":               {"pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":2,"ga":12},
-    "Turkey":                {"pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":3,"ga":5},
-    "United States":         {"pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":8,"ga":5},
-    "Uruguay":               {"pts":2,"gp":3,"w":0,"d":2,"l":1,"gf":3,"ga":4},
-    "Uzbekistan":            {"pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":2,"ga":11}
+    "Algeria": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 5,
+      "ga": 7
+    },
+    "Ghana": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 2
+    },
+    "Morocco": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 6,
+      "ga": 3
+    },
+    "Mexico": {
+      "pts": 9,
+      "gp": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "gf": 6,
+      "ga": 0
+    },
+    "Turkey": {
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 3,
+      "ga": 5
+    },
+    "Senegal": {
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 8,
+      "ga": 6
+    },
+    "Austria": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 6,
+      "ga": 6
+    },
+    "Canada": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 8,
+      "ga": 3
+    },
+    "Tunisia": {
+      "pts": 0,
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 2,
+      "ga": 12
+    },
+    "Uzbekistan": {
+      "pts": 0,
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 2,
+      "ga": 11
+    },
+    "Paraguay": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 4
+    },
+    "Belgium": {
+      "pts": 5,
+      "gp": 3,
+      "w": 1,
+      "d": 2,
+      "l": 0,
+      "gf": 6,
+      "ga": 2
+    },
+    "South Africa": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 3
+    },
+    "Saudi Arabia": {
+      "pts": 2,
+      "gp": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "gf": 1,
+      "ga": 5
+    },
+    "Uruguay": {
+      "pts": 2,
+      "gp": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "gf": 3,
+      "ga": 4
+    },
+    "France": {
+      "pts": 9,
+      "gp": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "gf": 10,
+      "ga": 2
+    },
+    "Qatar": {
+      "pts": 1,
+      "gp": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "gf": 2,
+      "ga": 10
+    },
+    "Ivory Coast": {
+      "pts": 6,
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 4,
+      "ga": 2
+    },
+    "Ecuador": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 2
+    },
+    "United States": {
+      "pts": 6,
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 8,
+      "ga": 4
+    },
+    "Cape Verde": {
+      "pts": 3,
+      "gp": 3,
+      "w": 0,
+      "d": 3,
+      "l": 0,
+      "gf": 2,
+      "ga": 2
+    },
+    "Australia": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 2
+    },
+    "Switzerland": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 7,
+      "ga": 3
+    },
+    "Germany": {
+      "pts": 6,
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 10,
+      "ga": 4
+    },
+    "DR Congo": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 4,
+      "ga": 3
+    },
+    "Jordan": {
+      "pts": 0,
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 3,
+      "ga": 8
+    },
+    "Croatia": {
+      "pts": 6,
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 5,
+      "ga": 5
+    },
+    "Portugal": {
+      "pts": 5,
+      "gp": 3,
+      "w": 1,
+      "d": 2,
+      "l": 0,
+      "gf": 6,
+      "ga": 1
+    },
+    "Panama": {
+      "pts": 0,
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 0,
+      "ga": 4
+    },
+    "Bosnia and Herzegovina": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 5,
+      "ga": 6
+    },
+    "Norway": {
+      "pts": 6,
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 8,
+      "ga": 7
+    },
+    "Netherlands": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 10,
+      "ga": 4
+    },
+    "Haiti": {
+      "pts": 0,
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 2,
+      "ga": 8
+    },
+    "Czech Republic": {
+      "pts": 1,
+      "gp": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "gf": 2,
+      "ga": 6
+    },
+    "Colombia": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 4,
+      "ga": 1
+    },
+    "England": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 6,
+      "ga": 2
+    },
+    "Iran": {
+      "pts": 3,
+      "gp": 3,
+      "w": 0,
+      "d": 3,
+      "l": 0,
+      "gf": 3,
+      "ga": 3
+    },
+    "New Zealand": {
+      "pts": 1,
+      "gp": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "gf": 4,
+      "ga": 10
+    },
+    "Japan": {
+      "pts": 5,
+      "gp": 3,
+      "w": 1,
+      "d": 2,
+      "l": 0,
+      "gf": 7,
+      "ga": 3
+    },
+    "Spain": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 5,
+      "ga": 0
+    },
+    "Iraq": {
+      "pts": 0,
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 1,
+      "ga": 12
+    },
+    "Sweden": {
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 7,
+      "ga": 7
+    },
+    "Egypt": {
+      "pts": 5,
+      "gp": 3,
+      "w": 1,
+      "d": 2,
+      "l": 0,
+      "gf": 5,
+      "ga": 3
+    },
+    "Brazil": {
+      "pts": 7,
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 7,
+      "ga": 1
+    },
+    "Curacao": {
+      "pts": 1,
+      "gp": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "gf": 1,
+      "ga": 9
+    },
+    "Scotland": {
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 1,
+      "ga": 4
+    },
+    "South Korea": {
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 2,
+      "ga": 3
+    },
+    "Argentina": {
+      "pts": 9,
+      "gp": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "gf": 8,
+      "ga": 1
+    }
   },
   "matches": [
-    {"fixtureId":"France-Senegal-2026-06-16","date":"2026-06-16T00:00:00.000Z","stage":"Group I","home":"France","away":"Senegal","homeGoals":3,"awayGoals":1,"venue":"New York/New Jersey"},
-    {"fixtureId":"Mexico-SouthAfrica-2026-06-11","date":"2026-06-11T00:00:00.000Z","stage":"Group A","home":"Mexico","away":"South Africa","homeGoals":2,"awayGoals":0,"venue":"Mexico City"},
-    {"fixtureId":"SouthKorea-Czechia-2026-06-11","date":"2026-06-11T00:00:00.000Z","stage":"Group A","home":"South Korea","away":"Czech Republic","homeGoals":1,"awayGoals":1,"venue":"Guadalajara"},
-    {"fixtureId":"Canada-Bosnia-2026-06-12","date":"2026-06-12T00:00:00.000Z","stage":"Group B","home":"Canada","away":"Bosnia and Herzegovina","homeGoals":1,"awayGoals":1,"venue":"Toronto"},
-    {"fixtureId":"USA-Paraguay-2026-06-12","date":"2026-06-12T00:00:00.000Z","stage":"Group D","home":"United States","away":"Paraguay","homeGoals":3,"awayGoals":0,"venue":"Los Angeles"},
-    {"fixtureId":"Brazil-Croatia-2026-06-13","date":"2026-06-13T00:00:00.000Z","stage":"Group C","home":"Brazil","away":"Croatia","homeGoals":2,"awayGoals":1,"venue":"San Francisco"},
-    {"fixtureId":"Morocco-Scotland-2026-06-13","date":"2026-06-13T00:00:00.000Z","stage":"Group C","home":"Morocco","away":"Scotland","homeGoals":3,"awayGoals":0,"venue":"Houston"},
-    {"fixtureId":"Germany-Senegal-2026-06-13","date":"2026-06-13T00:00:00.000Z","stage":"Group E","home":"Germany","away":"Senegal","homeGoals":4,"awayGoals":0,"venue":"Boston"},
-    {"fixtureId":"IvoryCoast-Curacao-2026-06-14","date":"2026-06-14T00:00:00.000Z","stage":"Group E","home":"Ivory Coast","away":"Curacao","homeGoals":2,"awayGoals":0,"venue":"Dallas"},
-    {"fixtureId":"Netherlands-Tunisia-2026-06-14","date":"2026-06-14T00:00:00.000Z","stage":"Group F","home":"Netherlands","away":"Tunisia","homeGoals":3,"awayGoals":1,"venue":"Seattle"},
-    {"fixtureId":"Japan-Sweden-2026-06-15","date":"2026-06-15T00:00:00.000Z","stage":"Group F","home":"Japan","away":"Sweden","homeGoals":2,"awayGoals":2,"venue":"Atlanta"},
-    {"fixtureId":"Spain-CapeVerde-2026-06-15","date":"2026-06-15T00:00:00.000Z","stage":"Group H","home":"Spain","away":"Cape Verde","homeGoals":0,"awayGoals":0,"venue":"Los Angeles"},
-    {"fixtureId":"Saudi-Uruguay-2026-06-15","date":"2026-06-15T00:00:00.000Z","stage":"Group H","home":"Saudi Arabia","away":"Uruguay","homeGoals":0,"awayGoals":0,"venue":"Miami"},
-    {"fixtureId":"Iraq-Norway-2026-06-16","date":"2026-06-16T00:00:00.000Z","stage":"Group I","home":"Iraq","away":"Norway","homeGoals":1,"awayGoals":4,"venue":"Philadelphia"},
-    {"fixtureId":"Argentina-Algeria-2026-06-16","date":"2026-06-16T00:00:00.000Z","stage":"Group J","home":"Argentina","away":"Algeria","homeGoals":3,"awayGoals":0,"venue":"Dallas"},
-    {"fixtureId":"Austria-Jordan-2026-06-16","date":"2026-06-16T00:00:00.000Z","stage":"Group J","home":"Austria","away":"Jordan","homeGoals":3,"awayGoals":1,"venue":"Kansas City"},
-    {"fixtureId":"Belgium-Egypt-2026-06-17","date":"2026-06-17T00:00:00.000Z","stage":"Group G","home":"Belgium","away":"Egypt","homeGoals":1,"awayGoals":1,"venue":"Seattle"},
-    {"fixtureId":"Iran-NewZealand-2026-06-17","date":"2026-06-17T00:00:00.000Z","stage":"Group G","home":"Iran","away":"New Zealand","homeGoals":2,"awayGoals":2,"venue":"Vancouver"},
-    {"fixtureId":"Portugal-DRCongo-2026-06-17","date":"2026-06-17T00:00:00.000Z","stage":"Group K","home":"Portugal","away":"DR Congo","homeGoals":1,"awayGoals":1,"venue":"Philadelphia"},
-    {"fixtureId":"Colombia-Uzbekistan-2026-06-17","date":"2026-06-17T00:00:00.000Z","stage":"Group K","home":"Colombia","away":"Uzbekistan","homeGoals":3,"awayGoals":1,"venue":"Kansas City"},
-    {"fixtureId":"Mexico-SouthKorea-2026-06-18","date":"2026-06-18T00:00:00.000Z","stage":"Group A","home":"Mexico","away":"South Korea","homeGoals":1,"awayGoals":0,"venue":"Mexico City"},
-    {"fixtureId":"SouthAfrica-Czechia-2026-06-18","date":"2026-06-18T00:00:00.000Z","stage":"Group A","home":"South Africa","away":"Czech Republic","homeGoals":1,"awayGoals":1,"venue":"Houston"},
-    {"fixtureId":"Switzerland-Canada-2026-06-19","date":"2026-06-19T00:00:00.000Z","stage":"Group B","home":"Switzerland","away":"Canada","homeGoals":2,"awayGoals":1,"venue":"Vancouver"},
-    {"fixtureId":"Bosnia-Qatar-2026-06-19","date":"2026-06-19T00:00:00.000Z","stage":"Group B","home":"Bosnia and Herzegovina","away":"Qatar","homeGoals":3,"awayGoals":1,"venue":"Los Angeles"},
-    {"fixtureId":"Brazil-Morocco-2026-06-20","date":"2026-06-20T00:00:00.000Z","stage":"Group C","home":"Brazil","away":"Morocco","homeGoals":1,"awayGoals":1,"venue":"San Francisco"},
-    {"fixtureId":"Scotland-Haiti-2026-06-20","date":"2026-06-20T00:00:00.000Z","stage":"Group C","home":"Scotland","away":"Haiti","homeGoals":1,"awayGoals":0,"venue":"Kansas City"},
-    {"fixtureId":"USA-Australia-2026-06-21","date":"2026-06-21T00:00:00.000Z","stage":"Group D","home":"United States","away":"Australia","homeGoals":1,"awayGoals":1,"venue":"Los Angeles"},
-    {"fixtureId":"Turkey-Paraguay-2026-06-21","date":"2026-06-21T00:00:00.000Z","stage":"Group D","home":"Turkey","away":"Paraguay","homeGoals":2,"awayGoals":1,"venue":"San Francisco"},
-    {"fixtureId":"Ecuador-Germany-2026-06-22","date":"2026-06-22T00:00:00.000Z","stage":"Group E","home":"Ecuador","away":"Germany","homeGoals":2,"awayGoals":1,"venue":"Miami"},
-    {"fixtureId":"IvoryCoast-Curacao2-2026-06-22","date":"2026-06-22T00:00:00.000Z","stage":"Group E","home":"Ivory Coast","away":"Curacao","homeGoals":2,"awayGoals":0,"venue":"Dallas"},
-    {"fixtureId":"Netherlands-Sweden-2026-06-23","date":"2026-06-23T00:00:00.000Z","stage":"Group F","home":"Netherlands","away":"Sweden","homeGoals":4,"awayGoals":1,"venue":"Seattle"},
-    {"fixtureId":"Japan-Tunisia-2026-06-23","date":"2026-06-23T00:00:00.000Z","stage":"Group F","home":"Japan","away":"Tunisia","homeGoals":3,"awayGoals":1,"venue":"Atlanta"},
-    {"fixtureId":"Spain-Saudi-2026-06-23","date":"2026-06-23T00:00:00.000Z","stage":"Group H","home":"Spain","away":"Saudi Arabia","homeGoals":4,"awayGoals":0,"venue":"Los Angeles"},
-    {"fixtureId":"Uruguay-CapeVerde-2026-06-23","date":"2026-06-23T00:00:00.000Z","stage":"Group H","home":"Uruguay","away":"Cape Verde","homeGoals":1,"awayGoals":1,"venue":"Miami"},
-    {"fixtureId":"France-Iraq-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group I","home":"France","away":"Iraq","homeGoals":3,"awayGoals":0,"venue":"New York/New Jersey"},
-    {"fixtureId":"Norway-Senegal-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group I","home":"Norway","away":"Senegal","homeGoals":3,"awayGoals":1,"venue":"Philadelphia"},
-    {"fixtureId":"Argentina-Austria-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group J","home":"Argentina","away":"Austria","homeGoals":2,"awayGoals":0,"venue":"Dallas"},
-    {"fixtureId":"Algeria-Jordan-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group J","home":"Algeria","away":"Jordan","homeGoals":3,"awayGoals":1,"venue":"Kansas City"},
-    {"fixtureId":"Belgium-NewZealand-2026-06-26","date":"2026-06-26T00:00:00.000Z","stage":"Group G","home":"Belgium","away":"New Zealand","homeGoals":5,"awayGoals":1,"venue":"Seattle"},
-    {"fixtureId":"Iran-Egypt-2026-06-26","date":"2026-06-26T00:00:00.000Z","stage":"Group G","home":"Iran","away":"Egypt","homeGoals":1,"awayGoals":1,"venue":"Vancouver"},
-    {"fixtureId":"Portugal-Uzbekistan-2026-06-26","date":"2026-06-26T00:00:00.000Z","stage":"Group K","home":"Portugal","away":"Uzbekistan","homeGoals":5,"awayGoals":0,"venue":"Philadelphia"},
-    {"fixtureId":"Colombia-DRCongo-2026-06-26","date":"2026-06-26T00:00:00.000Z","stage":"Group K","home":"Colombia","away":"DR Congo","homeGoals":1,"awayGoals":0,"venue":"Kansas City"},
-    {"fixtureId":"Mexico-Czechia-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group A","home":"Mexico","away":"Czech Republic","homeGoals":3,"awayGoals":0,"venue":"Mexico City"},
-    {"fixtureId":"SouthAfrica-SouthKorea-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group A","home":"South Africa","away":"South Korea","homeGoals":1,"awayGoals":0,"venue":"Houston"},
-    {"fixtureId":"Morocco-Haiti-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group C","home":"Morocco","away":"Haiti","homeGoals":4,"awayGoals":2,"venue":"Houston"},
-    {"fixtureId":"Brazil-Scotland-2026-06-24","date":"2026-06-24T00:00:00.000Z","stage":"Group C","home":"Brazil","away":"Scotland","homeGoals":3,"awayGoals":0,"venue":"San Francisco"},
-    {"fixtureId":"USA-Turkey-2026-06-25","date":"2026-06-25T00:00:00.000Z","stage":"Group D","home":"United States","away":"Turkey","homeGoals":4,"awayGoals":1,"venue":"Los Angeles"},
-    {"fixtureId":"Australia-Paraguay-2026-06-25","date":"2026-06-25T00:00:00.000Z","stage":"Group D","home":"Australia","away":"Paraguay","homeGoals":0,"awayGoals":0,"venue":"Dallas"},
-    {"fixtureId":"Spain-Uruguay-2026-06-26","date":"2026-06-26T00:00:00.000Z","stage":"Group H","home":"Spain","away":"Uruguay","homeGoals":1,"awayGoals":0,"venue":"Los Angeles"},
-    {"fixtureId":"CapeVerde-Saudi-2026-06-26","date":"2026-06-26T00:00:00.000Z","stage":"Group H","home":"Cape Verde","away":"Saudi Arabia","homeGoals":1,"awayGoals":1,"venue":"Miami"},
-    {"fixtureId":"France-Norway-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group I","home":"France","away":"Norway","homeGoals":4,"awayGoals":1,"venue":"New York/New Jersey"},
-    {"fixtureId":"Senegal-Iraq-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group I","home":"Senegal","away":"Iraq","homeGoals":6,"awayGoals":0,"venue":"Philadelphia"},
-    {"fixtureId":"Algeria-Austria-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group J","home":"Algeria","away":"Austria","homeGoals":3,"awayGoals":3,"venue":"Kansas City"},
-    {"fixtureId":"Argentina-Jordan-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group J","home":"Argentina","away":"Jordan","homeGoals":3,"awayGoals":1,"venue":"Dallas"},
-    {"fixtureId":"Colombia-Portugal-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group K","home":"Colombia","away":"Portugal","homeGoals":0,"awayGoals":0,"venue":"Kansas City"},
-    {"fixtureId":"DRCongo-Uzbekistan-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group K","home":"DR Congo","away":"Uzbekistan","homeGoals":3,"awayGoals":1,"venue":"Philadelphia"},
-    {"fixtureId":"Croatia-Ghana-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group L","home":"Croatia","away":"Ghana","homeGoals":2,"awayGoals":1,"venue":"Miami"},
-    {"fixtureId":"England-Panama-2026-06-27","date":"2026-06-27T00:00:00.000Z","stage":"Group L","home":"England","away":"Panama","homeGoals":2,"awayGoals":0,"venue":"Atlanta"},
-    {"fixtureId":"SouthAfrica-Canada-2026-06-28","date":"2026-06-28T00:00:00.000Z","stage":"Round of 32","home":"South Africa","away":"Canada","homeGoals":0,"awayGoals":1,"venue":"Los Angeles"}
+    {
+      "fixtureId": "Algeria-Austria-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Algeria",
+      "away": "Austria",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "venue": "Kansas City"
+    },
+    {
+      "fixtureId": "Jordan-Argentina-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Jordan",
+      "away": "Argentina",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Colombia-Portugal-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Colombia",
+      "away": "Portugal",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Miami (Miami Gardens)"
+    },
+    {
+      "fixtureId": "DR Congo-Uzbekistan-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Panama-England-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "Panama",
+      "away": "England",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Croatia-Ghana-2026-06-27",
+      "date": "2026-06-27T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "Croatia",
+      "away": "Ghana",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "Egypt-Iran-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Egypt",
+      "away": "Iran",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Seattle"
+    },
+    {
+      "fixtureId": "New Zealand-Belgium-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Cape Verde-Saudi Arabia-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Uruguay-Spain-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Uruguay",
+      "away": "Spain",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Guadalajara (Zapopan)"
+    },
+    {
+      "fixtureId": "Norway-France-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Norway",
+      "away": "France",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Senegal-Iraq-2026-06-26",
+      "date": "2026-06-26T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Senegal",
+      "away": "Iraq",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "Turkey-USA-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Turkey",
+      "away": "United States",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Paraguay-Australia-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Paraguay",
+      "away": "Australia",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+      "fixtureId": "Cura\u00e7ao-Ivory Coast-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Curacao",
+      "away": "Ivory Coast",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "Ecuador-Germany-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Ecuador",
+      "away": "Germany",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Japan-Sweden-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Japan",
+      "away": "Sweden",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Tunisia-Netherlands-2026-06-25",
+      "date": "2026-06-25T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "venue": "Kansas City"
+    },
+    {
+      "fixtureId": "Czech Republic-Mexico-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Czech Republic",
+      "away": "Mexico",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "venue": "Mexico City"
+    },
+    {
+      "fixtureId": "South Africa-South Korea-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "South Africa",
+      "away": "South Korea",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Monterrey (Guadalupe)"
+    },
+    {
+      "fixtureId": "Switzerland-Canada-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Switzerland",
+      "away": "Canada",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Bosnia & Herzegovina-Qatar-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "venue": "Seattle"
+    },
+    {
+      "fixtureId": "Scotland-Brazil-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Scotland",
+      "away": "Brazil",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "venue": "Miami (Miami Gardens)"
+    },
+    {
+      "fixtureId": "Morocco-Haiti-2026-06-24",
+      "date": "2026-06-24T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Morocco",
+      "away": "Haiti",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Portugal-Uzbekistan-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Colombia-DR Congo-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Colombia",
+      "away": "DR Congo",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Guadalajara (Zapopan)"
+    },
+    {
+      "fixtureId": "England-Ghana-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "England",
+      "away": "Ghana",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Panama-Croatia-2026-06-23",
+      "date": "2026-06-23T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "Panama",
+      "away": "Croatia",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "France-Iraq-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "France",
+      "away": "Iraq",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "Norway-Senegal-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Norway",
+      "away": "Senegal",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Argentina-Austria-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Argentina",
+      "away": "Austria",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Jordan-Algeria-2026-06-22",
+      "date": "2026-06-22T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Jordan",
+      "away": "Algeria",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+      "fixtureId": "Belgium-Iran-2026-06-21",
+      "date": "2026-06-21T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Belgium",
+      "away": "Iran",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "New Zealand-Egypt-2026-06-21",
+      "date": "2026-06-21T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "New Zealand",
+      "away": "Egypt",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Spain-Saudi Arabia-2026-06-21",
+      "date": "2026-06-21T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Uruguay-Cape Verde-2026-06-21",
+      "date": "2026-06-21T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "venue": "Miami (Miami Gardens)"
+    },
+    {
+      "fixtureId": "Germany-Ivory Coast-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "Ecuador-Cura\u00e7ao-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Ecuador",
+      "away": "Curacao",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Kansas City"
+    },
+    {
+      "fixtureId": "Netherlands-Sweden-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Tunisia-Japan-2026-06-20",
+      "date": "2026-06-20T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Tunisia",
+      "away": "Japan",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "venue": "Monterrey (Guadalupe)"
+    },
+    {
+      "fixtureId": "Scotland-Morocco-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Scotland",
+      "away": "Morocco",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Brazil-Haiti-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Brazil",
+      "away": "Haiti",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "USA-Australia-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "United States",
+      "away": "Australia",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Seattle"
+    },
+    {
+      "fixtureId": "Turkey-Paraguay-2026-06-19",
+      "date": "2026-06-19T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Turkey",
+      "away": "Paraguay",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+      "fixtureId": "Czech Republic-South Africa-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Czech Republic",
+      "away": "South Africa",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Mexico-South Korea-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Mexico",
+      "away": "South Korea",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Guadalajara (Zapopan)"
+    },
+    {
+      "fixtureId": "Switzerland-Bosnia & Herzegovina-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Switzerland",
+      "away": "Bosnia and Herzegovina",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Canada-Qatar-2026-06-18",
+      "date": "2026-06-18T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Canada",
+      "away": "Qatar",
+      "homeGoals": 6,
+      "awayGoals": 0,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Portugal-DR Congo-2026-06-17",
+      "date": "2026-06-17T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Portugal",
+      "away": "DR Congo",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Uzbekistan-Colombia-2026-06-17",
+      "date": "2026-06-17T00:00:00.000Z",
+      "stage": "Group K",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "venue": "Mexico City"
+    },
+    {
+      "fixtureId": "England-Croatia-2026-06-17",
+      "date": "2026-06-17T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "England",
+      "away": "Croatia",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Ghana-Panama-2026-06-17",
+      "date": "2026-06-17T00:00:00.000Z",
+      "stage": "Group L",
+      "home": "Ghana",
+      "away": "Panama",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "France-Senegal-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "France",
+      "away": "Senegal",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Iraq-Norway-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group I",
+      "home": "Iraq",
+      "away": "Norway",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Argentina-Algeria-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Argentina",
+      "away": "Algeria",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "venue": "Kansas City"
+    },
+    {
+      "fixtureId": "Austria-Jordan-2026-06-16",
+      "date": "2026-06-16T00:00:00.000Z",
+      "stage": "Group J",
+      "home": "Austria",
+      "away": "Jordan",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+      "fixtureId": "Belgium-Egypt-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Belgium",
+      "away": "Egypt",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Seattle"
+    },
+    {
+      "fixtureId": "Iran-New Zealand-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group G",
+      "home": "Iran",
+      "away": "New Zealand",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Spain-Cape Verde-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Spain",
+      "away": "Cape Verde",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "venue": "Atlanta"
+    },
+    {
+      "fixtureId": "Saudi Arabia-Uruguay-2026-06-15",
+      "date": "2026-06-15T00:00:00.000Z",
+      "stage": "Group H",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Miami (Miami Gardens)"
+    },
+    {
+      "fixtureId": "Germany-Cura\u00e7ao-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Germany",
+      "away": "Curacao",
+      "homeGoals": 7,
+      "awayGoals": 1,
+      "venue": "Houston"
+    },
+    {
+      "fixtureId": "Ivory Coast-Ecuador-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group E",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "venue": "Philadelphia"
+    },
+    {
+      "fixtureId": "Netherlands-Japan-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Netherlands",
+      "away": "Japan",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "venue": "Dallas (Arlington)"
+    },
+    {
+      "fixtureId": "Sweden-Tunisia-2026-06-14",
+      "date": "2026-06-14T00:00:00.000Z",
+      "stage": "Group F",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "venue": "Monterrey (Guadalupe)"
+    },
+    {
+      "fixtureId": "Qatar-Switzerland-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+      "fixtureId": "Brazil-Morocco-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Brazil",
+      "away": "Morocco",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+      "fixtureId": "Haiti-Scotland-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group C",
+      "home": "Haiti",
+      "away": "Scotland",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Boston (Foxborough)"
+    },
+    {
+      "fixtureId": "Australia-Turkey-2026-06-13",
+      "date": "2026-06-13T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "Australia",
+      "away": "Turkey",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Vancouver"
+    },
+    {
+      "fixtureId": "Canada-Bosnia & Herzegovina-2026-06-12",
+      "date": "2026-06-12T00:00:00.000Z",
+      "stage": "Group B",
+      "home": "Canada",
+      "away": "Bosnia and Herzegovina",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "venue": "Toronto"
+    },
+    {
+      "fixtureId": "USA-Paraguay-2026-06-12",
+      "date": "2026-06-12T00:00:00.000Z",
+      "stage": "Group D",
+      "home": "United States",
+      "away": "Paraguay",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "venue": "Los Angeles (Inglewood)"
+    },
+    {
+      "fixtureId": "Mexico-South Africa-2026-06-11",
+      "date": "2026-06-11T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "Mexico",
+      "away": "South Africa",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "venue": "Mexico City"
+    },
+    {
+      "fixtureId": "South Korea-Czech Republic-2026-06-11",
+      "date": "2026-06-11T00:00:00.000Z",
+      "stage": "Group A",
+      "home": "South Korea",
+      "away": "Czech Republic",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Guadalajara (Zapopan)"
+    },
+    {
+      "fixtureId": "SouthAfrica-Canada-R32-2026-06-28",
+      "date": "2026-06-28T19:00:00.000Z",
+      "stage": "Round of 32",
+      "home": "South Africa",
+      "away": "Canada",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "venue": "Los Angeles"
+    }
   ],
   "groupStandings": {
     "Group A": [
-      {"team":"Mexico",       "pts":9,"gp":3,"w":3,"d":0,"l":0,"gf":6,"ga":0,"gd":6},
-      {"team":"South Africa", "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":2,"ga":2,"gd":0},
-      {"team":"South Korea",  "pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":2,"ga":4,"gd":-2},
-      {"team":"Czech Republic","pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":2,"ga":6,"gd":-4}
+      {
+        "team": "Mexico",
+        "pts": 9,
+        "gp": 3,
+        "w": 3,
+        "d": 0,
+        "l": 0,
+        "gf": 6,
+        "ga": 0,
+        "gd": 6
+      },
+      {
+        "team": "South Africa",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1
+      },
+      {
+        "team": "South Korea",
+        "pts": 3,
+        "gp": 3,
+        "w": 1,
+        "d": 0,
+        "l": 2,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1
+      },
+      {
+        "team": "Czech Republic",
+        "pts": 1,
+        "gp": 3,
+        "w": 0,
+        "d": 1,
+        "l": 2,
+        "gf": 2,
+        "ga": 6,
+        "gd": -4
+      }
     ],
     "Group B": [
-      {"team":"Switzerland",           "pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":7,"ga":3,"gd":4},
-      {"team":"Canada",                "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":8,"ga":3,"gd":5},
-      {"team":"Bosnia and Herzegovina","pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":5,"ga":7,"gd":-2},
-      {"team":"Qatar",                 "pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":2,"ga":8,"gd":-6}
+      {
+        "team": "Switzerland",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 7,
+        "ga": 3,
+        "gd": 4
+      },
+      {
+        "team": "Canada",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 8,
+        "ga": 3,
+        "gd": 5
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 5,
+        "ga": 6,
+        "gd": -1
+      },
+      {
+        "team": "Qatar",
+        "pts": 1,
+        "gp": 3,
+        "w": 0,
+        "d": 1,
+        "l": 2,
+        "gf": 2,
+        "ga": 10,
+        "gd": -8
+      }
     ],
     "Group C": [
-      {"team":"Brazil",  "pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":7,"ga":2,"gd":5},
-      {"team":"Morocco", "pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":6,"ga":2,"gd":4},
-      {"team":"Scotland","pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":1,"ga":8,"gd":-7},
-      {"team":"Haiti",   "pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":2,"ga":9,"gd":-7}
+      {
+        "team": "Brazil",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6
+      },
+      {
+        "team": "Morocco",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 6,
+        "ga": 3,
+        "gd": 3
+      },
+      {
+        "team": "Scotland",
+        "pts": 3,
+        "gp": 3,
+        "w": 1,
+        "d": 0,
+        "l": 2,
+        "gf": 1,
+        "ga": 4,
+        "gd": -3
+      },
+      {
+        "team": "Haiti",
+        "pts": 0,
+        "gp": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 2,
+        "ga": 8,
+        "gd": -6
+      }
     ],
     "Group D": [
-      {"team":"United States","pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":8,"ga":5,"gd":3},
-      {"team":"Australia",    "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":2,"ga":2,"gd":0},
-      {"team":"Paraguay",     "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":2,"ga":4,"gd":-2},
-      {"team":"Turkey",       "pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":3,"ga":5,"gd":-2}
+      {
+        "team": "United States",
+        "pts": 6,
+        "gp": 3,
+        "w": 2,
+        "d": 0,
+        "l": 1,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4
+      },
+      {
+        "team": "Australia",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0
+      },
+      {
+        "team": "Paraguay",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2
+      },
+      {
+        "team": "Turkey",
+        "pts": 3,
+        "gp": 3,
+        "w": 1,
+        "d": 0,
+        "l": 2,
+        "gf": 3,
+        "ga": 5,
+        "gd": -2
+      }
     ],
     "Group E": [
-      {"team":"Germany",    "pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":11,"ga":3,"gd":8},
-      {"team":"Ivory Coast","pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":4,"ga":3,"gd":1},
-      {"team":"Ecuador",    "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":4,"ga":4,"gd":0},
-      {"team":"Curacao",    "pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":1,"ga":9,"gd":-8}
+      {
+        "team": "Germany",
+        "pts": 6,
+        "gp": 3,
+        "w": 2,
+        "d": 0,
+        "l": 1,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6
+      },
+      {
+        "team": "Ivory Coast",
+        "pts": 6,
+        "gp": 3,
+        "w": 2,
+        "d": 0,
+        "l": 1,
+        "gf": 4,
+        "ga": 2,
+        "gd": 2
+      },
+      {
+        "team": "Ecuador",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0
+      },
+      {
+        "team": "Curacao",
+        "pts": 1,
+        "gp": 3,
+        "w": 0,
+        "d": 1,
+        "l": 2,
+        "gf": 1,
+        "ga": 9,
+        "gd": -8
+      }
     ],
     "Group F": [
-      {"team":"Netherlands","pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":10,"ga":4,"gd":6},
-      {"team":"Japan",      "pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":7,"ga":3,"gd":4},
-      {"team":"Sweden",     "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":7,"ga":6,"gd":1},
-      {"team":"Tunisia",    "pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":2,"ga":12,"gd":-10}
+      {
+        "team": "Netherlands",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6
+      },
+      {
+        "team": "Japan",
+        "pts": 5,
+        "gp": 3,
+        "w": 1,
+        "d": 2,
+        "l": 0,
+        "gf": 7,
+        "ga": 3,
+        "gd": 4
+      },
+      {
+        "team": "Sweden",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 7,
+        "ga": 7,
+        "gd": 0
+      },
+      {
+        "team": "Tunisia",
+        "pts": 0,
+        "gp": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 2,
+        "ga": 12,
+        "gd": -10
+      }
     ],
     "Group G": [
-      {"team":"Belgium",     "pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":7,"ga":4,"gd":3},
-      {"team":"Egypt",       "pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":5,"ga":3,"gd":2},
-      {"team":"Iran",        "pts":3,"gp":3,"w":0,"d":3,"l":0,"gf":3,"ga":3,"gd":0},
-      {"team":"New Zealand", "pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":4,"ga":10,"gd":-6}
+      {
+        "team": "Belgium",
+        "pts": 5,
+        "gp": 3,
+        "w": 1,
+        "d": 2,
+        "l": 0,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4
+      },
+      {
+        "team": "Egypt",
+        "pts": 5,
+        "gp": 3,
+        "w": 1,
+        "d": 2,
+        "l": 0,
+        "gf": 5,
+        "ga": 3,
+        "gd": 2
+      },
+      {
+        "team": "Iran",
+        "pts": 3,
+        "gp": 3,
+        "w": 0,
+        "d": 3,
+        "l": 0,
+        "gf": 3,
+        "ga": 3,
+        "gd": 0
+      },
+      {
+        "team": "New Zealand",
+        "pts": 1,
+        "gp": 3,
+        "w": 0,
+        "d": 1,
+        "l": 2,
+        "gf": 4,
+        "ga": 10,
+        "gd": -6
+      }
     ],
     "Group H": [
-      {"team":"Spain",       "pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":5,"ga":0,"gd":5},
-      {"team":"Cape Verde",  "pts":3,"gp":3,"w":0,"d":3,"l":0,"gf":2,"ga":2,"gd":0},
-      {"team":"Uruguay",     "pts":2,"gp":3,"w":0,"d":2,"l":1,"gf":3,"ga":4,"gd":-1},
-      {"team":"Saudi Arabia","pts":2,"gp":3,"w":0,"d":2,"l":1,"gf":1,"ga":5,"gd":-4}
+      {
+        "team": "Spain",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 5,
+        "ga": 0,
+        "gd": 5
+      },
+      {
+        "team": "Cape Verde",
+        "pts": 3,
+        "gp": 3,
+        "w": 0,
+        "d": 3,
+        "l": 0,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0
+      },
+      {
+        "team": "Uruguay",
+        "pts": 2,
+        "gp": 3,
+        "w": 0,
+        "d": 2,
+        "l": 1,
+        "gf": 3,
+        "ga": 4,
+        "gd": -1
+      },
+      {
+        "team": "Saudi Arabia",
+        "pts": 2,
+        "gp": 3,
+        "w": 0,
+        "d": 2,
+        "l": 1,
+        "gf": 1,
+        "ga": 5,
+        "gd": -4
+      }
     ],
     "Group I": [
-      {"team":"France", "pts":9,"gp":3,"w":3,"d":0,"l":0,"gf":10,"ga":2,"gd":8},
-      {"team":"Norway", "pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":8,"ga":2,"gd":6},
-      {"team":"Senegal","pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":8,"ga":5,"gd":3},
-      {"team":"Iraq",   "pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":1,"ga":11,"gd":-10}
+      {
+        "team": "France",
+        "pts": 9,
+        "gp": 3,
+        "w": 3,
+        "d": 0,
+        "l": 0,
+        "gf": 10,
+        "ga": 2,
+        "gd": 8
+      },
+      {
+        "team": "Norway",
+        "pts": 6,
+        "gp": 3,
+        "w": 2,
+        "d": 0,
+        "l": 1,
+        "gf": 8,
+        "ga": 7,
+        "gd": 1
+      },
+      {
+        "team": "Senegal",
+        "pts": 3,
+        "gp": 3,
+        "w": 1,
+        "d": 0,
+        "l": 2,
+        "gf": 8,
+        "ga": 6,
+        "gd": 2
+      },
+      {
+        "team": "Iraq",
+        "pts": 0,
+        "gp": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 1,
+        "ga": 12,
+        "gd": -11
+      }
     ],
     "Group J": [
-      {"team":"Argentina","pts":9,"gp":3,"w":3,"d":0,"l":0,"gf":9,"ga":1,"gd":8},
-      {"team":"Austria",  "pts":6,"gp":3,"w":2,"d":0,"l":1,"gf":6,"ga":4,"gd":2},
-      {"team":"Algeria",  "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":6,"ga":5,"gd":1},
-      {"team":"Jordan",   "pts":1,"gp":3,"w":0,"d":1,"l":2,"gf":2,"ga":7,"gd":-5}
+      {
+        "team": "Argentina",
+        "pts": 9,
+        "gp": 3,
+        "w": 3,
+        "d": 0,
+        "l": 0,
+        "gf": 8,
+        "ga": 1,
+        "gd": 7
+      },
+      {
+        "team": "Austria",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 6,
+        "ga": 6,
+        "gd": 0
+      },
+      {
+        "team": "Algeria",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 5,
+        "ga": 7,
+        "gd": -2
+      },
+      {
+        "team": "Jordan",
+        "pts": 0,
+        "gp": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 3,
+        "ga": 8,
+        "gd": -5
+      }
     ],
     "Group K": [
-      {"team":"Colombia","pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":4,"ga":1,"gd":3},
-      {"team":"Portugal","pts":5,"gp":3,"w":1,"d":2,"l":0,"gf":6,"ga":1,"gd":5},
-      {"team":"DR Congo","pts":3,"gp":3,"w":1,"d":0,"l":2,"gf":4,"ga":5,"gd":-1},
-      {"team":"Uzbekistan","pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":2,"ga":11,"gd":-9}
+      {
+        "team": "Colombia",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 4,
+        "ga": 1,
+        "gd": 3
+      },
+      {
+        "team": "Portugal",
+        "pts": 5,
+        "gp": 3,
+        "w": 1,
+        "d": 2,
+        "l": 0,
+        "gf": 6,
+        "ga": 1,
+        "gd": 5
+      },
+      {
+        "team": "DR Congo",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 4,
+        "ga": 3,
+        "gd": 1
+      },
+      {
+        "team": "Uzbekistan",
+        "pts": 0,
+        "gp": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 2,
+        "ga": 11,
+        "gd": -9
+      }
     ],
     "Group L": [
-      {"team":"England","pts":7,"gp":3,"w":2,"d":1,"l":0,"gf":6,"ga":2,"gd":4},
-      {"team":"Croatia","pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":5,"ga":6,"gd":-1},
-      {"team":"Ghana",  "pts":4,"gp":3,"w":1,"d":1,"l":1,"gf":4,"ga":5,"gd":-1},
-      {"team":"Panama", "pts":0,"gp":3,"w":0,"d":0,"l":3,"gf":0,"ga":7,"gd":-7}
+      {
+        "team": "England",
+        "pts": 7,
+        "gp": 3,
+        "w": 2,
+        "d": 1,
+        "l": 0,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4
+      },
+      {
+        "team": "Croatia",
+        "pts": 6,
+        "gp": 3,
+        "w": 2,
+        "d": 0,
+        "l": 1,
+        "gf": 5,
+        "ga": 5,
+        "gd": 0
+      },
+      {
+        "team": "Ghana",
+        "pts": 4,
+        "gp": 3,
+        "w": 1,
+        "d": 1,
+        "l": 1,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0
+      },
+      {
+        "team": "Panama",
+        "pts": 0,
+        "gp": 3,
+        "w": 0,
+        "d": 0,
+        "l": 3,
+        "gf": 0,
+        "ga": 4,
+        "gd": -4
+      }
     ]
   },
   "thirdPlaceRanking": [
-    {"team":"South Korea",           "group":"A","pts":3,"gf":2,"ga":4,"gd":-2},
-    {"team":"Bosnia and Herzegovina","group":"B","pts":4,"gf":5,"ga":7,"gd":-2},
-    {"team":"Scotland",              "group":"C","pts":3,"gf":1,"ga":8,"gd":-7},
-    {"team":"Paraguay",              "group":"D","pts":4,"gf":2,"ga":4,"gd":-2},
-    {"team":"Ecuador",               "group":"E","pts":4,"gf":4,"ga":4,"gd":0},
-    {"team":"Sweden",                "group":"F","pts":4,"gf":7,"ga":6,"gd":1},
-    {"team":"Iran",                  "group":"G","pts":3,"gf":3,"ga":3,"gd":0},
-    {"team":"Cape Verde",            "group":"H","pts":3,"gf":2,"ga":2,"gd":0},
-    {"team":"Senegal",               "group":"I","pts":3,"gf":8,"ga":5,"gd":3},
-    {"team":"Algeria",               "group":"J","pts":4,"gf":6,"ga":5,"gd":1},
-    {"team":"DR Congo",              "group":"K","pts":3,"gf":4,"ga":5,"gd":-1},
-    {"team":"Ghana",                 "group":"L","pts":4,"gf":4,"ga":5,"gd":-1}
+    {
+      "group": "Group K",
+      "team": "DR Congo",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 4,
+      "ga": 3,
+      "gd": 1,
+      "provisionalRank": 1,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group F",
+      "team": "Sweden",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 7,
+      "ga": 7,
+      "gd": 0,
+      "provisionalRank": 2,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group E",
+      "team": "Ecuador",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0,
+      "provisionalRank": 3,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group L",
+      "team": "Ghana",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0,
+      "provisionalRank": 4,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group B",
+      "team": "Bosnia and Herzegovina",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 5,
+      "ga": 6,
+      "gd": -1,
+      "provisionalRank": 5,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group J",
+      "team": "Algeria",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 5,
+      "ga": 7,
+      "gd": -2,
+      "provisionalRank": 6,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group D",
+      "team": "Paraguay",
+      "pts": 4,
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "provisionalRank": 7,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group I",
+      "team": "Senegal",
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 8,
+      "ga": 6,
+      "gd": 2,
+      "provisionalRank": 8,
+      "inHuntForR32": true
+    },
+    {
+      "group": "Group G",
+      "team": "Iran",
+      "pts": 3,
+      "gp": 3,
+      "w": 0,
+      "d": 3,
+      "l": 0,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0,
+      "provisionalRank": 9,
+      "inHuntForR32": false
+    },
+    {
+      "group": "Group A",
+      "team": "South Korea",
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "provisionalRank": 10,
+      "inHuntForR32": false
+    },
+    {
+      "group": "Group C",
+      "team": "Scotland",
+      "pts": 3,
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 1,
+      "ga": 4,
+      "gd": -3,
+      "provisionalRank": 11,
+      "inHuntForR32": false
+    },
+    {
+      "group": "Group H",
+      "team": "Uruguay",
+      "pts": 2,
+      "gp": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "provisionalRank": 12,
+      "inHuntForR32": false
+    }
   ],
   "knockout": {
     "Round of 32": [
-      {"home":"South Africa","away":"Canada","homeGoals":0,"awayGoals":1,"venue":"Los Angeles","date":"2026-06-28T00:00:00.000Z"}
+      {
+        "home": "South Africa",
+        "away": "Canada",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "venue": "Los Angeles",
+        "date": "2026-06-28T19:00:00.000Z"
+      }
     ],
     "Round of 16": [],
     "Quarter-finals": [],
