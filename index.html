@@ -1177,8 +1177,11 @@ function timeAgo(iso){
 function buildTicker(data){
   const items=[];
   if(data.matches && data.matches.length>0){
-    data.matches.slice(0,10).forEach(m=>{
-      items.push(`${flag(m.home)} ${m.home} ${m.homeGoals} – ${m.awayGoals} ${m.away} ${flag(m.away)}`);
+    // Show most recent matches first (reverse order), up to 15
+    const recent=[...data.matches].reverse().slice(0,15);
+    recent.forEach(m=>{
+      const stageLabel=m.stage.startsWith("Round")||m.stage.startsWith("Quarter")||m.stage.startsWith("Semi")||m.stage.startsWith("Final")?` [${m.stage}]`:"";
+      items.push(`${flag(m.home)} ${m.home} ${m.homeGoals}–${m.awayGoals} ${m.away} ${flag(m.away)}${stageLabel}`);
     });
   } else {
     items.push("No results yet — tournament kicks off soon");
@@ -1430,11 +1433,35 @@ const KNOWN_RESULTS = {
   "r32-1": {homeGoals:0, awayGoals:1}, // South Africa 0-1 Canada
 };
 
+// R16 fixture pairings: [r32IdA, r32IdB, date, venue]
+// Winner of r32IdA faces winner of r32IdB
+const R16_PAIRINGS = [
+  ["r32-1",  "r32-3",  "Jul 4",  "Houston"],
+  ["r32-2",  "r32-5",  "Jul 4",  "Philadelphia"],
+  ["r32-4",  "r32-6",  "Jul 5",  "New York/NJ"],
+  ["r32-7",  "r32-8",  "Jul 5",  "Mexico City"],
+  ["r32-9",  "r32-10", "Jul 6",  "Seattle"],
+  ["r32-11", "r32-12", "Jul 6",  "Dallas"],
+  ["r32-13", "r32-14", "Jul 7",  "Vancouver"],
+  ["r32-15", "r32-16", "Jul 7",  "Atlanta"],
+];
+
+// Returns the winner team name from a fixture id, or null if not yet played
+function r32Winner(id){
+  const fix=R32_FIXTURES.find(f=>f.id===id);
+  if(!fix) return null;
+  const res=KNOWN_RESULTS[id];
+  if(!res) return null;
+  if(res.homeGoals > res.awayGoals) return fix.home;
+  if(res.awayGoals > res.homeGoals) return fix.away;
+  return null;
+}
+
 function renderBracket(data){
   const river=document.getElementById("bracketRiver");
   const knockout=data.knockout||{};
 
-  // Build result lookup from data.json knockout section
+  // Build result lookup from data.json knockout section (R32)
   const resultLookup={};
   (knockout["Round of 32"]||[]).forEach(m=>{
     resultLookup[m.home+"|"+m.away]=m;
@@ -1461,9 +1488,53 @@ function renderBracket(data){
     }
   }).join("");
 
-  // ---- LATER ROUNDS from data.json ----
-  const laterRounds=["Round of 16","Quarter-finals","Semi-finals","Final"];
-  const laterCounts={"Round of 16":8,"Quarter-finals":4,"Semi-finals":2,"Final":1};
+  // ---- ROUND OF 16 - derived from R32 winners + data.json for played matches ----
+  const r16JsonMatches=knockout["Round of 16"]||[];
+  const r16Lookup={};
+  r16JsonMatches.forEach(m=>{ r16Lookup[m.home+"|"+m.away]=m; r16Lookup[m.away+"|"+m.home]=m; });
+
+  const r16Html=R16_PAIRINGS.map(([idA,idB,date,venue])=>{
+    const teamA=r32Winner(idA);
+    const teamB=r32Winner(idB);
+    // Check if R16 match already played
+    let playedMatch=null;
+    if(teamA&&teamB){
+      playedMatch=r16Lookup[teamA+"|"+teamB];
+    }
+    let s1,s2;
+    if(playedMatch){
+      const hg=playedMatch.home===teamA?playedMatch.homeGoals:playedMatch.awayGoals;
+      const ag=playedMatch.home===teamA?playedMatch.awayGoals:playedMatch.homeGoals;
+      const hw=hg>ag,aw=ag>hg;
+      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(teamA)} ${teamA}</span><span class="bracket-slot-score">${hg}</span></div>`;
+      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(teamB)} ${teamB}</span><span class="bracket-slot-score">${ag}</span></div>`;
+      return `<div class="bracket-match">${s1}${s2}</div>`;
+    } else if(teamA&&teamB){
+      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}</div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}</div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    } else if(teamA){
+      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}</div>`;
+      s2=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    } else if(teamB){
+      s1=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}</div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    } else {
+      const fixA=R32_FIXTURES.find(f=>f.id===idA);
+      const fixB=R32_FIXTURES.find(f=>f.id===idB);
+      const labelA=fixA?("W: "+fixA.home+"/"+fixA.away):"TBD";
+      const labelB=fixB?("W: "+fixB.home+"/"+fixB.away):"TBD";
+      s1=`<div class="bracket-slot tbd"><span>${labelA}</span></div>`;
+      s2=`<div class="bracket-slot tbd"><span>${labelB}</span></div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    }
+  }).join("");
+
+  // ---- QUARTER-FINALS, SEMI-FINALS, FINAL from data.json ----
+  const laterRounds=["Quarter-finals","Semi-finals","Final"];
+  const laterCounts={"Quarter-finals":4,"Semi-finals":2,"Final":1};
   const laterHtml=laterRounds.map(roundName=>{
     const real=knockout[roundName]||[];
     const count=laterCounts[roundName];
@@ -1492,6 +1563,10 @@ function renderBracket(data){
     <div class="bracket-round">
       <div class="bracket-round-label">Round of 32</div>
       ${r32Html}
+    </div>
+    <div class="bracket-round">
+      <div class="bracket-round-label">Round of 16</div>
+      ${r16Html}
     </div>
     ${laterHtml}`;
 }
