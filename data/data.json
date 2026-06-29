@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-29T18:07:39.048Z",
+  "generatedAt": "2026-06-29T21:25:09.050Z",
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 73,
+  "completedMatches": 74,
   "friends": [
     {
       "name": "Patty",
@@ -113,7 +113,7 @@
         "Egypt",
         "Brazil"
       ],
-      "points": 16
+      "points": 19
     },
     {
       "name": "Rianne",
@@ -471,12 +471,12 @@
     },
     "Japan": {
       "pts": 5,
-      "gp": 3,
+      "gp": 4,
       "w": 1,
       "d": 2,
-      "l": 0,
-      "gf": 7,
-      "ga": 3
+      "l": 1,
+      "gf": 8,
+      "ga": 5
     },
     "Spain": {
       "pts": 7,
@@ -515,13 +515,13 @@
       "ga": 3
     },
     "Brazil": {
-      "pts": 7,
-      "gp": 3,
-      "w": 2,
+      "pts": 10,
+      "gp": 4,
+      "w": 3,
       "d": 1,
       "l": 0,
-      "gf": 7,
-      "ga": 1
+      "gf": 9,
+      "ga": 2
     },
     "Curacao": {
       "pts": 1,
@@ -561,6 +561,16 @@
     }
   },
   "matches": [
+    {
+      "fixtureId": "Brazil-Japan-2026-06-29",
+      "date": "2026-06-29T00:00:00.000Z",
+      "stage": "Round of 32",
+      "home": "Brazil",
+      "away": "Japan",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "venue": "Houston"
+    },
     {
       "fixtureId": "South Africa-Canada-2026-06-28",
       "date": "2026-06-28T00:00:00.000Z",
@@ -1388,14 +1398,14 @@
     "Group C": [
       {
         "team": "Brazil",
-        "pts": 7,
-        "gp": 3,
-        "w": 2,
+        "pts": 10,
+        "gp": 4,
+        "w": 3,
         "d": 1,
         "l": 0,
-        "gf": 7,
-        "ga": 1,
-        "gd": 6
+        "gf": 9,
+        "ga": 2,
+        "gd": 7
       },
       {
         "team": "Morocco",
@@ -1538,13 +1548,13 @@
       {
         "team": "Japan",
         "pts": 5,
-        "gp": 3,
+        "gp": 4,
         "w": 1,
         "d": 2,
-        "l": 0,
-        "gf": 7,
-        "ga": 3,
-        "gd": 4
+        "l": 1,
+        "gf": 8,
+        "ga": 5,
+        "gd": 3
       },
       {
         "team": "Sweden",
@@ -2018,6 +2028,16 @@
   ],
   "knockout": {
     "Round of 32": [
+      {
+        "fixtureId": "Brazil-Japan-2026-06-29",
+        "date": "2026-06-29T00:00:00.000Z",
+        "stage": "Round of 32",
+        "home": "Brazil",
+        "away": "Japan",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "venue": "Houston"
+      },
       {
         "fixtureId": "South Africa-Canada-2026-06-28",
         "date": "2026-06-28T00:00:00.000Z",
