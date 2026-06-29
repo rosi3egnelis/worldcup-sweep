@@ -890,6 +890,19 @@ main{
 }
 .bracket-slot:first-child{border-bottom:1px solid var(--border);}
 .bracket-slot.tbd{color:var(--text-faint);font-weight:500;font-style:italic;}
+.bracket-slot.upcoming{color:var(--text-muted);font-weight:600;}
+.bracket-date-tag{
+  font-family:var(--font-display);
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--blue);
+  text-align:center;
+  padding:2px 0 1px;
+  background:var(--blue-glow);
+  border-bottom:1px solid var(--border);
+}
 .bracket-slot.winner{background:rgba(34,197,94,0.07);}
 .bracket-slot-score{
   font-family:var(--font-display);
@@ -1390,17 +1403,71 @@ function renderThirds(data){
 /* ============================================================
    BRACKET
    ============================================================ */
+
+// Full hardcoded R32 fixture list — teams confirmed after group stage.
+// Scores from data.json are merged in automatically when available.
+const R32_FIXTURES = [
+  {id:"r32-1",  date:"Jun 28", home:"South Africa", away:"Canada"},
+  {id:"r32-2",  date:"Jun 29", home:"Germany",      away:"Paraguay"},
+  {id:"r32-3",  date:"Jun 29", home:"Netherlands",  away:"Morocco"},
+  {id:"r32-4",  date:"Jun 29", home:"Brazil",       away:"Japan"},
+  {id:"r32-5",  date:"Jun 30", home:"France",       away:"Sweden"},
+  {id:"r32-6",  date:"Jun 30", home:"Ivory Coast",  away:"Norway"},
+  {id:"r32-7",  date:"Jun 30", home:"Mexico",       away:"Ecuador"},
+  {id:"r32-8",  date:"Jul 1",  home:"England",      away:"DR Congo"},
+  {id:"r32-9",  date:"Jul 1",  home:"Belgium",      away:"Senegal"},
+  {id:"r32-10", date:"Jul 1",  home:"USA",          away:"Bosnia and Herzegovina"},
+  {id:"r32-11", date:"Jul 2",  home:"Spain",        away:"Austria"},
+  {id:"r32-12", date:"Jul 2",  home:"Portugal",     away:"Croatia"},
+  {id:"r32-13", date:"Jul 2",  home:"Switzerland",  away:"Algeria"},
+  {id:"r32-14", date:"Jul 3",  home:"Australia",    away:"Egypt"},
+  {id:"r32-15", date:"Jul 3",  home:"Argentina",    away:"Cape Verde"},
+  {id:"r32-16", date:"Jul 3",  home:"Colombia",     away:"Ghana"},
+];
+
+// Confirmed results not yet in data.json (updated manually as matches are played)
+const KNOWN_RESULTS = {
+  "r32-1": {homeGoals:0, awayGoals:1}, // South Africa 0-1 Canada
+};
+
 function renderBracket(data){
   const river=document.getElementById("bracketRiver");
   const knockout=data.knockout||{};
-  const rounds=["Round of 32","Round of 16","Quarter-finals","Semi-finals","Final"];
-  const slotCounts={"Round of 32":16,"Round of 16":8,"Quarter-finals":4,"Semi-finals":2,"Final":1};
 
-  river.innerHTML=rounds.map(roundName=>{
+  // Build result lookup from data.json knockout section
+  const resultLookup={};
+  (knockout["Round of 32"]||[]).forEach(m=>{
+    resultLookup[m.home+"|"+m.away]=m;
+    resultLookup[m.away+"|"+m.home]={home:m.away,away:m.home,homeGoals:m.awayGoals,awayGoals:m.homeGoals};
+  });
+
+  // ---- ROUND OF 32 ----
+  const r32Html=R32_FIXTURES.map(fix=>{
+    const jsonResult=resultLookup[fix.home+"|"+fix.away];
+    const override=KNOWN_RESULTS[fix.id];
+    const result=jsonResult||override;
+    let s1,s2;
+    if(result){
+      const hg=(jsonResult?jsonResult.homeGoals:result.homeGoals);
+      const ag=(jsonResult?jsonResult.awayGoals:result.awayGoals);
+      const hw=hg>ag,aw=ag>hg;
+      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(fix.home)} ${fix.home}</span><span class="bracket-slot-score">${hg}</span></div>`;
+      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(fix.away)} ${fix.away}</span><span class="bracket-slot-score">${ag}</span></div>`;
+      return `<div class="bracket-match">${s1}${s2}</div>`;
+    } else {
+      s1=`<div class="bracket-slot upcoming">${flag(fix.home)} ${fix.home}</div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(fix.away)} ${fix.away}</div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${fix.date}</div>${s1}${s2}</div>`;
+    }
+  }).join("");
+
+  // ---- LATER ROUNDS from data.json ----
+  const laterRounds=["Round of 16","Quarter-finals","Semi-finals","Final"];
+  const laterCounts={"Round of 16":8,"Quarter-finals":4,"Semi-finals":2,"Final":1};
+  const laterHtml=laterRounds.map(roundName=>{
     const real=knockout[roundName]||[];
-    const count=slotCounts[roundName];
+    const count=laterCounts[roundName];
     const isFinal=roundName==="Final";
-
     const matchesHtml=Array.from({length:count}).map((_,i)=>{
       const m=real[i];
       let s1,s2;
@@ -1414,13 +1481,19 @@ function renderBracket(data){
       }
       return `<div class="bracket-match">${s1}${s2}</div>`;
     }).join("");
-
     return `
     <div class="bracket-round ${isFinal?"bracket-final":""}">
       <div class="bracket-round-label">${roundName}</div>
       ${matchesHtml}
     </div>`;
   }).join("");
+
+  river.innerHTML=`
+    <div class="bracket-round">
+      <div class="bracket-round-label">Round of 32</div>
+      ${r32Html}
+    </div>
+    ${laterHtml}`;
 }
 
 /* ============================================================
