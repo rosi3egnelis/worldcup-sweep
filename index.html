@@ -1435,6 +1435,8 @@ const R32_FIXTURES = [
 // Confirmed results not yet in data.json (updated manually as matches are played)
 const KNOWN_RESULTS = {
   "r32-1": {homeGoals:0, awayGoals:1}, // South Africa 0-1 Canada
+  "r32-2": {homeGoals:1, awayGoals:1, penWinner:"away"}, // Germany 1-1 Paraguay (Paraguay wins 4-3 pens)
+  "r32-3": {homeGoals:1, awayGoals:1, penWinner:"away"}, // Netherlands 1-1 Morocco (Morocco wins 3-2 pens)
   "r32-4": {homeGoals:2, awayGoals:1}, // Brazil 2-1 Japan
 };
 
@@ -1457,6 +1459,9 @@ function r32Winner(id){
   if(!fix) return null;
   const res=KNOWN_RESULTS[id];
   if(!res) return null;
+  // Penalty shootout winner takes precedence
+  if(res.penWinner==="home") return fix.home;
+  if(res.penWinner==="away") return fix.away;
   if(res.homeGoals > res.awayGoals) return fix.home;
   if(res.awayGoals > res.homeGoals) return fix.away;
   return null;
