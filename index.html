@@ -834,86 +834,195 @@ main{
 /* =========================================================
    KNOCKOUT BRACKET
    ========================================================= */
+/* =========================================================
+   BRACKET — TV-style horizontal tree with connector lines
+   ========================================================= */
 .bracket-scroll{
   overflow-x:auto;
-  padding-bottom:var(--space-4);
+  overflow-y:visible;
+  padding-bottom:var(--space-6);
   margin:0 calc(-1 * var(--space-6));
   padding-left:var(--space-6);
   padding-right:var(--space-6);
 }
 .bracket-river{
   display:flex;
-  gap:var(--space-6);
+  gap:0;
   min-width:max-content;
-  padding:var(--space-2) var(--space-2) var(--space-4);
-  align-items:stretch;
+  padding:var(--space-4) var(--space-2) var(--space-4);
+  align-items:center;
 }
+/* Each round column */
 .bracket-round{
   display:flex;
   flex-direction:column;
   justify-content:space-around;
-  gap:var(--space-3);
-  min-width:180px;
+  position:relative;
+  min-width:175px;
+  padding:0 0 0 0;
+}
+/* Connector column between rounds */
+.bracket-connector{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  position:relative;
+  width:28px;
+  flex-shrink:0;
+  align-self:stretch;
+}
+.bracket-connector-pair{
+  flex:1;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+/* Horizontal line out of a match */
+.bracket-connector-pair::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  right:50%;
+  height:1px;
+  background:var(--border);
+}
+/* Vertical line joining two halves */
+.bracket-connector-pair.top::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  bottom:0;
+  right:50%;
+  width:1px;
+  background:var(--border);
+}
+.bracket-connector-pair.bottom::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:50%;
+  right:50%;
+  width:1px;
+  background:var(--border);
+}
+/* Horizontal line into next match */
+.bracket-connector-in{
+  width:28px;
+  flex-shrink:0;
+  align-self:stretch;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+.bracket-connector-in::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  right:0;
+  height:1px;
+  background:var(--border);
 }
 .bracket-round-label{
   font-family:var(--font-display);
-  font-size:0.72rem;
+  font-size:0.68rem;
   font-weight:800;
   letter-spacing:0.1em;
   text-transform:uppercase;
   color:var(--gold);
   text-align:center;
-  margin-bottom:var(--space-2);
+  margin-bottom:var(--space-3);
   padding-bottom:var(--space-2);
   border-bottom:1px solid var(--border);
 }
+/* Match card */
 .bracket-match{
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:var(--r-md);
+  border-radius:6px;
   overflow:hidden;
   position:relative;
+  width:170px;
+  transition:border-color 0.15s;
 }
+.bracket-match:hover{border-color:var(--text-muted);}
 .bracket-final .bracket-match{
   border-color:var(--gold);
-  box-shadow:0 0 0 1px rgba(245,200,66,0.2), var(--shadow-glow-gold);
+  box-shadow:0 0 0 1px rgba(245,200,66,0.2), 0 0 12px rgba(245,200,66,0.15);
+  width:170px;
 }
+/* Slot row */
 .bracket-slot{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:var(--space-2);
-  padding:var(--space-2) var(--space-3);
-  font-size:0.8rem;
+  gap:6px;
+  padding:6px 8px;
+  font-size:0.78rem;
   font-weight:600;
   color:var(--text);
+  line-height:1.2;
+  min-height:36px;
 }
 .bracket-slot:first-child{border-bottom:1px solid var(--border);}
-.bracket-slot.tbd{color:var(--text-faint);font-weight:500;font-style:italic;}
+.bracket-slot.tbd{color:var(--text-faint);font-weight:400;font-style:italic;font-size:0.72rem;}
 .bracket-slot.upcoming{color:var(--text-muted);font-weight:600;}
-.bracket-date-tag{
-  font-family:var(--font-display);
-  font-size:0.6rem;
-  font-weight:700;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--blue);
-  text-align:center;
-  padding:2px 0 1px;
-  background:var(--blue-glow);
-  border-bottom:1px solid var(--border);
+.bracket-slot.winner{
+  background:rgba(34,197,94,0.08);
+  color:var(--text);
 }
-.bracket-slot.winner{background:rgba(34,197,94,0.07);}
-.bracket-owner{display:block;font-size:10px;color:var(--text-faint);font-weight:400;letter-spacing:0.02em;margin-top:1px;}
-.team-owner-label{font-size:10px;color:var(--accent);font-weight:500;letter-spacing:0.03em;opacity:0.8;}
+.bracket-slot-team{
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+  min-width:0;
+  flex:1;
+}
+.bracket-slot-name{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:0.78rem;
+  font-weight:600;
+}
+.bracket-owner{
+  font-size:9px;
+  color:var(--accent);
+  font-weight:500;
+  letter-spacing:0.02em;
+  opacity:0.85;
+  white-space:nowrap;
+}
 .bracket-slot-score{
   font-family:var(--font-display);
   font-weight:800;
-  font-size:0.9rem;
+  font-size:0.88rem;
   color:var(--gold);
-  min-width:16px;
+  min-width:14px;
   text-align:right;
+  flex-shrink:0;
 }
+.bracket-date-tag{
+  font-family:var(--font-display);
+  font-size:0.57rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--blue);
+  text-align:center;
+  padding:2px 4px 2px;
+  background:rgba(59,130,246,0.06);
+  border-bottom:1px solid var(--border);
+}
+.team-owner-label{font-size:10px;color:var(--accent);font-weight:500;letter-spacing:0.03em;opacity:0.8;}
+
+/* Round spacing helpers — each round needs half gaps to align with connectors */
+.bracket-round.r32   { gap:4px; }
+.bracket-round.r16   { gap:56px; }
+.bracket-round.qf    { gap:168px; }
+.bracket-round.sf    { gap:400px; }
+.bracket-round.final { gap:0; }
 
 /* =========================================================
    EMPTY STATE
@@ -1160,6 +1269,8 @@ const flag = t => flagMap[t] || "🏳️";
 function ownerMap(friends){
   const m={};
   friends.forEach(f=>f.teams.forEach(t=>{m[t]=f.name;}));
+  // Alias: "USA" in fixtures = "United States" in sweep data
+  if(m["United States"]) m["USA"]=m["United States"];
   return m;
 }
 
@@ -1455,14 +1566,14 @@ const KNOWN_RESULTS = {
 // R16 fixture pairings: [r32IdA, r32IdB, date, venue]
 // Winner of r32IdA faces winner of r32IdB
 const R16_PAIRINGS = [
-  ["r32-1",  "r32-3",  "Jul 4",  "Houston"],
-  ["r32-2",  "r32-5",  "Jul 4",  "Philadelphia"],
-  ["r32-4",  "r32-6",  "Jul 5",  "New York/NJ"],
-  ["r32-7",  "r32-8",  "Jul 5",  "Mexico City"],
-  ["r32-9",  "r32-10", "Jul 6",  "Seattle"],
-  ["r32-11", "r32-12", "Jul 6",  "Dallas"],
-  ["r32-13", "r32-14", "Jul 7",  "Vancouver"],
-  ["r32-15", "r32-16", "Jul 7",  "Atlanta"],
+  ["r32-1",  "r32-3",  "Jul 4",  "Houston"],        // Canada vs Morocco
+  ["r32-2",  "r32-5",  "Jul 4",  "Philadelphia"],   // Paraguay vs France
+  ["r32-4",  "r32-6",  "Jul 5",  "New York/NJ"],    // Brazil vs Norway
+  ["r32-7",  "r32-8",  "Jul 5",  "Mexico City"],    // Mexico vs England
+  ["r32-9",  "r32-10", "Jul 6",  "Seattle"],        // Belgium vs USA
+  ["r32-11", "r32-12", "Jul 6",  "Dallas"],         // Spain vs Portugal
+  ["r32-15", "r32-14", "Jul 7",  "Atlanta"],        // Argentina vs Egypt ✓ FIXED
+  ["r32-13", "r32-16", "Jul 7",  "Vancouver"],      // Switzerland vs Colombia ✓ FIXED
 ];
 
 // Returns the winner team name from a fixture id, or null if not yet played
@@ -1489,91 +1600,66 @@ function r32Winner(id){
 
 function renderBracket(data){
   const river=document.getElementById("bracketRiver");
+  if(!river){return;}
+
   const knockout=data.knockout||{};
   const owners=ownerMap(data.friends);
 
-  // Build result lookup from data.json knockout section (R32)
-  const resultLookup={};
-  (knockout["Round of 32"]||[]).forEach(m=>{
-    resultLookup[m.home+"|"+m.away]=m;
-    resultLookup[m.away+"|"+m.home]={home:m.away,away:m.home,homeGoals:m.awayGoals,awayGoals:m.homeGoals};
+  // ── helpers ──────────────────────────────────────────────────────────────
+  // flagMap and flag() are defined globally above — use them directly
+
+  function mkSlot(teamName, score, isWinner){
+    if(!teamName){
+      return `<div class="bracket-slot tbd"><div class="bracket-slot-team"><span class="bracket-slot-name">TBD</span></div></div>`;
+    }
+    const cls = isWinner===true?"winner":isWinner===false?"":"upcoming";
+    const ownerLabel = owners[teamName]?`<span class="bracket-owner">${owners[teamName]}</span>`:"";
+    const scoreHtml = (score!==undefined&&score!==null)?`<span class="bracket-slot-score">${score}</span>`:"";
+    return `<div class="bracket-slot ${cls}">
+      <div class="bracket-slot-team">
+        <span class="bracket-slot-name">${flag(teamName)} ${teamName}</span>
+        ${ownerLabel}
+      </div>${scoreHtml}
+    </div>`;
+  }
+
+  function mkTbdSlot(label){
+    return `<div class="bracket-slot tbd"><div class="bracket-slot-team"><span class="bracket-slot-name">${label||"TBD"}</span></div></div>`;
+  }
+
+  function mkMatch(slotA, slotB, dateVenue){
+    const tag = dateVenue?`<div class="bracket-date-tag">${dateVenue}</div>`:"";
+    return `<div class="bracket-match">${tag}${slotA}${slotB}</div>`;
+  }
+
+  // ── R32 winner helper ────────────────────────────────────────────────────
+  function r32Winner(id){
+    const fix=R32_FIXTURES.find(f=>f.id===id);
+    if(!fix) return null;
+    const res=KNOWN_RESULTS[id];
+    if(!res) return null;
+    if(res.penWinner==="home") return fix.home;
+    if(res.penWinner==="away") return fix.away;
+    if(res.homeGoals > res.awayGoals) return fix.home;
+    if(res.awayGoals > res.homeGoals) return fix.away;
+    return null;
+  }
+
+  // ── R16 lookup ────────────────────────────────────────────────────────────
+  const r16JsonMatches = knockout["Round of 16"]||[];
+  const r16Lookup={};
+  r16JsonMatches.forEach(m=>{
+    r16Lookup[m.home+"|"+m.away]=m;
+    r16Lookup[m.away+"|"+m.home]=m;
   });
 
-  // ---- ROUND OF 32 ----
-  const r32Html=R32_FIXTURES.map(fix=>{
-    const jsonResult=resultLookup[fix.home+"|"+fix.away];
-    const override=KNOWN_RESULTS[fix.id];
-    const result=jsonResult||override;
-    let s1,s2;
-    if(result){
-      const hg=(jsonResult?jsonResult.homeGoals:result.homeGoals);
-      const ag=(jsonResult?jsonResult.awayGoals:result.awayGoals);
-      const hw=hg>ag,aw=ag>hg;
-      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(fix.home)} ${fix.home}</span><span class="bracket-slot-score">${hg}</span>${owners[fix.home]?`<span class="bracket-owner">(${owners[fix.home]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(fix.away)} ${fix.away}</span><span class="bracket-slot-score">${ag}</span>${owners[fix.away]?`<span class="bracket-owner">(${owners[fix.away]})</span>`:""}</div>`;
-      return `<div class="bracket-match">${s1}${s2}</div>`;
-    } else {
-      s1=`<div class="bracket-slot upcoming">${flag(fix.home)} ${fix.home}${owners[fix.home]?`<span class="bracket-owner">(${owners[fix.home]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(fix.away)} ${fix.away}${owners[fix.away]?`<span class="bracket-owner">(${owners[fix.away]})</span>`:""}</div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${fix.date}</div>${s1}${s2}</div>`;
-    }
-  }).join("");
-
-  // ---- ROUND OF 16 - derived from R32 winners + data.json for played matches ----
-  const r16JsonMatches=knockout["Round of 16"]||[];
-  const r16Lookup={};
-  r16JsonMatches.forEach(m=>{ r16Lookup[m.home+"|"+m.away]=m; r16Lookup[m.away+"|"+m.home]=m; });
-
-  const r16Html=R16_PAIRINGS.map(([idA,idB,date,venue])=>{
-    const teamA=r32Winner(idA);
-    const teamB=r32Winner(idB);
-    // Check if R16 match already played
-    let playedMatch=null;
-    if(teamA&&teamB){
-      playedMatch=r16Lookup[teamA+"|"+teamB];
-    }
-    let s1,s2;
-    if(playedMatch){
-      const hg=playedMatch.home===teamA?playedMatch.homeGoals:playedMatch.awayGoals;
-      const ag=playedMatch.home===teamA?playedMatch.awayGoals:playedMatch.homeGoals;
-      const hw=hg>ag,aw=ag>hg;
-      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(teamA)} ${teamA}</span><span class="bracket-slot-score">${hg}</span>${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(teamB)} ${teamB}</span><span class="bracket-slot-score">${ag}</span>${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
-      return `<div class="bracket-match">${s1}${s2}</div>`;
-    } else if(teamA&&teamB){
-      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
-    } else if(teamA){
-      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
-    } else if(teamB){
-      s1=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
-    } else {
-      const fixA=R32_FIXTURES.find(f=>f.id===idA);
-      const fixB=R32_FIXTURES.find(f=>f.id===idB);
-      const labelA=fixA?("W: "+fixA.home+"/"+fixA.away):"TBD";
-      const labelB=fixB?("W: "+fixB.home+"/"+fixB.away):"TBD";
-      s1=`<div class="bracket-slot tbd"><span>${labelA}</span></div>`;
-      s2=`<div class="bracket-slot tbd"><span>${labelB}</span></div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
-    }
-  }).join("");
-
-  // ---- helper: derive R16 winner from data.json results ----
   function r16Winner(r16Idx){
     const pairing=R16_PAIRINGS[r16Idx];
     if(!pairing) return null;
     const [idA,idB]=pairing;
-    const teamA=r32Winner(idA);
-    const teamB=r32Winner(idB);
-    if(!teamA||!teamB) return null;
-    // Find played R16 result
-    const m=r16JsonMatches.find(x=>
-      (x.home===teamA&&x.away===teamB)||(x.home===teamB&&x.away===teamA));
+    const tA=r32Winner(idA), tB=r32Winner(idB);
+    if(!tA||!tB) return null;
+    const m=r16JsonMatches.find(x=>(x.home===tA&&x.away===tB)||(x.home===tB&&x.away===tA));
     if(!m) return null;
     if(m.penWinner==="home") return m.home;
     if(m.penWinner==="away") return m.away;
@@ -1582,84 +1668,184 @@ function renderBracket(data){
     return null;
   }
 
-  // ---- QUARTER-FINALS driven by QF_PAIRINGS ----
+  // ── QF lookup ────────────────────────────────────────────────────────────
   const qfJsonMatches=knockout["Quarter-finals"]||[];
   const qfLookup={};
-  qfJsonMatches.forEach(m=>{ qfLookup[m.home+"|"+m.away]=m; qfLookup[m.away+"|"+m.home]=m; });
+  qfJsonMatches.forEach(m=>{qfLookup[m.home+"|"+m.away]=m;qfLookup[m.away+"|"+m.home]=m;});
 
-  const qfHtml=QF_PAIRINGS.map(([idxA,idxB,date,venue])=>{
-    const teamA=r16Winner(idxA);
-    const teamB=r16Winner(idxB);
-    let playedQF=null;
-    if(teamA&&teamB) playedQF=qfLookup[teamA+"|"+teamB];
-    let s1,s2;
-    if(playedQF){
-      const hg=playedQF.home===teamA?playedQF.homeGoals:playedQF.awayGoals;
-      const ag=playedQF.home===teamA?playedQF.awayGoals:playedQF.homeGoals;
-      const hw=hg>ag,aw=ag>hg;
-      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(teamA)} ${teamA}</span><span class="bracket-slot-score">${hg}</span>${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(teamB)} ${teamB}</span><span class="bracket-slot-score">${ag}</span>${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
-      return `<div class="bracket-match">${s1}${s2}</div>`;
-    } else if(teamA&&teamB){
-      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
-    } else if(teamA){
-      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
-      s2=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
-    } else if(teamB){
-      s1=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
-      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+  function qfWinner(qfIdx){
+    const [idxA,idxB]=QF_PAIRINGS[qfIdx];
+    const tA=r16Winner(idxA), tB=r16Winner(idxB);
+    if(!tA||!tB) return null;
+    const m=qfJsonMatches.find(x=>(x.home===tA&&x.away===tB)||(x.home===tB&&x.away===tA));
+    if(!m) return null;
+    if(m.penWinner==="home") return m.home;
+    if(m.penWinner==="away") return m.away;
+    if(m.homeGoals>m.awayGoals) return m.home;
+    if(m.awayGoals>m.homeGoals) return m.away;
+    return null;
+  }
+
+  // ── SF lookup ────────────────────────────────────────────────────────────
+  const sfJsonMatches=knockout["Semi-finals"]||[];
+  const sfLookup={};
+  sfJsonMatches.forEach(m=>{sfLookup[m.home+"|"+m.away]=m;sfLookup[m.away+"|"+m.home]=m;});
+
+  // SF pairings: [qfIdxA, qfIdxB] — winners of QF0&QF1 meet, QF2&QF3 meet
+  const SF_PAIRINGS=[[0,1],[2,3]];
+
+  function sfWinner(sfIdx){
+    const [qA,qB]=SF_PAIRINGS[sfIdx];
+    const tA=qfWinner(qA), tB=qfWinner(qB);
+    if(!tA||!tB) return null;
+    const m=sfJsonMatches.find(x=>(x.home===tA&&x.away===tB)||(x.home===tB&&x.away===tA));
+    if(!m) return null;
+    if(m.penWinner==="home") return m.home;
+    if(m.penWinner==="away") return m.away;
+    if(m.homeGoals>m.awayGoals) return m.home;
+    if(m.awayGoals>m.homeGoals) return m.away;
+    return null;
+  }
+
+  // ── Build match HTML for each round ─────────────────────────────────────
+
+  // R32 — 16 matches
+  const r32Matches = R32_FIXTURES.map(fix=>{
+    const res=KNOWN_RESULTS[fix.id];
+    if(res){
+      const hw=res.penWinner==="home"||(res.homeGoals>res.awayGoals&&!res.penWinner);
+      const aw=res.penWinner==="away"||(res.awayGoals>res.homeGoals&&!res.penWinner);
+      return mkMatch(
+        mkSlot(fix.home, res.homeGoals, hw),
+        mkSlot(fix.away, res.awayGoals, aw),
+        ""
+      );
     } else {
-      s1=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
-      s2=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
-      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+      return mkMatch(mkTbdSlot(fix.home), mkTbdSlot(fix.away), fix.date);
     }
-  }).join("");
+  });
 
-  // ---- SEMI-FINALS, FINAL from data.json ----
-  const laterRounds=["Semi-finals","Final"];
-  const laterCounts={"Semi-finals":2,"Final":1};
-  const laterHtml=laterRounds.map(roundName=>{
-    const real=knockout[roundName]||[];
-    const count=laterCounts[roundName];
-    const isFinal=roundName==="Final";
-    const matchesHtml=Array.from({length:count}).map((_,i)=>{
-      const m=real[i];
-      let s1,s2;
-      if(m){
-        const hw=m.homeGoals>m.awayGoals,aw=m.awayGoals>m.homeGoals;
-        s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(m.home)} ${m.home}</span><span class="bracket-slot-score">${m.homeGoals}</span>${owners[m.home]?`<span class="bracket-owner">(${owners[m.home]})</span>`:""}</div>`;
-        s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(m.away)} ${m.away}</span><span class="bracket-slot-score">${m.awayGoals}</span>${owners[m.away]?`<span class="bracket-owner">(${owners[m.away]})</span>`:""}</div>`;
-      } else {
-        s1=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
-        s2=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
-      }
-      return `<div class="bracket-match">${s1}${s2}</div>`;
-    }).join("");
-    return `
-    <div class="bracket-round ${isFinal?"bracket-final":""}">
-      <div class="bracket-round-label">${roundName}</div>
-      ${matchesHtml}
+  // R16 — 8 matches
+  const r16Matches = R16_PAIRINGS.map(([idA,idB,date,venue],i)=>{
+    const tA=r32Winner(idA), tB=r32Winner(idB);
+    const played=tA&&tB?r16JsonMatches.find(x=>(x.home===tA&&x.away===tB)||(x.home===tB&&x.away===tA)):null;
+    if(played){
+      const hg=played.home===tA?played.homeGoals:played.awayGoals;
+      const ag=played.home===tA?played.awayGoals:played.homeGoals;
+      const hw=played.penWinner==="home"||(!played.penWinner&&hg>ag);
+      const aw=played.penWinner==="away"||(!played.penWinner&&ag>hg);
+      // Normalise: always show tA first
+      return mkMatch(
+        mkSlot(tA, played.home===tA?played.homeGoals:played.awayGoals, played.home===tA?hw:aw),
+        mkSlot(tB, played.home===tA?played.awayGoals:played.homeGoals, played.home===tA?aw:hw),
+        ""
+      );
+    } else if(tA&&tB){
+      return mkMatch(mkSlot(tA,null,null), mkSlot(tB,null,null), `${date} · ${venue}`);
+    } else {
+      const fixA=R32_FIXTURES.find(f=>f.id===idA), fixB=R32_FIXTURES.find(f=>f.id===idB);
+      return mkMatch(
+        tA?mkSlot(tA,null,null):mkTbdSlot(fixA?`W: ${fixA.home}/${fixA.away}`:"TBD"),
+        tB?mkSlot(tB,null,null):mkTbdSlot(fixB?`W: ${fixB.home}/${fixB.away}`:"TBD"),
+        `${date} · ${venue}`
+      );
+    }
+  });
+
+  // QF — 4 matches
+  const qfMatches = QF_PAIRINGS.map(([idxA,idxB,date,venue],qi)=>{
+    const tA=r16Winner(idxA), tB=r16Winner(idxB);
+    const played=tA&&tB?qfJsonMatches.find(x=>(x.home===tA&&x.away===tB)||(x.home===tB&&x.away===tA)):null;
+    if(played){
+      const hw=played.penWinner==="home"||(!played.penWinner&&played.homeGoals>played.awayGoals);
+      const aw=played.penWinner==="away"||(!played.penWinner&&played.awayGoals>played.homeGoals);
+      const hg=played.home===tA?played.homeGoals:played.awayGoals;
+      const ag=played.home===tA?played.awayGoals:played.homeGoals;
+      return mkMatch(mkSlot(tA,hg,played.home===tA?hw:aw), mkSlot(tB,ag,played.home===tA?aw:hw), "");
+    } else if(tA&&tB){
+      return mkMatch(mkSlot(tA,null,null), mkSlot(tB,null,null), `${date} · ${venue}`);
+    } else {
+      const [r16A]=R16_PAIRINGS[idxA]||[];
+      const [r16B]=R16_PAIRINGS[idxB]||[];
+      return mkMatch(
+        tA?mkSlot(tA,null,null):mkTbdSlot("Winner TBD"),
+        tB?mkSlot(tB,null,null):mkTbdSlot("Winner TBD"),
+        `${date} · ${venue}`
+      );
+    }
+  });
+
+  // SF — 2 matches
+  const sfMatches = SF_PAIRINGS.map(([qA,qB],si)=>{
+    const tA=qfWinner(qA), tB=qfWinner(qB);
+    // SF dates (approximate)
+    const sfDates=["Jul 14 · Foxborough","Jul 15 · Inglewood"];
+    const played=tA&&tB?sfJsonMatches.find(x=>(x.home===tA&&x.away===tB)||(x.home===tB&&x.away===tA)):null;
+    if(played){
+      const hw=played.penWinner==="home"||(!played.penWinner&&played.homeGoals>played.awayGoals);
+      const aw=played.penWinner==="away"||(!played.penWinner&&played.awayGoals>played.homeGoals);
+      const hg=played.home===tA?played.homeGoals:played.awayGoals;
+      const ag=played.home===tA?played.awayGoals:played.homeGoals;
+      return mkMatch(mkSlot(tA,hg,played.home===tA?hw:aw), mkSlot(tB,ag,played.home===tA?aw:hw), "");
+    } else if(tA&&tB){
+      return mkMatch(mkSlot(tA,null,null), mkSlot(tB,null,null), sfDates[si]);
+    } else {
+      return mkMatch(mkTbdSlot("Winner TBD"), mkTbdSlot("Winner TBD"), sfDates[si]);
+    }
+  });
+
+  // Final — 1 match
+  const finalMatches = (()=>{
+    const finalJson=(knockout["Final"]||[])[0];
+    const tA=sfWinner(0), tB=sfWinner(1);
+    if(finalJson){
+      const hw=finalJson.penWinner==="home"||(!finalJson.penWinner&&finalJson.homeGoals>finalJson.awayGoals);
+      const aw=finalJson.penWinner==="away"||(!finalJson.penWinner&&finalJson.awayGoals>finalJson.homeGoals);
+      return [mkMatch(
+        mkSlot(finalJson.home, finalJson.homeGoals, hw),
+        mkSlot(finalJson.away, finalJson.awayGoals, aw),
+        ""
+      )];
+    } else if(tA&&tB){
+      return [mkMatch(mkSlot(tA,null,null), mkSlot(tB,null,null), "Jul 19 · MetLife")];
+    } else {
+      return [mkMatch(mkTbdSlot("TBD"), mkTbdSlot("TBD"), "Jul 19 · MetLife")];
+    }
+  })();
+
+  // ── Build connector HTML between rounds ──────────────────────────────────
+  // Each connector block takes N matches from left and produces N/2 outputs.
+  // We use CSS vertical lines via pairs.
+  function mkConnectors(n){
+    // n = number of match pairs (left round count / 2)
+    let html="";
+    for(let i=0;i<n;i++){
+      html+=`<div class="bracket-connector-pair top"></div><div class="bracket-connector-pair bottom"></div>`;
+    }
+    return `<div class="bracket-connector">${html}</div>`;
+  }
+
+  // ── Assemble the full bracket HTML ───────────────────────────────────────
+  function roundHtml(matches, roundClass, label){
+    return `<div class="bracket-round ${roundClass}">
+      <div class="bracket-round-label">${label}</div>
+      ${matches.join("")}
     </div>`;
-  }).join("");
+  }
 
-  river.innerHTML=`
-    <div class="bracket-round">
-      <div class="bracket-round-label">Round of 32</div>
-      ${r32Html}
-    </div>
-    <div class="bracket-round">
-      <div class="bracket-round-label">Round of 16</div>
-      ${r16Html}
-    </div>
-    <div class="bracket-round">
-      <div class="bracket-round-label">Quarter-finals</div>
-      ${qfHtml}
-    </div>
-    ${laterHtml}`;
+  river.innerHTML =
+    roundHtml(r32Matches, "r32", "Round of 32") +
+    mkConnectors(8) +
+    roundHtml(r16Matches, "r16", "Round of 16") +
+    mkConnectors(4) +
+    roundHtml(qfMatches,  "qf",  "Quarter-finals") +
+    mkConnectors(2) +
+    roundHtml(sfMatches,  "sf",  "Semi-finals") +
+    mkConnectors(1) +
+    `<div class="bracket-round final bracket-final">
+      <div class="bracket-round-label">⚽ Final</div>
+      ${finalMatches.join("")}
+    </div>`;
 }
 
 /* ============================================================
