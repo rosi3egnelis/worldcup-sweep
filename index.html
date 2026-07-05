@@ -1466,6 +1466,14 @@ const R16_PAIRINGS = [
 ];
 
 // Returns the winner team name from a fixture id, or null if not yet played
+// QF pairings: [r16IndexA, r16IndexB, date, venue]  (0-based index into R16_PAIRINGS)
+const QF_PAIRINGS = [
+  [0, 1, "Jul 9",  "Dallas"],
+  [2, 3, "Jul 9",  "Kansas City"],
+  [4, 5, "Jul 10", "Miami"],
+  [6, 7, "Jul 11", "Los Angeles"],
+];
+
 function r32Winner(id){
   const fix=R32_FIXTURES.find(f=>f.id===id);
   if(!fix) return null;
@@ -1555,9 +1563,65 @@ function renderBracket(data){
     }
   }).join("");
 
-  // ---- QUARTER-FINALS, SEMI-FINALS, FINAL from data.json ----
-  const laterRounds=["Quarter-finals","Semi-finals","Final"];
-  const laterCounts={"Quarter-finals":4,"Semi-finals":2,"Final":1};
+  // ---- helper: derive R16 winner from data.json results ----
+  function r16Winner(r16Idx){
+    const pairing=R16_PAIRINGS[r16Idx];
+    if(!pairing) return null;
+    const [idA,idB]=pairing;
+    const teamA=r32Winner(idA);
+    const teamB=r32Winner(idB);
+    if(!teamA||!teamB) return null;
+    // Find played R16 result
+    const m=r16JsonMatches.find(x=>
+      (x.home===teamA&&x.away===teamB)||(x.home===teamB&&x.away===teamA));
+    if(!m) return null;
+    if(m.penWinner==="home") return m.home;
+    if(m.penWinner==="away") return m.away;
+    if(m.homeGoals>m.awayGoals) return m.home;
+    if(m.awayGoals>m.homeGoals) return m.away;
+    return null;
+  }
+
+  // ---- QUARTER-FINALS driven by QF_PAIRINGS ----
+  const qfJsonMatches=knockout["Quarter-finals"]||[];
+  const qfLookup={};
+  qfJsonMatches.forEach(m=>{ qfLookup[m.home+"|"+m.away]=m; qfLookup[m.away+"|"+m.home]=m; });
+
+  const qfHtml=QF_PAIRINGS.map(([idxA,idxB,date,venue])=>{
+    const teamA=r16Winner(idxA);
+    const teamB=r16Winner(idxB);
+    let playedQF=null;
+    if(teamA&&teamB) playedQF=qfLookup[teamA+"|"+teamB];
+    let s1,s2;
+    if(playedQF){
+      const hg=playedQF.home===teamA?playedQF.homeGoals:playedQF.awayGoals;
+      const ag=playedQF.home===teamA?playedQF.awayGoals:playedQF.homeGoals;
+      const hw=hg>ag,aw=ag>hg;
+      s1=`<div class="bracket-slot ${hw?"winner":""}"><span>${flag(teamA)} ${teamA}</span><span class="bracket-slot-score">${hg}</span>${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot ${aw?"winner":""}"><span>${flag(teamB)} ${teamB}</span><span class="bracket-slot-score">${ag}</span>${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
+      return `<div class="bracket-match">${s1}${s2}</div>`;
+    } else if(teamA&&teamB){
+      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    } else if(teamA){
+      s1=`<div class="bracket-slot upcoming">${flag(teamA)} ${teamA}${owners[teamA]?`<span class="bracket-owner">(${owners[teamA]})</span>`:""}</div>`;
+      s2=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    } else if(teamB){
+      s1=`<div class="bracket-slot tbd"><span>Winner TBD</span></div>`;
+      s2=`<div class="bracket-slot upcoming">${flag(teamB)} ${teamB}${owners[teamB]?`<span class="bracket-owner">(${owners[teamB]})</span>`:""}</div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    } else {
+      s1=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
+      s2=`<div class="bracket-slot tbd"><span>TBD</span></div>`;
+      return `<div class="bracket-match"><div class="bracket-date-tag">${date} · ${venue}</div>${s1}${s2}</div>`;
+    }
+  }).join("");
+
+  // ---- SEMI-FINALS, FINAL from data.json ----
+  const laterRounds=["Semi-finals","Final"];
+  const laterCounts={"Semi-finals":2,"Final":1};
   const laterHtml=laterRounds.map(roundName=>{
     const real=knockout[roundName]||[];
     const count=laterCounts[roundName];
@@ -1590,6 +1654,10 @@ function renderBracket(data){
     <div class="bracket-round">
       <div class="bracket-round-label">Round of 16</div>
       ${r16Html}
+    </div>
+    <div class="bracket-round">
+      <div class="bracket-round-label">Quarter-finals</div>
+      ${qfHtml}
     </div>
     ${laterHtml}`;
 }
