@@ -3,7 +3,7 @@
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 90,
+  "completedMatches": 92,
   "friends": [
     {
       "name": "Patty",
@@ -83,7 +83,7 @@
         "Norway",
         "Netherlands"
       ],
-      "points": 20
+      "points": 23
     },
     {
       "name": "Pardillo",
@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 21
+      "points": 24
     },
     {
       "name": "Silenge",
@@ -2206,6 +2206,18 @@
         "venue": "Lincoln Financial Field, Philadelphia",
         "date": "2026-07-05T01:00:00.000Z",
         "stage": "Round of 16"
+      },
+      {
+        "home": "Brazil",
+        "homeGoals": 1,
+        "away": "Norway",
+        "awayGoals": 2
+      },
+      {
+        "home": "Mexico",
+        "homeGoals": 2,
+        "away": "England",
+        "awayGoals": 3
       }
     ],
     "Quarter-finals": [],
