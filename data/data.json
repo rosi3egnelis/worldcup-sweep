@@ -3,7 +3,7 @@
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 92,
+  "completedMatches": 93,
   "friends": [
     {
       "name": "Patty",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 19
+      "points": 22
     },
     {
       "name": "Ron",
@@ -2218,6 +2218,12 @@
         "homeGoals": 2,
         "away": "England",
         "awayGoals": 3
+      },
+      {
+        "home": "Spain",
+        "homeGoals": 1,
+        "away": "Portugal",
+        "awayGoals": 0
       }
     ],
     "Quarter-finals": [],
