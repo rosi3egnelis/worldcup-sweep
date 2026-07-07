@@ -3,7 +3,7 @@
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 93,
+  "completedMatches": 94,
   "friends": [
     {
       "name": "Patty",
@@ -33,7 +33,7 @@
         "Paraguay",
         "Belgium"
       ],
-      "points": 15
+      "points": 18
     },
     {
       "name": "Brizuela",
@@ -2224,6 +2224,12 @@
         "homeGoals": 1,
         "away": "Portugal",
         "awayGoals": 0
+      },
+      {
+        "home": "USA",
+        "homeGoals": 1,
+        "away": "Belgium",
+        "awayGoals": 4
       }
     ],
     "Quarter-finals": [],
