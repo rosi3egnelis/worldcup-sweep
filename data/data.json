@@ -3,7 +3,7 @@
   "season": 2026,
   "leagueId": 1,
   "totalFixturesFetched": 104,
-  "completedMatches": 94,
+  "completedMatches": 96,
   "friends": [
     {
       "name": "Patty",
@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 24
+      "points": 27
     },
     {
       "name": "Silenge",
@@ -123,7 +123,7 @@
         "South Korea",
         "Argentina"
       ],
-      "points": 19
+      "points": 22
     }
   ],
   "teamStats": {
@@ -2230,6 +2230,18 @@
         "homeGoals": 1,
         "away": "Belgium",
         "awayGoals": 4
+      },
+      {
+        "home": "Argentina",
+        "homeGoals": 3,
+        "away": "Egypt",
+        "awayGoals": 2
+      },
+      {
+        "home": "Switzerland",
+        "homeGoals": 2,
+        "away": "Colombia",
+        "awayGoals": 3
       }
     ],
     "Quarter-finals": [],
