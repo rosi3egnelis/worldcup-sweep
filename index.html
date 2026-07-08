@@ -1573,16 +1573,16 @@ const R16_PAIRINGS = [
   ["r32-9",  "r32-10", "Jul 6",  "Seattle"],        // Belgium vs USA
   ["r32-11", "r32-12", "Jul 6",  "Dallas"],         // Spain vs Portugal
   ["r32-15", "r32-14", "Jul 7",  "Atlanta"],        // Argentina vs Egypt ✓ FIXED
-  ["r32-13", "r32-16", "Jul 7",  "Vancouver"],      // Switzerland vs Colombia ✓ FIXED
+  ["r32-13", "r32-16", "Jul 7",  "Vancouver"],      // Switzerland 0-0 Colombia AET (Switzerland wins 4-3 pens)
 ];
 
 // Returns the winner team name from a fixture id, or null if not yet played
 // QF pairings: [r16IndexA, r16IndexB, date, venue]  (0-based index into R16_PAIRINGS)
 const QF_PAIRINGS = [
-  [0, 1, "Jul 9",  "Dallas"],
-  [2, 3, "Jul 9",  "Kansas City"],
-  [4, 5, "Jul 10", "Miami"],
-  [6, 7, "Jul 11", "Los Angeles"],
+  [0, 1, "Jul 9",  "Foxborough"],   // Morocco vs France
+  [4, 5, "Jul 10", "Inglewood"],    // Spain vs Belgium
+  [2, 3, "Jul 11", "Miami"],        // Norway vs England
+  [6, 7, "Jul 11", "Kansas City"],  // Argentina vs Switzerland
 ];
 
 function r32Winner(id){
