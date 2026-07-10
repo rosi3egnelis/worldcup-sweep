@@ -43,7 +43,7 @@
         "Uruguay",
         "France"
       ],
-      "points": 23
+      "points": 26
     },
     {
       "name": "Miriam",
@@ -2201,7 +2201,14 @@
         "penWinner": "home"
       }
     ],
-    "Quarter-finals": [],
+    "Quarter-finals": [
+      {
+        "home": "France",
+        "homeGoals": 2,
+        "away": "Morocco",
+        "awayGoals": 0
+      }
+    ],
     "Semi-finals": [],
     "Third place play-off": [],
     "Final": []
