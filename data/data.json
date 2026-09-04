@@ -93,7 +93,7 @@
         "Colombia",
         "England"
       ],
-      "points": 27
+      "points": 30
     },
     {
       "name": "Silenge",
@@ -103,7 +103,7 @@
         "Japan",
         "Spain"
       ],
-      "points": 25
+      "points": 31
     },
     {
       "name": "Ron",
@@ -123,7 +123,7 @@
         "South Korea",
         "Argentina"
       ],
-      "points": 25
+      "points": 28
     }
   ],
   "teamStats": {
@@ -2227,8 +2227,35 @@
         "awayGoals": 1
       }
     ],
-    "Semi-finals": [],
-    "Third place play-off": [],
-    "Final": []
+    "Semi-finals": [
+      {
+        "home": "France",
+        "homeGoals": 0,
+        "away": "Spain",
+        "awayGoals": 2
+      },
+      {
+        "home": "England",
+        "homeGoals": 1,
+        "away": "Argentina",
+        "awayGoals": 2
+      }
+    ],
+    "Third place play-off": [
+      {
+        "home": "France",
+        "homeGoals": 4,
+        "away": "England",
+        "awayGoals": 6
+      }
+    ],
+    "Final": [
+      {
+        "home": "Spain",
+        "homeGoals": 1,
+        "away": "Argentina",
+        "awayGoals": 0
+      }
+    ]
   }
 }
